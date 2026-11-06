@@ -1,0 +1,92 @@
+.swipe {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+.swipe-track {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.swipe-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    cursor: pointer;
+    user-select: none;
+}
+.swipe-slide a {
+    height: 100%;
+    width: 100%;
+}
+.swipe-slide img {
+    height: 100%;
+    width: 100%;
+    vertical-align: bottom;
+}
+.swipe-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+}
+.swipe-indicators span {
+    width: 20px;
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+.swipe-indicators span.active {
+    background: var(--bg-color);
+}
+
+.carousel-btn {
+    user-select: none;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    top: calc(50% - 30px);
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    z-index: 10;
+    background: transparent;
+}
+
+.carousel-btn.prev {
+    left: 0;
+}
+
+.carousel-btn.next {
+    right: 0;
+}
+.hidden-btn {
+    display: none;
+}
+
+@media (max-width: 980px) {
+    .carousel-btn {
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        top: calc(50% - 20px);
+        font-size: 40px;
+    }
+    .swipe-indicators {
+        gap: 8px;
+        bottom: 10px;
+    }
+    .swipe-indicators span {
+        width: 15px;
+    }
+}

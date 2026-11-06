@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    name: PHP syntax + hygiene
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Syntax check (PHP 8.0)
+        run: |
+          set -euo pipefail
+          fails=0
+          while IFS= read -r f; do
+            out="$(php -l "$f" 2>&1)" || { echo "$out"; fails=1; }
+          done < <(find . -name '*.php' -not -path './backup/*' -not -path './vendor/*' -not -path './node_modules/*')
+          exit $fails
+
+      - name: Block debug leftovers
+        run: |
+          set -euo pipefail
+          hits="$(grep -rn --include='*.php' -E '\b(var_dump|print_r|dd|dump)\s*\(' . \
+            --exclude-dir=backup --exclude-dir=vendor --exclude-dir=node_modules || true)"
+          if [ -n "$hits" ]; then
+            echo "$hits"
+            echo "::error::Remove debug output before merging"
+            exit 1
+          fi
+
+      - name: Require theme header
+        run: |
+          set -euo pipefail
+          for key in 'Theme Name' 'Version' 'License' 'Text Domain'; do
+            grep -qi "^$key:" style.css || { echo "::error::style.css is missing $key"; exit 1; }
+          done
+          echo "style.css header OK"

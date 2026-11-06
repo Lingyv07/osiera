@@ -1,0 +1,35 @@
+/*
+Theme Name: Osiera
+Theme URI: https://github.com/Lingyv07/osiera
+Author: Lingyv07
+Author URI: https://github.com/Lingyv07
+Description: A clean, multilingual corporate theme for manufacturers, exporters and B2B service providers. Ships with four content types (products, applications, FAQ, posts), inquiry forms with stored submissions, per-page SEO and JSON-LD, configurable URL paths, and optional starter content you import yourself.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.8
+Requires PHP: 8.0
+License: GNU General Public License v3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: osiera
+Domain Path: /languages
+Tags: two-columns, custom-logo, custom-menu, featured-images, translation-ready
+*/
+
+/*
+Osiera WordPress Theme
+Copyright (C) 2026 Lingyv07
+
+This theme is free software: you can redistribute it and/or modify it under the
+terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later version.
+
+This theme is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this theme. If not, see https://www.gnu.org/licenses/gpl-3.0.html.
+
+Note: all visual styles are enqueued from assets/css/*.css. This file only
+carries the theme header required by WordPress.
+*/

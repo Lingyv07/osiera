@@ -1,0 +1,50 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build and publish theme zip
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify tag matches style.css version
+        run: |
+          set -euo pipefail
+          tag="${GITHUB_REF_NAME#v}"
+          header="$(sed -n '1,40p' style.css | grep -i '^Version:' | head -1 | cut -d: -f2- | tr -d ' \r')"
+          echo "tag:    $tag"
+          echo "header: $header"
+          if [ "$tag" != "$header" ]; then
+            echo "::error::Tag v$tag does not match 'Version: $header' in style.css"
+            exit 1
+          fi
+
+      - name: Build installable zip
+        run: |
+          set -euo pipefail
+          mkdir -p build
+          git archive --format=tar --prefix=osiera/ HEAD | tar -x -C build
+          cd build
+          zip -rq "osiera-${GITHUB_REF_NAME#v}.zip" osiera
+          echo "--- archive top level ---"
+          unzip -l "osiera-${GITHUB_REF_NAME#v}.zip" | head -12
+          echo "--- size ---"
+          du -h "osiera-${GITHUB_REF_NAME#v}.zip"
+
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: build/*.zip
+          generate_release_notes: true
+          fail_on_unmatched_files: true

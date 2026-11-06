@@ -1,0 +1,239 @@
+{
+    "en": {
+        "header": {
+            "search-placeholder": "Search...",
+            "call-now": "Call now",
+            "select-language-description": "Please select your language",
+            "social-media-description": "Social sharing",
+            "search-label": "Search"
+        },
+        "footer": {
+            "company": "",
+            "address-title": "Address",
+            "telephone-title": "Telephone",
+            "email-title": "Email",
+            "copy-success": "Copy successful",
+            "contact-us": "Contact Us",
+            "send": "Send",
+            "name-placeholder": "* Enter Your Name or Company name",
+            "email-placeholder": "* Enter Your Email",
+            "telephone-placeholder": "Enter Your Telephone",
+            "inquiry-placeholder": "* Tell us what you need and we will reply with a quote.",
+            "message-success": "Submit successfully",
+            "message-error": "Submission failed",
+            "home": "Home",
+            "products": "Products",
+            "news": "News",
+            "message": "Message",
+            "about-us": "About Us",
+            "contact": "Contact",
+            "company-desc": "",
+            "street-address": "",
+            "address-region": "",
+            "address-locality": "",
+            "brand": "",
+            "whats-app-title": "WhatsApp",
+            "copy-email": "Click to copy Email"
+        },
+        "home": {
+            "our-products": "Our Products",
+            "our-products-desc": "The main product groups, with the details buyers ask about.",
+            "applicable": "Applications",
+            "applicable-desc": "Where these products are used, by industry and by use case.",
+            "custom-title": "Need something custom?",
+            "custom-desc": "Describe the requirement and we will come back with a plan, a price and a lead time.",
+            "custom-btn-text": "Customize Now",
+            "about-us-more": "Learn more about us",
+            "latest-news": "Latest News",
+            "faq": "FAQ",
+            "video-title": "Company Video",
+            "video-desc": "A short look at how we work.",
+            "title": "",
+            "description": "A clear overview of what you offer, who it is for, and how to get in touch.",
+            "page-title": "Built around your requirements",
+            "summary-subtitle": "Specifications, lead times and answers in one place."
+        },
+        "product": {
+            "inquire-new": "Request a Quote",
+            "product-categories": "Product Categories",
+            "new-products": "New Products",
+            "related-products": "Related Products",
+            "read-more": "Read More",
+            "total-pages": "Total Pages",
+            "title": "Products",
+            "description": "Product groups, specifications and the details buyers ask about.",
+            "breadcrumb-list-name": "Products",
+            "warning-icon": ""
+        },
+        "news": {
+            "title": "News",
+            "description": "Announcements, updates and recent activity.",
+            "breadcrumb-list-name": "News"
+        },
+        "applications": {
+            "title": "Applications",
+            "description": "How these products are used, by industry and by use case.",
+            "breadcrumb-list-name": "Applications"
+        },
+        "faq": {
+            "title": "FAQ",
+            "description": "The questions we are asked most often, with direct answers.",
+            "breadcrumb-list-name": "FAQ"
+        },
+        "about-us": {
+            "title": "About Us",
+            "desc": "Who we are, how we are organised, and how we approach the work.",
+            "summary-subtitle": "The numbers behind the company.",
+            "video-summary-desc": "A short introduction to the company and the team.",
+            "summary-info-items": [
+                {
+                    "title": "",
+                    "value": ""
+                },
+                {
+                    "title": "",
+                    "value": ""
+                },
+                {
+                    "title": "",
+                    "value": ""
+                },
+                {
+                    "title": "",
+                    "value": ""
+                }
+            ],
+            "company-overview-items": [
+                {
+                    "title": "",
+                    "text": ""
+                },
+                {
+                    "title": "",
+                    "text": ""
+                },
+                {
+                    "title": "",
+                    "text": ""
+                },
+                {
+                    "title": "",
+                    "text": ""
+                }
+            ],
+            "our-strengths": "Our Strengths",
+            "our-strengths-items": [
+                {
+                    "icon": "",
+                    "text": ""
+                },
+                {
+                    "icon": "",
+                    "text": ""
+                },
+                {
+                    "icon": "",
+                    "text": ""
+                },
+                {
+                    "icon": "",
+                    "text": ""
+                }
+            ],
+            "company-culture": "Company Culture",
+            "company-culture-items": [
+                {
+                    "title": "",
+                    "text": ""
+                },
+                {
+                    "title": "",
+                    "text": ""
+                },
+                {
+                    "title": "",
+                    "text": ""
+                },
+                {
+                    "title": "",
+                    "text": ""
+                }
+            ],
+            "need-to-know": "Need to Know",
+            "need-to-know-items": [
+                {
+                    "title": "",
+                    "text": ""
+                },
+                {
+                    "title": "",
+                    "text": ""
+                },
+                {
+                    "title": "",
+                    "text": ""
+                },
+                {
+                    "title": "",
+                    "text": ""
+                },
+                {
+                    "title": "",
+                    "text": ""
+                },
+                {
+                    "title": "",
+                    "text": ""
+                }
+            ]
+        },
+        "contact-us": {
+            "title": "Contact Us",
+            "description": "Questions, requests and quotes — reach us here."
+        },
+        "certificates": {
+            "title": "Certificates",
+            "description": "The certifications and qualifications we hold."
+        },
+        "privacy-policy": {
+            "title": "Privacy Policy",
+            "description": "How personal data is collected, used and protected."
+        },
+        "search": {
+            "title": "Search Results"
+        },
+        "functional": {
+            "inquiry": {
+                "title": "Leave A Message",
+                "point-message": "Need Help? Leave A Message"
+            },
+            "page": "Page"
+        },
+        "not-found": {
+            "not-found": "Not Found",
+            "search-label": "Search"
+        },
+        "message": {
+            "inquiry": {
+                "empty-param": "Important information is missing",
+                "email-format": "Email format error",
+                "success": "Submit received successfully",
+                "error": "Submit received failed",
+                "req-frequently": "Requests too frequently"
+            }
+        },
+        "cookie": {
+            "cookie-policy-title": "Cookie Policy",
+            "cookie-policy-content": "To provide you with a better browsing experience, this website uses cookies. By clicking “Accept” or continuing to browse, you agree to our use of cookies.",
+            "cookie-policy-more": "Learn More",
+            "cookie-policy-reject-text": "Reject",
+            "cookie-policy-btn": "Accept"
+        },
+        "organization": {
+            "logo-name": "",
+            "contact-type": "",
+            "web-site-description": "",
+            "knows-about": []
+        }
+    }
+}

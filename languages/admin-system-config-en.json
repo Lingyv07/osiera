@@ -1,0 +1,1744 @@
+{
+    "version": "1",
+    "name": "Admin System Config",
+    "desc": "Admin-side only: labels for groups and fields, default values for settings pages, admin notices and special input types. The front-end language pack lives in data-init/data/lang-content.json.",
+    "meta": {
+        "groups": [
+            {
+                "key": "base",
+                "label": "Header & Footer",
+                "desc": "Site-wide navigation, contact details and message form texts",
+                "sections": [
+                    "header",
+                    "footer"
+                ]
+            },
+            {
+                "key": "home",
+                "label": "Home",
+                "desc": "Hero, products / applications blocks, video section and home SEO",
+                "sections": [
+                    "home"
+                ]
+            },
+            {
+                "key": "lists",
+                "label": "List Pages",
+                "desc": "Titles and SEO for product, news, application and FAQ list pages",
+                "sections": [
+                    "product",
+                    "news",
+                    "applications",
+                    "faq"
+                ]
+            },
+            {
+                "key": "about",
+                "label": "About Us",
+                "desc": "Company overview, stats, strengths, culture and specifications",
+                "sections": [
+                    "about-us"
+                ]
+            },
+            {
+                "key": "pages",
+                "label": "Other Pages",
+                "desc": "Contact, certificates, privacy policy and search results",
+                "sections": [
+                    "contact-us",
+                    "certificates",
+                    "privacy-policy",
+                    "search"
+                ]
+            },
+            {
+                "key": "system",
+                "label": "System Messages",
+                "desc": "Buttons, 404, form validation messages and cookie banner",
+                "sections": [
+                    "functional",
+                    "not-found",
+                    "message",
+                    "cookie"
+                ]
+            },
+            {
+                "key": "seo",
+                "label": "Structured Data",
+                "desc": "JSON-LD Organization fields",
+                "sections": [
+                    "organization"
+                ]
+            }
+        ],
+        "sections": {
+            "header": "Header",
+            "footer": "Footer",
+            "home": "Home",
+            "product": "Products",
+            "news": "News",
+            "applications": "Applications",
+            "faq": "FAQ",
+            "about-us": "About Us",
+            "contact-us": "Contact Page",
+            "certificates": "Certificates",
+            "privacy-policy": "Privacy Policy",
+            "search": "Search Page",
+            "functional": "Buttons",
+            "not-found": "404 Page",
+            "message": "Messages",
+            "cookie": "Cookie Banner",
+            "organization": "Structured Data"
+        },
+        "fields": {
+            "header.search-placeholder": "Search placeholder",
+            "header.call-now": "Call now",
+            "header.select-language-description": "Language selector label",
+            "header.social-media-description": "Social media heading",
+            "header.search-label": "Search field ARIA label",
+            "footer.company": "Company name",
+            "footer.address-title": "Address heading",
+            "footer.telephone-title": "Telephone heading",
+            "footer.email-title": "Email heading",
+            "footer.copy-success": "Copy success message",
+            "footer.contact-us": "Contact heading",
+            "footer.send": "Send button",
+            "footer.name-placeholder": "Name placeholder",
+            "footer.email-placeholder": "Email placeholder",
+            "footer.telephone-placeholder": "Phone placeholder",
+            "footer.inquiry-placeholder": "Inquiry placeholder",
+            "footer.message-success": "Submit success message",
+            "footer.message-error": "Submit error message",
+            "footer.home": "Home link text",
+            "footer.products": "Products link text",
+            "footer.news": "News link text",
+            "footer.message": "Message link text",
+            "footer.about-us": "About us link text",
+            "footer.contact": "Contact link text",
+            "footer.company-desc": "Company description (footer)",
+            "footer.street-address": "Street address",
+            "footer.address-region": "State / Province",
+            "footer.address-locality": "City",
+            "footer.brand": "Brand name",
+            "footer.whats-app-title": "WhatsApp heading",
+            "footer.copy-email": "Copy email tooltip",
+            "home.our-products": "Products section title",
+            "home.our-products-desc": "Products section description",
+            "home.applicable": "Applications section title",
+            "home.applicable-desc": "Applications section description",
+            "home.custom-title": "Custom section title",
+            "home.custom-desc": "Custom section description",
+            "home.custom-btn-text": "Custom section button text",
+            "home.about-us-more": "Learn more about us",
+            "home.latest-news": "Latest news heading",
+            "home.faq": "FAQ heading",
+            "home.video-title": "Video section title",
+            "home.video-desc": "Video section description",
+            "home.title": "Home SEO title",
+            "home.description": "Home SEO description",
+            "home.page-title": "Home main title",
+            "home.summary-subtitle": "Home subtitle",
+            "product.inquire-new": "Inquire button text",
+            "product.product-categories": "Product categories heading",
+            "product.new-products": "New products heading",
+            "product.related-products": "Related products heading",
+            "product.read-more": "Read more",
+            "product.total-pages": "Total pages",
+            "product.title": "List page SEO title",
+            "product.description": "List page SEO description",
+            "product.breadcrumb-list-name": "Breadcrumb name",
+            "product.warning-icon": "Product notice icon",
+            "news.title": "News page SEO title",
+            "news.description": "News page SEO description",
+            "news.breadcrumb-list-name": "News breadcrumb",
+            "applications.title": "Application page SEO title",
+            "applications.description": "Application page SEO description",
+            "applications.breadcrumb-list-name": "Application breadcrumb",
+            "faq.title": "FAQ page SEO title",
+            "faq.description": "FAQ page SEO description",
+            "faq.breadcrumb-list-name": "FAQ breadcrumb",
+            "about-us.title": "About page SEO title",
+            "about-us.desc": "About page SEO description",
+            "about-us.summary-subtitle": "About page subtitle",
+            "about-us.video-summary-desc": "Video description",
+            "about-us.summary-info-items.title": "Stat label",
+            "about-us.summary-info-items.value": "Stat value",
+            "about-us.company-overview-items.title": "Overview item title",
+            "about-us.company-overview-items.text": "Overview item text",
+            "about-us.our-strengths": "Strengths section title",
+            "about-us.our-strengths-items.icon": "Strength icon",
+            "about-us.our-strengths-items.text": "Strength text",
+            "about-us.company-culture": "Culture section title",
+            "about-us.company-culture-items.title": "Culture item title",
+            "about-us.company-culture-items.text": "Culture item text",
+            "about-us.need-to-know": "Specifications section title",
+            "about-us.need-to-know-items.title": "Specification item title",
+            "about-us.need-to-know-items.text": "Specification item text",
+            "contact-us.title": "Contact page SEO title",
+            "contact-us.description": "Contact page SEO description",
+            "certificates.title": "Certificates page SEO title",
+            "certificates.description": "Certificates page SEO description",
+            "privacy-policy.title": "Privacy policy SEO title",
+            "privacy-policy.description": "Privacy policy SEO description",
+            "search.title": "Search results page title",
+            "functional.inquiry.title": "Message form title",
+            "functional.inquiry.point-message": "Message form intro",
+            "functional.page": "Word for \"page\"",
+            "not-found.not-found": "404 title",
+            "not-found.search-label": "404 search label",
+            "message.inquiry.empty-param": "Message: missing fields",
+            "message.inquiry.email-format": "Message: invalid email format",
+            "message.inquiry.success": "Message: submitted successfully",
+            "message.inquiry.error": "Message: submission failed",
+            "message.inquiry.req-frequently": "Message: too many submissions",
+            "cookie.cookie-policy-title": "Cookie banner title",
+            "cookie.cookie-policy-content": "Cookie banner description",
+            "cookie.cookie-policy-more": "Learn more link text",
+            "cookie.cookie-policy-reject-text": "Reject button",
+            "cookie.cookie-policy-btn": "Accept button",
+            "organization.logo-name": "Logo alt text",
+            "organization.contact-type": "Contact type",
+            "organization.web-site-description": "Site description",
+            "organization.knows-about": "Knows about",
+            "about-us.summary-info-items": "Company stats (list)",
+            "about-us.company-overview-items": "Company overview (list)",
+            "about-us.our-strengths-items": "Our strengths (list)",
+            "about-us.company-culture-items": "Company culture (list)",
+            "about-us.need-to-know-items": "Specifications (list)"
+        },
+        "tags": [
+            "organization.knows-about"
+        ],
+        "files": [
+            "product.warning-icon",
+            "about-us.our-strengths-items.icon"
+        ],
+        "shapes": {
+            "about-us.summary-info-items": {
+                "title": "",
+                "value": ""
+            },
+            "about-us.company-overview-items": {
+                "title": "",
+                "text": ""
+            },
+            "about-us.our-strengths-items": {
+                "icon": "",
+                "text": ""
+            },
+            "about-us.company-culture-items": {
+                "title": "",
+                "text": ""
+            },
+            "about-us.need-to-know-items": {
+                "title": "",
+                "text": ""
+            }
+        },
+        "ui": {
+            "media": {
+                "svg": {
+                    "rejected": "This SVG could not be read, or it contains scripts. For security reasons it cannot be uploaded.",
+                    "no-permission": "Your account cannot upload SVG files"
+                }
+            },
+            "structured": {
+                "menu-title": "Structured Data",
+                "page": {
+                    "title": "Structured Data",
+                    "hint": "Add to or override the structured data a page already provides for search engines. Fill it per page type and save per language; leave it empty to keep the original. Brand, address and phone are maintained in Page Info and Language Content, so there is no need to repeat them here."
+                },
+                "card": {
+                    "help-title": "How to write it",
+                    "help-hint": "Paste a JSON object, an array of objects, or a whole JSON block with @graph. Item 1 of the array rewrites entry 1 of the page structured data and only the properties you write are replaced; extra items are added. An object with @type matches by type, with @id matches by id. Empty objects {} are skipped, null removes a property, and keys next to @graph are merged into the outermost level.",
+                    "help-example": "{\"@type\": \"Product\", \"brand\": {\"@type\": \"Brand\", \"name\": \"Your Brand\"}}\n{\"@graph\": [{}, {\"description\": \"One-line note\"}], \"inLanguage\": \"en\"}"
+                },
+                "type": {
+                    "common": "All pages",
+                    "common-hint": "Applied before any other type. A good place for site-wide information such as Organization and WebSite.",
+                    "home": "Home",
+                    "home-hint": "Site home page, including /xx/home for each language.",
+                    "product": "Product detail",
+                    "product-hint": "A single product page.",
+                    "post": "Post detail",
+                    "post-hint": "News and blog article pages.",
+                    "application": "Application detail",
+                    "application-hint": "Application case pages.",
+                    "faq": "FAQ detail",
+                    "faq-hint": "Question and answer detail pages.",
+                    "page": "Other Pages",
+                    "page-hint": "Regular pages, product and post lists, categories, search results and so on."
+                },
+                "field": {
+                    "json": "JSON override"
+                },
+                "status": {
+                    "empty": "Not set: nothing changes; the page keeps its original data.",
+                    "merge": "Merged into the existing %s; added automatically when the type is missing.",
+                    "position": "No @type: matched by position — item 1 rewrites entry 1, item 2 rewrites entry 2 and so on; extra items are added and empty objects {} are skipped.",
+                    "root": "Another %d item(s) alongside @graph are merged into the outermost level.",
+                    "error": "Invalid format (%s). The front end ignores this block."
+                },
+                "badge": {
+                    "set": "%d item(s) set",
+                    "customized": "%d item(s) overridden"
+                },
+                "tag": {
+                    "custom": "Override",
+                    "inherit": "Inherited"
+                },
+                "hint": {
+                    "scope-all": "Editing \"All languages\": any language without its own value falls back to this one.",
+                    "scope-lang": "Editing the override for %s: leave a field empty or write it exactly like \"All languages\" to keep inheriting.",
+                    "savebar": "Takes effect on the front end right away — no need to re-publish content; press Ctrl+F5 to see the new structured data."
+                },
+                "button": {
+                    "save": "Save settings",
+                    "reset-lang": "Clear override"
+                },
+                "confirm": {
+                    "reset-lang": "Clear the override for this language and inherit everything from \"All languages\"?"
+                },
+                "notice": {
+                    "no-permission": "Your account cannot make this change, or the page timed out — please refresh and try again",
+                    "saved-all": "Structured data override for \"All languages\" saved",
+                    "saved-lang": "Override for %s saved; types left empty keep inheriting from \"All languages\"",
+                    "json-error": "%d item(s) have format errors. Your text is saved but ignored on the front end — fix it and save again.",
+                    "reset-lang": "Override for %s cleared; everything inherits from \"All languages\" again"
+                },
+                "demo": {
+                    "common": "{\"@type\": \"Organization\", \"name\": \"Your Company\"}",
+                    "home": "{\"@type\": \"WebSite\", \"alternateName\": \"Site short name\"}",
+                    "product": "{\"@type\": \"Product\", \"brand\": {\"@type\": \"Brand\", \"name\": \"Brand name\"}}",
+                    "post": "{\"@type\": \"Article\", \"author\": {\"@type\": \"Organization\", \"name\": \"Publisher\"}}",
+                    "application": "{\"@type\": \"Article\", \"about\": \"Application topic\"}",
+                    "faq": "{\"@type\": \"FAQPage\", \"inLanguage\": \"zh-CN\"}",
+                    "page": "{\"@type\": \"WebPage\", \"inLanguage\": \"zh-CN\"}"
+                },
+                "error": {
+                    "end-extra": "The JSON has already ended; there is extra content after it",
+                    "comma-dup": "Extra comma here (the last item must not be followed by a comma)",
+                    "key-name": "Expected a key name in double quotes, or a closing brace",
+                    "string-open": "Unterminated string, missing the closing double quote",
+                    "colon": "Expected a colon after the key name",
+                    "comma-or-close": "Expected a comma or a closing bracket (often a missing comma after the previous item)",
+                    "value": "Expected a value here (string, number, object or array)",
+                    "bracket": "Unclosed bracket, missing the closing bracket",
+                    "empty": "Empty content, or not a complete JSON value",
+                    "unknown": "Unrecognized structure",
+                    "located": "Line %d: %s",
+                    "not-object": "Must be a JSON object or an array of objects"
+                }
+            },
+            "common": {
+                "button": {
+                    "publish": "Publish"
+                },
+                "langbar": {
+                    "label": "Language versions",
+                    "current": "(current language)",
+                    "add-hint": ": no version in this language yet — click to create one from the current content",
+                    "empty-hint": ": no translation yet"
+                },
+                "migrate": {
+                    "done": "Already migrated"
+                },
+                "column": {
+                    "image": "Image"
+                },
+                "page": {
+                    "view": "View",
+                    "back": "Back to list"
+                }
+            },
+            "news": {
+                "page": {
+                    "title": "Post Info",
+                    "view": "View post",
+                    "back": "Back to all posts"
+                },
+                "error": {
+                    "missing-post-id": "Missing post_id parameter",
+                    "invalid-post": "Invalid post"
+                },
+                "notice": {
+                    "saved": "Post info saved"
+                },
+                "card": {
+                    "basic-title": "Basic info",
+                    "basic-hint": "The title appears in lists and search results; a smaller sort weight puts it earlier",
+                    "summary-title": "Summary",
+                    "summary-hint": "Shown in lists and search results; 80–160 characters recommended",
+                    "image-title": "Featured image",
+                    "image-hint": "Used in lists and share cards; an 800 × 800 square is recommended",
+                    "content-title": "Post content",
+                    "content-hint": "What you write here becomes the article body; the summary is filled in above and never merged into it"
+                },
+                "field": {
+                    "title": "Title",
+                    "title-placeholder": "Post title shown in lists and search results",
+                    "sort": "Sort weight",
+                    "article-type": "Article type",
+                    "main-title": "Topic",
+                    "main-title-placeholder": "Page H1, used in structured data",
+                    "summary-placeholder": "One sentence about this post"
+                },
+                "option": {
+                    "article": "Article",
+                    "news-article": "News article"
+                },
+                "counter": {
+                    "unit": "characters"
+                },
+                "switch": {
+                    "no-description": "Keep summary out of the body",
+                    "no-description-hint": "On by default: the summary is used only in lists and search results, not merged into the body"
+                },
+                "button": {
+                    "pick-image": "Choose / change image",
+                    "remove-image": "Remove image",
+                    "save": "Save post info"
+                },
+                "savebar": {
+                    "hint": "Saving also updates the post body and sort weight"
+                },
+                "media": {
+                    "title": "Choose featured image",
+                    "button": "Use this image"
+                }
+            },
+            "products": {
+                "labels": {
+                    "name": "Products",
+                    "singular-name": "Products",
+                    "menu-name": "Products",
+                    "admin-bar": "Products",
+                    "add-new": "Add product",
+                    "add-new-item": "Add new product",
+                    "new-item": "New product",
+                    "edit-item": "Edit product",
+                    "view-item": "View product",
+                    "all-items": "All products",
+                    "search-items": "Search products",
+                    "not-found": "No products found",
+                    "not-found-trash": "No products in Trash"
+                },
+                "tax": {
+                    "labels": {
+                        "name": "Product categories",
+                        "singular-name": "Product categories",
+                        "search-items": "Search categories",
+                        "all-items": "All categories",
+                        "edit-item": "Edit category",
+                        "update-item": "Update category",
+                        "add-new-item": "Add new category",
+                        "new-item-name": "New category name",
+                        "menu-name": "Product categories"
+                    }
+                },
+                "menu": {
+                    "page-title": "Product Info",
+                    "menu-title": "Product Info"
+                },
+                "page": {
+                    "title": "Product Info",
+                    "view": "View product",
+                    "back": "Back to all products"
+                },
+                "notice": {
+                    "missing-post-id": "Missing post_id parameter",
+                    "invalid-product": "Invalid product",
+                    "saved": "Product info saved",
+                    "template-saved": "Template saved",
+                    "template-name-empty": "Template name cannot be empty",
+                    "template-deleted": "Template deleted",
+                    "template-not-found": "Template to delete not found",
+                    "template-select-required": "Select a template to delete first",
+                    "template-save-failed": "Failed to save template: ",
+                    "template-delete-failed": "Failed to delete template: "
+                },
+                "template": {
+                    "title": "Template",
+                    "hint": "Saves what you have filled in as a template for later reuse; choosing an existing template replaces the current images, copy and content",
+                    "select": "Select template",
+                    "placeholder": "Select a template",
+                    "name-label": "New template name",
+                    "name-placeholder": "e.g. Standard hot-melt film layout",
+                    "id-label": "Template ID: %s"
+                },
+                "card": {
+                    "basic-title": "Basic info",
+                    "basic-hint": "The sort weight controls the position in the list; a smaller number comes first",
+                    "summary-title": "Product summary",
+                    "summary-hint": "Shown in product lists and search results; 80–160 characters recommended",
+                    "images-title": "Product images",
+                    "images-hint": "800 × 800 squares recommended. Drag cards to reorder; the first one is the list thumbnail. Images and videos are supported, and each image can have its own description and embedded video",
+                    "desc-title": "Product description & notice",
+                    "desc-hint": "The description appears above the body on the detail page; the notice is for cautions and supply notes",
+                    "params-title": "Product specs",
+                    "params-hint": "Shown as name / value rows in the detail page spec table; drag the handle to reorder, empty pairs are not saved",
+                    "content-title": "Product content",
+                    "content-hint": "Saving builds the product body: main title, description paragraph, then the content below"
+                },
+                "field": {
+                    "title": "Title",
+                    "title-placeholder": "Product title shown in lists, navigation and search results",
+                    "sort": "Sort weight",
+                    "main-title": "Main title",
+                    "main-title-placeholder": "Used for structured data and the page H1",
+                    "summary-placeholder": "One sentence about this product",
+                    "image-alt": "Image description",
+                    "video-src": "Local video",
+                    "iframe-src": "External video",
+                    "description": "Product description",
+                    "warning": "Product notice",
+                    "warning-placeholder": "Leave empty if none",
+                    "param-key": "Name",
+                    "param-value": "Value"
+                },
+                "media": {
+                    "drag-hint": "Hold and drag to reorder",
+                    "video": "Video",
+                    "image": "Image",
+                    "primary-badge": "Cover",
+                    "remove-title": "Delete this media",
+                    "edit-overlay": "Click to replace",
+                    "empty": "No images yet — click \"Add image\" in the top right to pick from the media library",
+                    "pick-title": "Choose or upload media",
+                    "pick-button": "Use this media"
+                },
+                "params": {
+                    "drag-hint": "Hold and drag to reorder",
+                    "empty": "No specs yet — click \"Add spec\" in the top right to add a row",
+                    "json-hint": "The order here is the order shown in the spec table. Format:",
+                    "json-tip": "Applying replaces the spec rows below; it only takes effect after you save the product",
+                    "json-placeholder": "[\n  { \"key\": \"Name\", \"value\": \"Value\" },\n  { \"key\": \"Thickness\", \"value\": \"0.05 mm\" }\n]"
+                },
+                "button": {
+                    "add-image": "Add image",
+                    "template-save": "Save as template",
+                    "template-delete": "Delete selected template",
+                    "delete": "Delete",
+                    "json-toggle": "Edit JSON",
+                    "add-param": "Add spec",
+                    "json-format": "Format",
+                    "json-apply": "Apply to list",
+                    "json-cancel": "Collapse",
+                    "save": "Save product",
+                    "json-close": "Back to list"
+                },
+                "savebar": {
+                    "hint": "Saving also updates the product body, sort weight and image info"
+                },
+                "counter": {
+                    "char-unit": "characters",
+                    "image-unit": "images",
+                    "param-unit": "items"
+                },
+                "json": {
+                    "error-syntax": "JSON syntax error: ",
+                    "error-array": "The top level must be an array []",
+                    "error-shape": "Item %d must be {\"key\":\"\",\"value\":\"\"} or [\"name\",\"value\"]",
+                    "error-types": "key / value of item %d must be strings",
+                    "applied": "Applied %d item(s)",
+                    "ok-parse": "Parsed · %d item(s)",
+                    "ok-format": "Formatted · %d item(s)"
+                },
+                "confirm": {
+                    "delete-template": "Delete the selected template? This cannot be undone."
+                },
+                "alert": {
+                    "template-name": "Enter a template name"
+                }
+            },
+            "application-info": {
+                "labels": {
+                    "name": "Applications",
+                    "singular-name": "Applications",
+                    "add-new": "Add application",
+                    "add-new-item": "Add new application",
+                    "edit-item": "Edit application",
+                    "all-items": "All applications",
+                    "search-items": "Search applications",
+                    "not-found": "No applications found"
+                },
+                "menu-name": "Applications",
+                "tax": {
+                    "labels": {
+                        "name": "Application categories",
+                        "singular-name": "Application categories",
+                        "search-items": "Search application categories",
+                        "all-items": "All application categories",
+                        "edit-item": "Edit application category",
+                        "update-item": "Update application category",
+                        "add-new-item": "Add new application category",
+                        "new-item-name": "New application category name",
+                        "menu-name": "Application categories"
+                    }
+                },
+                "page": {
+                    "title": "Application Info",
+                    "view": "View application",
+                    "back": "Back to all applications"
+                },
+                "error": {
+                    "missing-post-id": "Missing post_id parameter",
+                    "invalid-post": "Invalid application"
+                },
+                "notice": {
+                    "saved": "Application info saved"
+                },
+                "card": {
+                    "basic-title": "Basic info",
+                    "basic-hint": "The sort weight controls the position in the list; a smaller number comes first",
+                    "excerpt-title": "Summary",
+                    "excerpt-hint": "Shown in application lists and search results; 80–160 characters recommended",
+                    "image-title": "Featured image",
+                    "image-hint": "Used in lists and share cards; an 800 × 800 square is recommended",
+                    "content-title": "Content",
+                    "content-hint": "Saving builds the body: main title, summary paragraph, then the content below"
+                },
+                "field": {
+                    "title": "Title",
+                    "title-placeholder": "Application title shown in lists, navigation and search results",
+                    "sort": "Sort weight",
+                    "main-title": "Main title",
+                    "main-title-placeholder": "Used for structured data and the page H1",
+                    "excerpt-placeholder": "One sentence about this use case"
+                },
+                "switch": {
+                    "no-description": "Keep summary out of the body",
+                    "no-description-hint": "When on, the summary is only used in lists and not merged into the body"
+                },
+                "button": {
+                    "pick-image": "Choose / change image",
+                    "remove-image": "Remove image",
+                    "save": "Save application"
+                },
+                "savebar": {
+                    "hint": "Saving also updates the body, sort weight and featured image"
+                },
+                "counter": {
+                    "unit": "characters"
+                },
+                "media": {
+                    "title": "Choose featured image",
+                    "button": "Use this image"
+                }
+            },
+            "faq-info": {
+                "menu-name": "FAQ",
+                "labels": {
+                    "add-new": "Add FAQ",
+                    "add-new-item": "Add new FAQ",
+                    "edit-item": "Edit FAQ",
+                    "all-items": "All FAQs",
+                    "search-items": "Search FAQs",
+                    "not-found": "No FAQs found"
+                },
+                "tax": {
+                    "labels": {
+                        "name": "FAQ categories",
+                        "singular-name": "FAQ categories",
+                        "search-items": "Search FAQ categories",
+                        "all-items": "All FAQ categories",
+                        "edit-item": "Edit FAQ category",
+                        "update-item": "Update FAQ category",
+                        "add-new-item": "Add new FAQ category",
+                        "new-item-name": "New FAQ category name",
+                        "menu-name": "FAQ categories"
+                    }
+                },
+                "page": {
+                    "title": "FAQ Info",
+                    "view": "View FAQ",
+                    "back": "Back to all FAQs"
+                },
+                "error": {
+                    "missing-post-id": "Missing post_id parameter",
+                    "invalid-post": "Invalid FAQ"
+                },
+                "notice": {
+                    "saved": "FAQ info saved"
+                },
+                "card": {
+                    "basic-title": "Basic info",
+                    "basic-hint": "The sort weight controls the position in the list; a smaller number comes first",
+                    "content-title": "FAQ content",
+                    "content-hint": "Saving writes it into the FAQ body; the detail page shows it as-is"
+                },
+                "field": {
+                    "title": "Title",
+                    "title-placeholder": "FAQ question shown in lists and search results",
+                    "sort": "Sort weight"
+                },
+                "savebar": {
+                    "hint": "Saving also updates the body and sort weight"
+                },
+                "button": {
+                    "save": "Save FAQ"
+                }
+            },
+            "manage": {
+                "item-unit": "items",
+                "json-error": "Invalid JSON syntax. Fix it before saving:",
+                "media": {
+                    "choose-image": "Choose image",
+                    "pick-title": "Choose image",
+                    "pick-button": "Use this image",
+                    "custom-url-hint": "A site path such as /contact, or a full URL. The image's own address is cleared when you switch to Custom URL, so just type the new one."
+                }
+            },
+            "page-info": {
+                "js": {
+                    "cert.alt-placeholder": "Image alt text, used for SEO and accessibility",
+                    "cert.anchor": "Anchor ID",
+                    "cert.badge": "Badge text",
+                    "cert.button": "Button text",
+                    "cert.card-title": "Card title",
+                    "cert.category": "Credential category",
+                    "cert.code-err": "The JSON in the code box is invalid. Fix it before switching back to the visual editor.",
+                    "cert.collapse-all": "Collapse all",
+                    "cert.del-confirm": "Delete this certificate?",
+                    "cert.desc": "Description",
+                    "cert.expand-all": "Expand all",
+                    "cert.file": "File URL",
+                    "cert.file-addr": "PDF or other file URL",
+                    "cert.file-placeholder": "PDF or verification page URL",
+                    "cert.group-add": "+ Add group",
+                    "cert.group-del": "Delete this group",
+                    "cert.group-del-confirm": "Delete this group and every certificate in it?",
+                    "cert.group-placeholder": "e.g. Environmental Compliance (EU Standards)",
+                    "cert.group-title": "Group title",
+                    "cert.groups": "Certificate groups",
+                    "cert.header": "Page header",
+                    "cert.hero": "Main certificate (hero card at the top of the page)",
+                    "cert.html-hint": "HTML supported",
+                    "cert.icon": "Icon",
+                    "cert.icon-add": "+ Add icon",
+                    "cert.icon-del": "Delete this icon",
+                    "cert.icon-pick": "Choose",
+                    "cert.icon-relate": "Related certificate ID",
+                    "cert.icon-relate-hint": "Match the certificate anchor ID",
+                    "cert.icons": "Home / About us icons",
+                    "cert.image": "Certificate image",
+                    "cert.item-add": "+ Add certificate",
+                    "cert.item-del": "Delete this certificate",
+                    "cert.json-format-err": "Invalid JSON. Fix it before formatting.",
+                    "cert.json-ok": "✓ JSON is valid",
+                    "cert.link-text": "Link text",
+                    "cert.name": "Certificate name",
+                    "cert.new": "New certificate",
+                    "cert.pdf": "PDF URL",
+                    "cert.pick-file": "Choose file",
+                    "cert.pick-image": "Choose image",
+                    "cert.relate-hint": "Linked to the home page icon",
+                    "cert.report-no": "Report number",
+                    "cert.report-no-hint": "HTML supported, e.g. <strong>Report No.: ...</strong>",
+                    "cert.reset-confirm": "Discard your changes and restore the last saved content?",
+                    "cert.save-err": "The certificates JSON is invalid, so the settings were not saved. Fix the error shown under the code box.",
+                    "cert.schema": "Schema type",
+                    "cert.sort-hint": "Drag the handle on the left to reorder. The front end follows this order after saving.",
+                    "cert.spec-add": "+ Add row",
+                    "cert.spec-del": "Delete this row",
+                    "cert.spec-name-placeholder": "Parameter name, e.g. Certificate No.",
+                    "cert.spec-value-placeholder": "Parameter value, HTML supported",
+                    "cert.specs": "Specifications",
+                    "cert.standard": "Standard text",
+                    "cert.title": "Title",
+                    "cert.verify": "Verification link",
+                    "common.delete": "Delete",
+                    "common.drag": "Drag to reorder",
+                    "common.name": "Name",
+                    "common.url": "Link",
+                    "link.del": "Delete this link",
+                    "media.no-video": "No video selected",
+                    "media.not-loaded": "Media library is not available. Refresh the page and try again.",
+                    "media.pick-file": "Select or upload a file (PDF / Word / Excel)",
+                    "media.pick-image": "Select or upload an image",
+                    "media.pick-video": "Select or upload a video",
+                    "media.use": "Use this file",
+                    "slide.change": "Click to change",
+                    "slide.confirm": "Remove this slide?",
+                    "slide.remove": "Remove this image",
+                    "slide.route": "Link route",
+                    "social.change-icon": "Click to change the icon",
+                    "social.confirm": "Remove this social link?",
+                    "social.pick-icon": "Choose icon"
+                },
+                "menu-title": "Page Info",
+                "notice": {
+                    "no-permission": "Your account cannot make this change, or the page timed out — please refresh and try again",
+                    "saved": "Settings saved",
+                    "saved-cert-invalid": "Settings saved, but the certificates JSON has a format error — check it under \"Structured Data\".",
+                    "reset-done": "Defaults restored"
+                },
+                "image": {
+                    "home-main-title": "Home hero image",
+                    "home-main-hint": "Main visual on the home page",
+                    "video-title": "Video cover",
+                    "video-hint": "Cover for the company intro video",
+                    "product-top-title": "Products page banner",
+                    "product-top-hint": "Banner on the product list page",
+                    "post-top-title": "Posts page banner",
+                    "post-top-hint": "Banner on the news / post page",
+                    "application-top-title": "Applications page banner",
+                    "application-top-hint": "Banner on the applications page; falls back to the Posts banner when empty",
+                    "faq-top-title": "FAQ page banner",
+                    "faq-top-hint": "Banner on the FAQ page; falls back to the Posts banner when empty",
+                    "about-top-title": "About page banner",
+                    "about-top-hint": "Banner on the About page",
+                    "about-culture-title": "About culture image",
+                    "about-culture-hint": "Image on the left of the “Company Culture” block on the About page; leave empty to hide it",
+                    "contact-top-title": "Contact page banner",
+                    "contact-top-hint": "Banner on the Contact page",
+                    "certificates-top-title": "Certificates page banner",
+                    "certificates-top-hint": "Banner on the certificates page"
+                },
+                "video": {
+                    "company-title": "Company intro video (local)",
+                    "custom-bg-title": "Custom section background video",
+                    "none": "No video selected"
+                },
+                "default-image": {
+                    "new-title": "Default post image",
+                    "new-hint": "Used when a news item has no image",
+                    "product-title": "Default product image",
+                    "product-hint": "Used when a product has no image",
+                    "application-title": "Default application image",
+                    "application-hint": "Used when an application has no image",
+                    "faq-title": "Default FAQ image",
+                    "faq-hint": "Used when an FAQ has no image",
+                    "post-title": "Default image for post formats",
+                    "post-hint": "Used when a news item / post has no image"
+                },
+                "page": {
+                    "title": "Page Info",
+                    "hint": "Home slider, page banners, contact details and structured data (saved per language)"
+                },
+                "card": {
+                    "slides-title": "Home slider",
+                    "slides-hint": "Shown in order; each image can link to its own page",
+                    "images-title": "Page images",
+                    "images-hint": "Home hero, video cover and inner page banners",
+                    "default-images-title": "Default images",
+                    "default-images-hint": "Fallback images when a post / product has none; 1:1 squares recommended",
+                    "video-title": "Video",
+                    "video-hint": "You can pick an mp4 from the media library",
+                    "contact-title": "Contact details & copyright",
+                    "contact-hint": "Shared by the footer, the contact page and structured data",
+                    "social-title": "Social media & map",
+                    "social-hint": "Social icons in the header / footer, the map and WhatsApp entry on the contact page",
+                    "schema-title": "Structured Data",
+                    "schema-hint": "Company information used in the site-wide structured data that search engines and social platforms read"
+                },
+                "button": {
+                    "add-image": "+ Add image",
+                    "choose-image": "Choose image",
+                    "remove": "Remove",
+                    "choose-video": "Choose video",
+                    "add-social": "+ Add social link",
+                    "choose-icon": "Choose icon",
+                    "delete": "Delete",
+                    "visual": "Visual",
+                    "code": "Code",
+                    "add-link": "+ Add link",
+                    "format": "Format",
+                    "reset-to-saved": "Reset to saved content",
+                    "save": "Save settings"
+                },
+                "label": {
+                    "change-image": "Click to replace",
+                    "remove-image": "Remove this image",
+                    "drag-sort": "Hold and drag to reorder",
+                    "change-icon": "Click to change the icon"
+                },
+                "field": {
+                    "route": "Click target",
+                    "telephone": "Phone",
+                    "telephone-placeholder": "Public number, incl. country code",
+                    "email": "Email",
+                    "copy-info": "Copyright",
+                    "address": "Company address",
+                    "address-placeholder": "Province / city / district / street / number",
+                    "name": "Name",
+                    "link": "Link",
+                    "map-embed": "Google Maps embed URL",
+                    "map-search": "Google Maps search URL",
+                    "whatsapp-url": "WhatsApp link",
+                    "whatsapp-placeholder": "WhatsApp number, incl. country code",
+                    "whatsapp-url-placeholder": "Auto-generated when empty",
+                    "whatsapp-text": "Default WhatsApp message"
+                },
+                "empty": {
+                    "slides": "No slides yet — click \"Add image\" in the top right to start.",
+                    "social": "No social links yet — click \"Add social link\" in the top right to start.",
+                    "links": "No links yet — use the button below to add one."
+                },
+                "hint": {
+                    "social-map": "Drag the handle on the left to reorder social links; when the icon is empty, a bundled icon is matched by name. When the map and WhatsApp link are empty, they are generated from the default language settings and \"Contact → WhatsApp number\".",
+                    "links-separator-prefix": "Separate multiple links with a semicolon",
+                    "links-separator-suffix": "or a line break; they are merged on save.",
+                    "savebar": "Takes effect on the front end immediately"
+                },
+                "schema": {
+                    "same-as-title": "Profile links",
+                    "same-as-hint": "Company pages on third-party platforms, verification lookup pages and so on",
+                    "cert-title": "Certificate info",
+                    "cert-hint": "Certificates page content and the icons on the home / about pages, four parts in total"
+                },
+                "langbar": {
+                    "current": "Current language:",
+                    "default": "Default language"
+                }
+            },
+            "smtp": {
+                "menu-title": "Email Settings",
+                "notice": {
+                    "no-permission": "Your account cannot make this change, or the page timed out — please refresh and try again",
+                    "saved-all": "\"All languages\" settings saved; any language without its own value uses these",
+                    "saved-lang": "Settings for %1$s saved (%2$d value(s) differ from \"All languages\")",
+                    "same-as-all": "%s matches \"All languages\" exactly and is back to full inheritance"
+                },
+                "page": {
+                    "title": "Email Settings",
+                    "hint": "Sending configuration and abnormal-content blocking for inquiry emails live here. SMTP can be set per language; empty fields fall back to \"All languages\". Changes apply immediately."
+                },
+                "filter": {
+                    "card-title": "Inquiry filtering",
+                    "card-hint": "Keep scripted or spam-like submissions out of your inbox",
+                    "switch": "Block abnormal content from forwarding",
+                    "hint": "When on, inquiries flagged as abnormal are stored but not emailed, and marked as \"not forwarded — abnormal content\". When off, every inquiry in that language is forwarded normally. Set per language; a language without its own value inherits \"All languages\".",
+                    "badge-own": "Set for this language",
+                    "badge-inherit": "Inherits \"All languages\""
+                },
+                "group": {
+                    "smtp": "SMTP settings"
+                },
+                "card": {
+                    "server-title": "Outgoing server",
+                    "server-hint": "SMTP host, port and account from your email provider",
+                    "sender-title": "Sender & recipient",
+                    "sender-hint": "The from address should match the SMTP account, otherwise mail is likely to be flagged as spam; the sender name always uses the site name"
+                },
+                "field": {
+                    "host": "SMTP host",
+                    "port": "Port",
+                    "username": "SMTP username",
+                    "secure": "Encryption",
+                    "password": "SMTP password / app password",
+                    "from": "From address",
+                    "to": "To address",
+                    "to-placeholder": "Mailbox that receives inquiry notifications"
+                },
+                "option": {
+                    "ssl": "SSL (recommended)",
+                    "none": "None"
+                },
+                "label": {
+                    "password-aria": "SMTP password or app password"
+                },
+                "button": {
+                    "show": "Show",
+                    "save": "Save settings"
+                },
+                "hint": {
+                    "password": "Most providers need an app password, not your web login password",
+                    "to": "Defaults to the site admin email",
+                    "savebar-all": "All languages use the new settings right after saving",
+                    "savebar-lang": "Only values that differ from \"All languages\" are stored; clearing a field means inherit",
+                    "editing-lang": "Editing the settings for <strong>%s</strong>: only values that differ from \"All languages\" are stored separately; empty or identical values mean inherit.",
+                    "port-common": "Use the port and encryption method provided by your mail host"
+                },
+                "mail": {
+                    "from-name": "Inquiry"
+                }
+            },
+            "indexnow": {
+                "menu-title": "IndexNow Settings",
+                "notice": {
+                    "no-permission": "Your account cannot make this change, or the page timed out — please refresh and try again",
+                    "saved-all": "\"All languages\" key saved",
+                    "submit-failed": "Submission failed",
+                    "submit-success": "Submitted successfully",
+                    "reset-inherit": "%s now inherits the \"All languages\" key again",
+                    "saved-lang": "Key for %s saved"
+                },
+                "label": {
+                    "all-languages": "All languages",
+                    "key-aria": "IndexNow key",
+                    "key-with-lang": "Key (%s)"
+                },
+                "page": {
+                    "title": "IndexNow Settings",
+                    "hint": "Push site URLs to Bing, Yandex and other search engines instead of waiting for crawlers to find them. Keys are set per language; fill one in and click \"Save settings\" to apply."
+                },
+                "card": {
+                    "key-title": "Key",
+                    "key-hint": "Search engines fetch the key file to verify ownership before accepting pushes; can be set per language",
+                    "submit-title": "Submit URLs"
+                },
+                "button": {
+                    "save": "Save settings",
+                    "get-urls": "Get all URLs",
+                    "submit": "Submit to IndexNow"
+                },
+                "hint": {
+                    "no-key": "No key yet — fill one in and click \"Save settings\".",
+                    "inherit": "Leave it empty or use the same key as \"All languages\" to keep inheriting.",
+                    "savebar": "The key applies right after saving, no need to re-publish posts",
+                    "submit": "IndexNow fetches asynchronously after submission, usually within minutes",
+                    "key-file": "Verification file path: <code>/%1$s.txt</code>. IndexNow reads this address on the first submission.",
+                    "url-list": "One per line or separated by semicolons; only content from \"%s\" is collected",
+                    "published": "%1$s has <strong>%2$d</strong> published item(s). Click \"Get all URLs\" in the top right to fill them in, then delete the ones you do not want to push."
+                },
+                "field": {
+                    "urls": "URL list"
+                },
+                "badge": {
+                    "url-unit": "items"
+                }
+            },
+            "site_paths": {
+                "menu-title": "Site & Paths",
+                "page": {
+                    "title": "Site & Paths",
+                    "hint": "Sets the domain used for the canonical URL that search engines treat as authoritative, and the address prefixes for styles, images and uploads. Everything defaults to native WordPress addresses; a new site usually needs no changes."
+                },
+                "card": {
+                    "target-title": "Target origin",
+                    "target-hint": "The domain used by the page canonical URL; it has nothing to do with other addresses.",
+                    "prefix-title": "URL prefixes",
+                    "prefix-hint": "All default to native WordPress addresses; switch to a custom prefix only when the site really uses a server alias or reverse proxy.",
+                    "nginx-title": "Matching nginx config",
+                    "nginx-hint": "Updates live with the choices above; only items set to Custom with a prefix appear. Copy it into the site server config."
+                },
+                "field": {
+                    "target": "Target domain",
+                    "nginx": "nginx snippet"
+                },
+                "assets": {
+                    "label": "Theme assets",
+                    "desc": "URL prefix for bundled theme files such as CSS / JS / SVG"
+                },
+                "uploads": {
+                    "label": "Media uploads",
+                    "desc": "URL prefix for uploaded images, videos and so on"
+                },
+                "includes": {
+                    "label": "WordPress core assets",
+                    "desc": "Address prefix for the scripts and styles WordPress ships with, for example /includes; change it only when the site uses an alias"
+                },
+                "api": {
+                    "label": "API prefix",
+                    "desc": "URL prefix for front-end requests such as inquiries"
+                },
+                "native": {
+                    "template": "WordPress native",
+                    "core": "WordPress native",
+                    "rest": "WordPress native"
+                },
+                "custom": "Custom prefix",
+                "hint": {
+                    "current": "Current output: <code>%s</code>",
+                    "custom": "Enter your own, starting with /. A full URL also works — only the path is kept. Leave empty to keep the native WordPress address.",
+                    "target-auto": "Leave empty to use the domain the visitor is currently on.",
+                    "target-fixed": "Once set, the canonical URL always uses this domain.",
+                    "target-current": "Currently in effect: <code>%s</code>",
+                    "hreflang-current": "Domain used for hreflang: <code>%s</code>",
+                    "nginx": "Paste into the site's server { } block, then restart nginx.",
+                    "savebar": "Refresh the front end after saving; no need to re-publish content"
+                },
+                "button": {
+                    "save": "Save settings"
+                },
+                "notice": {
+                    "saved": "Settings saved — refresh the front end (Ctrl+F5) to apply.",
+                    "target": "Target origin: %s",
+                    "expired": "The link has expired — refresh the page and try again."
+                },
+                "nginx": {
+                    "root-hint": "# Recommended: rewrite static paths to their real directories; safer than alias, no trailing-slash traps",
+                    "includes": "# WordPress core assets (maps the prefix to the site's own wp-includes folder)",
+                    "assets": "# Theme static assets",
+                    "uploads": "# Uploads directory",
+                    "api": "# API (forwarded to the WordPress REST route; do not change the /wp-json segment)",
+                    "native": "# All paths are native WordPress paths; no extra config needed"
+                }
+            },
+            "assets": {
+                "menu-title": "Asset Updates",
+                "jsdist": {
+                    "card-title": "JS obfuscation (js-dist)",
+                    "card-hint": "Strips comments and redundant whitespace from the scripts in assets/js and writes them to assets/js-dist next to it; the front end then loads that folder. Source files stay untouched and can be rebuilt at any time.",
+                    "badge-on": "Enabled on this site",
+                    "badge-cdn-only": "CDN only",
+                    "switch": "Enable on this site",
+                    "switch-hint": "On: every visit loads js-dist. Off: js-dist is used only when the visit comes through the CDN; direct origin access keeps the original scripts for easier debugging.",
+                    "status-title": "Current state",
+                    "status-dir": "Output directory %s",
+                    "status-files": "%1$d files · %2$s",
+                    "status-ratio": "%1$s → %2$s (size %3$s)",
+                    "status-time": "built %s",
+                    "status-empty": "Not generated yet — use Save and update below to build it from assets/js.",
+                    "hint-rebuild": "A rebuild also removes files whose sources are gone; bump the asset version above so visitors fetch the new files.",
+                    "notice-built": "js-dist built: %1$d files, %2$s → %3$s",
+                    "notice-build-failed": "but js-dist could not be built; check that the assets folder in the theme is writable.",
+                    "notice-fallback": "%d file(s) failed the obfuscation self-check and were only minified (still functional, just not obfuscated)."
+                },
+                "page": {
+                    "title": "Asset Updates",
+                    "hint": "Site-wide custom CSS / JS and the asset version. The front end links to them after saving; change the version to make browsers load the latest files again."
+                },
+                "card": {
+                    "version-title": "Asset version",
+                    "version-hint": "Shared by every theme CSS / JS file. After changing your custom CSS / JS, set a new value here (e.g. 1.0.1) and save so visitors load the new file.",
+                    "code-title": "Custom CSS / JS",
+                    "code-hint": "Paste the code itself, without <link> / <script> tags; it applies site-wide after saving.",
+                    "status-title": "Current references",
+                    "status-hint": "Lists the URLs the front end actually loads; nothing is output when the file is empty."
+                },
+                "field": {
+                    "version": "Version",
+                    "css": "Custom CSS",
+                    "js": "Custom JavaScript"
+                },
+                "hint": {
+                    "version": "Change the version together with the code, or visitors may keep the old file",
+                    "css": "Saving creates assets/css/add-custom.css inside the theme and links it site-wide. Saving an empty box deletes the file.",
+                    "js": "Saving creates assets/js/add-custom.js inside the theme and links it site-wide. Saving an empty box deletes the file.",
+                    "savebar": "Takes effect on the front end right away — no file edits needed"
+                },
+                "status": {
+                    "empty": "Not generated (empty)"
+                },
+                "button": {
+                    "save": "Save and update"
+                },
+                "notice": {
+                    "saved": "Saved. Asset version %s",
+                    "no-permission": "Your account cannot make this change",
+                    "nonce-expired": "This link has expired. Reload the page and try again.",
+                    "write-failed": "Content saved, but the file could not be created. Check that the assets folder inside the theme is writable."
+                },
+                "demo": {
+                    "css": "/* e.g. body { --brand-color: #2271b1; } */",
+                    "js": "// e.g. console.log('custom js ready');"
+                }
+            },
+            "languages": {
+                "page": {
+                    "title": "Languages"
+                },
+                "card": {
+                    "list-title": "Language list",
+                    "delete-hint-before": "Deleting a language only removes it from the list and the front end",
+                    "delete-hint-after": ". Anything you have already written is kept, and comes back when you add the same language code again. At least one language must stay, and one of them has to be set as the default.",
+                    "deleted-restore": ". Add the same code again to bring one back.",
+                    "count-hint": "%d in total; this order is the front-end display order",
+                    "deleted-note": "%d deleted language(s):",
+                    "deleted-sep": ", "
+                },
+                "col": {
+                    "flag": "Flag",
+                    "code": "Language code",
+                    "name": "Display name",
+                    "locale": "Locale",
+                    "locale-tip": "Locale tag, lowercase language_REGION form, e.g. en_us, ru_ru, ja_ja; used by <html lang> and hreflang",
+                    "default": "Default",
+                    "content": "Language content"
+                },
+                "row": {
+                    "drag": "Hold and drag to reorder",
+                    "flag-upload": "Click to upload a flag",
+                    "set-default": "Set as default language",
+                    "auto-template": "Fills in that language’s default texts after saving"
+                },
+                "button": {
+                    "add": "+ Add language",
+                    "edit-content": "Edit content",
+                    "delete": "Delete",
+                    "save": "Save languages"
+                },
+                "savebar": {
+                    "hint": "The front-end language switcher updates right after saving"
+                },
+                "notice": {
+                    "saved": "Language settings saved",
+                    "at-least-one": "Keep at least one language, and language codes must be 2–5 lowercase letters",
+                    "dup-code": "Duplicate language code: %1$s. Each language needs a unique code — fix it and save again.",
+                    "created": "; %d language(s) added, texts follow that language’s built-in defaults",
+                    "invalid-rows": "; %d row(s) had an invalid code (2–5 lowercase letters needed) and were ignored"
+                },
+                "error": {
+                    "permission": "Your account cannot make this change"
+                },
+                "js": {
+                    "dup": "Duplicate language code: %s. Each language needs its own code — fix it and save again.",
+                    "dup-alert": "Duplicate language codes: %s. Each language needs its own code — fix them and save again.",
+                    "last-one": "At least one language must stay, so the last one cannot be deleted.\nIf you really do not need it, add another language first and then delete this one.",
+                    "del-title": "Delete “%s”?",
+                    "del-title-plain": "Delete this language?",
+                    "del-tail": "Once saved, this language leaves the list and the front end. Anything already written is kept and comes back when you add the same language code again.",
+                    "media-fail": "The media library did not open. Refresh the page and try again.",
+                    "media-title": "Choose a flag icon",
+                    "media-button": "Use this image",
+                    "rename": "Changing a language code counts as adding a new language; anything already written under the old code is deleted:",
+                    "rename-confirm": "Continue?"
+                }
+            },
+            "language-content": {
+                "error": {
+                    "no-code": "Missing language code",
+                    "template-empty": "The default texts are empty, so nothing can be applied — please check data-init/data/lang-content.json",
+                    "permission": "Your account cannot make this change",
+                    "json": "The content could not be read — check the format: "
+                },
+                "notice": {
+                    "nothing-to-fill": "Nothing to fill in",
+                    "filled": "Missing fields filled from the template",
+                    "nonce-expired": "The link has expired — refresh the page and try again",
+                    "overwritten": "Overwrote %d group(s) with the default texts",
+                    "applied": "Applied the default texts to %d group(s)",
+                    "saved-count": "Saved %d group(s)"
+                },
+                "confirm": {
+                    "fill-template": "Fill the form with the built-in texts? Nothing is applied until you click Save."
+                },
+                "group": {
+                    "all": "All content",
+                    "other": "Other"
+                },
+                "tabs": {
+                    "all": "All languages",
+                    "aria-label": "Choose language"
+                },
+                "menu-title": "Language content",
+                "page": {
+                    "title": "Language content"
+                },
+                "mode": {
+                    "aria-label": "Edit mode"
+                },
+                "json": {
+                    "card-title": "Full JSON",
+                    "card-hint-before": "Same structure as the built-in content template",
+                    "card-hint-after": "; saving applies the whole set to this language",
+                    "foot-hint-before": "Only groups that exist in the template are saved; anything starting with ",
+                    "foot-hint-after": " is ignored."
+                },
+                "tag": {
+                    "delete": "Delete"
+                },
+                "savebar": {
+                    "hint": "The front end of that language updates right after saving"
+                },
+                "stats": {
+                    "summary": "%1$d groups · %2$d/%3$d fields filled",
+                    "updated": "· last saved %s"
+                },
+                "card": {
+                    "count": "%d groups"
+                }
+            },
+            "slogans": {
+                "menu-title": "Admin Notices",
+                "page": {
+                    "title": "Admin Notices",
+                    "hint": "Every admin notice is configured here and applies immediately after saving"
+                },
+                "mode": {
+                    "visual": "Visual editor",
+                    "json": "JSON mode"
+                },
+                "button": {
+                    "reset": "Restore defaults",
+                    "save": "Save notices"
+                },
+                "json": {
+                    "card-title": "Notices JSON",
+                    "card-hint": "One key per notice; ",
+                    "card-hint-mid": " set to ",
+                    "card-hint-tail": " hides it on the page",
+                    "foot-hint": "Overrides the built-in notices immediately; removing one falls back to the default text."
+                },
+                "card": {
+                    "enabled": "Enabled",
+                    "count": "%d notice(s)"
+                },
+                "field": {
+                    "type": "Type",
+                    "title": "Title",
+                    "title-optional": "Optional",
+                    "text": "Text",
+                    "preview": "Preview"
+                },
+                "preview": {
+                    "fallback-type": "Notice"
+                },
+                "savebar": {
+                    "hint": "Applies immediately, no other settings need refreshing"
+                },
+                "notice": {
+                    "reset-done": "Restored the bundled default notices",
+                    "nonce-expired": "The link has expired — refresh the page and try again",
+                    "saved-count": "Saved %d notice(s)"
+                },
+                "error": {
+                    "permission": "Your account cannot make this change",
+                    "json": "The content could not be read — check the format: "
+                },
+                "confirm": {
+                    "reset": "Restore the bundled default notices? Your changes will be lost."
+                },
+                "type": {
+                    "info": "Notice",
+                    "warning": "Warning",
+                    "danger": "Danger",
+                    "success": "Success"
+                }
+            },
+            "monitor": {
+                "menu-title": "Monitoring",
+                "page": {
+                    "title": "Monitoring",
+                    "hint": "Clarity and gtag settings, plus which event fires when. The front-end script only reads this configuration, so no ID is hardcoded any more."
+                },
+                "card": {
+                    "switch-title": "Switches",
+                    "switch-hint": "This site, cookie consent and site SEO are independent switches; combine them as needed. Which tracking scripts load is decided only by the Clarity and Google switches below.",
+                    "clarity-title": "Microsoft Clarity",
+                    "clarity-hint": "Clarity only records sessions and heatmaps. It does not use gtag, has no conversions and sends no custom events, so it is configured on its own.",
+                    "google-title": "Google (gtag configuration)",
+                    "google-hint": "The GA4 property, Google Ads, Google Tag and Tag Manager containers all share the same gtag configuration: the page loads gtag.js once, then calls gtag('config', id) for each ID below. No conversion label is needed here.",
+                    "event-title": "Event sending",
+                    "event-hint": "Each event has one type: GA4 record sends the event name; Ads conversion sends conversion with the Google Ads send_to value. Pick \"Default\" as the source to cover every source; an exact source wins."
+                },
+                "field": {
+                    "clarity-id": "Project ID",
+                    "clarity-on": "Enable Clarity",
+                    "gtag-id": "Config ID",
+                    "google-on": "Enable Google tracking",
+                    "trigger": "Trigger",
+                    "source": "Traffic source",
+                    "kind": "Type",
+                    "event": "Event name",
+                    "target": "Send to (send_to)",
+                    "site": "Track visits to this site",
+                    "seo": "Site SEO",
+                    "consent": "Require cookie consent"
+                },
+                "kind": {
+                    "ga4": "GA4 record",
+                    "ads": "Ads conversion"
+                },
+                "trigger": {
+                    "inquiry": "Inquiry submitted",
+                    "email-click": "Email clicked"
+                },
+                "source": {
+                    "default": "Default (all sources)",
+                    "google-ads": "Google Ads",
+                    "google-seo": "Google organic",
+                    "bing-ads": "Bing Ads",
+                    "bing-seo": "Bing organic",
+                    "baidu-ads": "Baidu Ads",
+                    "baidu-seo": "Baidu organic",
+                    "facebook-ads": "Facebook Ads",
+                    "tiktok-ads": "TikTok Ads"
+                },
+                "button": {
+                    "add-gtag": "Add config",
+                    "add-event": "Add event",
+                    "save": "Save settings",
+                    "delete": "Remove this row"
+                },
+                "badge": {
+                    "on": "On · %d scripts",
+                    "off": "Off"
+                },
+                "notice": {
+                    "saved": "Monitoring settings saved.",
+                    "expired": "The page expired. Please save again."
+                },
+                "sub": {
+                    "gtag": "gtag configuration"
+                },
+                "gtag-empty": "No gtag configuration yet. Use \"Add config\" below to start.",
+                "event-empty": "No event sending yet. Use \"Add event\" below to start.",
+                "hint": {
+                    "clarity-id": "The project ID from Clarity under Settings → Overview, ten letters and digits.",
+                    "gtag": "One ID per row; the page calls gtag('config', id) for each of them. G- is a GA4 property, AW- is Google Ads, GT- is a Google tag and GTM- is a Tag Manager container (the container loads gtm.js separately and its events are configured in Tag Manager). Conversion labels belong to Event sending, not here.",
+                    "event": "A GA4 record sends the event name (for example generate_lead); an Ads conversion always sends conversion with the Google Ads send_to value, for example AW-XXXXXXXXXX/XXXXXXXXXX.",
+                    "savebar": "Takes effect immediately after saving; no asset rebuild needed.",
+                    "site": "With Clarity or Google tracking enabled, turning this switch off means only visitors coming through the CDN are tracked; direct traffic to the origin (including local debugging) is ignored.",
+                    "consent": "Off = consent assumed, scripts load with the page. On = the cookie notice appears first and scripts load only after the visitor agrees.",
+                    "seo": "When off, the origin outputs noindex, follow and robots.txt becomes Disallow: /; requests through the CDN are still crawlable, so the live site keeps its indexing.",
+                    "clarity-on": "When off, the Clarity script is not loaded and no sessions or heatmaps are recorded.",
+                    "google-on": "When off, none of the gtag configurations loads. The IDs are kept and come back when switched on again."
+                }
+            },
+            "inquiry": {
+                "menu-title": "Inquiries",
+                "page": {
+                    "title": "Inquiries",
+                    "total": "<strong>%s</strong> in total",
+                    "position": "Page %1$s of %2$s",
+                    "summary": "%1$s record(s), %2$s per page"
+                },
+                "filter": {
+                    "label": "Languages"
+                },
+                "col": {
+                    "customer": "Customer",
+                    "contact": "Contact",
+                    "message": "Message",
+                    "source": "Source",
+                    "time": "Time"
+                },
+                "row": {
+                    "lang-title": "Language / Region",
+                    "copy-email": "Copy email",
+                    "copy-phone": "Copy phone",
+                    "show-full": "Show full text",
+                    "show-less": "Show less",
+                    "type-title": "Type",
+                    "keyword-title": "Keywords",
+                    "empty": "No inquiries yet"
+                },
+                "pager": {
+                    "prev": "Previous",
+                    "next": "Next"
+                },
+                "mail": {
+                    "subject": "New website inquiry",
+                    "subtitle": "A new inquiry was submitted on the website",
+                    "preview": "New inquiry from %s",
+                    "name": "Contact",
+                    "email": "Email",
+                    "telephone": "Phone",
+                    "message": "Message",
+                    "footer": "From %1$s · %2$s"
+                }
+            },
+            "multilang": {
+                "menu": {
+                    "title": "Languages"
+                },
+                "column": {
+                    "lang": "Languages",
+                    "unset": "Not set",
+                    "nav": "Navigation",
+                    "nav-in": "Show",
+                    "nav-out": "Hidden",
+                    "nav-add": "Add to navigation",
+                    "nav-remove": "Remove from navigation",
+                    "nav-draft": "Appears after publishing",
+                    "nav-denied": "You are not allowed to change the navigation state of this page."
+                },
+                "filter": {
+                    "aria-label": "Filter by language",
+                    "all": "All languages",
+                    "default-suffix": "(default)"
+                },
+                "picker": {
+                    "keep": "— No change —"
+                },
+                "field": {
+                    "lang": "Languages"
+                },
+                "term-lang": {
+                    "hint": "Which language this category belongs to. It is only listed on pages of that language."
+                },
+                "panel": {
+                    "hint": "Which language this content belongs to. It only shows under that language's URLs.",
+                    "foot-new": "After saving it belongs to this language.",
+                    "add": "Add",
+                    "preview": "Preview the %2$s site"
+                },
+                "bar": {
+                    "hint": "Language of this content; click to switch",
+                    "all": "All languages",
+                    "default": "Default language"
+                },
+                "menu-bar": {
+                    "title": "Edit language",
+                    "tip": "\"Add menu items\" only lists content in this language"
+                },
+                "menu-item": {
+                    "default": "Default"
+                },
+                "error": {
+                    "permission": "Your account cannot make this change",
+                    "missing-post-id": "Missing post_id parameter",
+                    "missing-param": "Missing parameters",
+                    "bad-lang": "Unknown language",
+                    "source-missing": "Content to copy not found",
+                    "post-only": "Use the \"Add\" button to create a language version"
+                },
+                "action": {
+                    "edit-version": "Edit the %s version",
+                    "add-version": "Add a %s version",
+                    "new-version": "Create a %s version from the current content"
+                },
+                "label": {
+                    "untitled": "Untitled"
+                },
+                "default-title": {
+                    "post": "New Post",
+                    "product": "New Product",
+                    "application": "New Application",
+                    "faq": "New FAQ"
+                },
+                "tax": {
+                    "name": "Content language"
+                }
+            },
+            "list-add": "+ Add item",
+            "list-delete": "Delete",
+            "list-drag": "Hold and drag to reorder",
+            "list-empty": "Nothing yet — click \"Add item\" to start",
+            "list-lines": "One per line",
+            "list-count": "items",
+            "tag-hint": "Press Enter to add, click × to remove",
+            "tag-placeholder": "Type and press Enter to add",
+            "file-hint": "Image / file",
+            "file-pick": "Choose file",
+            "file-clear": "Remove",
+            "file-none": "None selected",
+            "file-placeholder": "Filled in after choosing a file; you can also type a path",
+            "mode-visual": "Visual",
+            "mode-json": "Code",
+            "fill-template": "Fill with default texts",
+            "save": "Save language content",
+            "menu": {
+                "name": "Osiera Menu"
+            },
+            "data_init": {
+                "menu-title": "Starter data",
+                "page": {
+                    "title": "Starter data",
+                    "hint": "Import a reference set of demo data: languages, pages, menu, taxonomies, UI copy, plus sample products / news / applications / FAQ. Everything can be edited or deleted afterwards; site settings stay untouched."
+                },
+                "state": {
+                    "pending": "Not imported",
+                    "importing": "Importing",
+                    "done": "Imported",
+                    "failed": "Import failed",
+                    "dismissed": "Dismissed for now",
+                    "disabled": "Permanently disabled",
+                    "hint-pending": "No starter data yet: the front end only has the theme skeleton, with no demo copy, images or content. Importing a demo set is the quickest way to see how each block works.",
+                    "hint-importing": "Import in progress, please keep this page open. A remote source downloads images, usually takes around ten seconds.",
+                    "hint-done": "Starter data imported. The demo content is only a reference and can be edited freely; importing again skips anything that already exists.",
+                    "hint-failed": "The last import did not finish, see the reason below. Fix the data address and retry, or disable importing permanently.",
+                    "hint-dismissed": "Dismissed for now. The notice will show again next time you open the admin. Use the button above to import, or “Disable importing” to stop the reminder.",
+                    "hint-disabled": "Importing is permanently disabled: no notices and no automatic fetching. Use \"Re-enable\" below to restore it.",
+                    "done-at": "Last import: %s"
+                },
+                "card": {
+                    "source-title": "Data source",
+                    "source-hint": "Starter data lives in a folder, either a local directory or a remote URL. A wrong address makes the import fail; save a new one and retry.",
+                    "import-title": "Import",
+                    "import-hint": "The import runs once, do not reload the page while it runs.",
+                    "close-title": "Notice and disabling",
+                    "close-hint": "Dismissing only hides the notice. Disabling permanently stops notices and automatic fetching.",
+                    "stats-title": "Last import result",
+                    "stats-hint": "Each row counts newly created items; existing ones are skipped."
+                },
+                "field": {
+                    "url": "Data address (data_init_url)"
+                },
+                "hint": {
+                    "url": "Accepts a theme-relative path (data-init), a site-root path (/wp-content/themes/osiera/data-init/), a Windows absolute path, or an http(s) URL. Leave empty to use the theme default.",
+                    "savebar": "Save the address first, then click \"Import starter data\".",
+                    "import-busy": "The import keeps the server busy for a while, please wait for the completion message."
+                },
+                "current": {
+                    "title": "Resolved to",
+                    "empty": "(not set, using the theme data-init)",
+                    "exists": "Folder exists",
+                    "missing": "Folder missing",
+                    "remote": "Remote URL",
+                    "hint": "A remote URL must be reachable from this server; local and private addresses are connected directly, bypassing system proxies."
+                },
+                "button": {
+                    "probe": "Check address",
+                    "save": "Save address",
+                    "import": "Import starter data",
+                    "reimport": "Import again",
+                    "dismiss": "Dismiss notice",
+                    "disable": "Disable importing",
+                    "enable": "Re-enable importing",
+                    "go": "Go to starter data",
+                    "never": "Disable permanently"
+                },
+                "import": {
+                    "what": "Imports: languages, pages, menu, taxonomies, UI copy, page info, plus sample products / news / applications / FAQ.",
+                    "safe": "Existing content is never overwritten: items with the same slug and language are skipped, and re-importing creates no duplicates.",
+                    "site-name": "Site title, timezone and date format are not changed here; set them in Settings → General.",
+                    "alt": "Alt text for images and videos comes from data/assets-alt.json (keyed by asset path). Anything not listed falls back to the file name; alt text edited by hand is never overwritten."
+                },
+                "error": {
+                    "title": "Last import failed",
+                    "tip": "Check that the data address is reachable: a local folder must exist, a remote one must serve …/data/languages.json. Save the fix, then click \"Import again\".",
+                    "disabled": "Importing is permanently disabled. Re-enable it below first.",
+                    "busy": "Another import is already running, please try again later.",
+                    "forbidden": "You are not allowed to perform this action.",
+                    "unknown": "The import did not finish, check the data address and retry.",
+                    "network": "No response from the server, it may have timed out. Please retry.",
+                    "not-found": "data/languages.json could not be read from: %s",
+                    "remote-hint": "The remote URL must be reachable from this server; local and private addresses are connected directly, bypassing system proxies."
+                },
+                "probe": {
+                    "checking": "Checking…",
+                    "ok": "Address is reachable, %d languages found."
+                },
+                "progress": {
+                    "importing": "Importing, please keep this page open…",
+                    "stage-lang": "Importing languages and UI copy…",
+                    "stage-page": "Creating pages and menu…",
+                    "stage-term": "Creating taxonomies…",
+                    "stage-content": "Importing products / news / applications / FAQ…",
+                    "stage-media": "Importing images and icons…",
+                    "stage-finish": "Finishing up…",
+                    "reload": "Reload the front end to see the imported content."
+                },
+                "notice": {
+                    "saved": "Data address saved.",
+                    "dismissed": "Notice dismissed for now. It will show again next time you open the admin; you can still import manually anytime.",
+                    "disabled": "Importing permanently disabled, no more notices.",
+                    "enabled": "Importing re-enabled.",
+                    "expired": "The page expired, please retry.",
+                    "done": "Starter data imported.",
+                    "themes-title": "Osiera starter data: ",
+                    "themes-pending": "not imported yet. Importing a demo set shows how each block works; you can also disable it permanently.",
+                    "themes-failed": "the last import failed, the data address may need fixing."
+                },
+                "stat": {
+                    "languages": "Languages (new)",
+                    "pages": "Pages (new)",
+                    "terms": "Taxonomies (new)",
+                    "menu": "Menu items (new)",
+                    "lang-content": "Copy groups (written)",
+                    "page-info": "Page info (written)",
+                    "product": "Products (new)",
+                    "post": "News (new)",
+                    "application": "Applications (new)",
+                    "faq": "FAQ (new)",
+                    "skipped": "Skipped (already exists)"
+                }
+            }
+        },
+        "ui_scopes": {
+            "application-info": {
+                "label": "Application Info",
+                "file": "tables/application.php"
+            },
+            "faq-info": {
+                "label": "FAQ Info",
+                "file": "tables/FAQ.php"
+            },
+            "indexnow": {
+                "label": "IndexNow Settings",
+                "file": "tables/IndexNow.php"
+            },
+            "monitor": {
+                "label": "Monitoring",
+                "file": "tables/monitor.php"
+            },
+            "inquiry": {
+                "label": "Inquiries",
+                "file": "tables/inquiry.php"
+            },
+            "language-content": {
+                "label": "Language content",
+                "file": "tables/language-content.php"
+            },
+            "languages": {
+                "label": "Language list",
+                "file": "tables/languages.php"
+            },
+            "multilang": {
+                "label": "Multilingual: language column / filter / editor panel",
+                "file": "inc/multilang/*.php"
+            },
+            "news": {
+                "label": "Post Info",
+                "file": "tables/news.php"
+            },
+            "page-info": {
+                "label": "Page Info",
+                "file": "tables/page-info.php"
+            },
+            "products": {
+                "label": "Product Info",
+                "file": "tables/products.php"
+            },
+            "slogans": {
+                "label": "Admin Notices",
+                "file": "tables/admin-slogans.php"
+            },
+            "smtp": {
+                "label": "Email Settings",
+                "file": "tables/smtp.php"
+            },
+            "common": {
+                "label": "Shared: page header / publish button / version bar",
+                "file": "tables/admin-info-common.php"
+            },
+            "form": {
+                "label": "Language content form controls (flat top-level keys: list-* / tag-* / file-* / mode-*)",
+                "file": "tables/language-content.php"
+            }
+        }
+    },
+    "settings": {
+        "smtp": {
+            "host": "",
+            "port": "",
+            "username": "",
+            "password": "",
+            "secure": "ssl",
+            "from": "",
+            "to": ""
+        },
+        "indexnow": {
+            "index_now_key": ""
+        },
+        "assets": {
+            "warning-icon": ""
+        }
+    },
+    "slogan_labels": {
+        "language-content": "Language content page",
+        "language-content-json": "Language content · JSON mode",
+        "admin-slogans": "Admin notices page",
+        "admin-slogans-json": "Admin notices · JSON mode"
+    },
+    "slogans": {
+        "language-content": {
+            "type": "info",
+            "title": "",
+            "text": "You are editing the full language pack for this language; it applies to the front end right after saving. A field left empty falls back to that language’s default texts or the default language, so you do not need to fill in every row.",
+            "enabled": true
+        },
+        "language-content-json": {
+            "type": "danger",
+            "title": "Editing JSON directly is risky",
+            "text": "Saving the full JSON replaces all texts for this language: syntax errors block the save, and removed keys fall back to the default texts. Copy it somewhere first, or switch to visual mode to check the structure.",
+            "enabled": true
+        },
+        "admin-slogans": {
+            "type": "info",
+            "title": "",
+            "text": "Every admin notice is configured here: turn one off and that page simply stops showing it — nothing else breaks.",
+            "enabled": true
+        },
+        "admin-slogans-json": {
+            "type": "warning",
+            "title": "",
+            "text": "One notice maps to one key in the JSON and only works when the key matches the one the page calls; type is info / warning / danger / success.",
+            "enabled": true
+        }
+    }
+}

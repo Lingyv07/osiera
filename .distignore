@@ -1,0 +1,21 @@
+# Used by `wp dist-archive .` to build a clean installable zip.
+# One pattern per line; matches paths relative to the theme root.
+.git
+.github
+.gitignore
+.gitattributes
+.distignore
+backup
+docs
+node_modules
+vendor
+build
+dist
+README.md
+CHANGELOG.md
+CONTRIBUTING.md
+SECURITY.md
+*.zip
+*.log
+.DS_Store
+Thumbs.db

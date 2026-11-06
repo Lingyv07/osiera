@@ -1,0 +1,26 @@
+.application-content-desc {
+    line-height: 25px;
+    padding: 0 10px;
+}
+.article-date-wrap {
+    display: flex;
+    justify-content: end;
+}
+.article-up-date, .article-create-date {
+    padding: 15px;
+    color: var(--bg-color-acce);
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    font-weight: bold;
+}
+.article-up-date img, .article-create-date img {
+    height: 25px;
+    vertical-align: bottom;
+    margin-right: 5px;
+}
+.application-image-main, .application-image-main img {
+    display: none;
+    visibility: hidden;
+    overflow: hidden;
+}

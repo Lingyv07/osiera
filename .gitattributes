@@ -1,0 +1,38 @@
+# Normalise line endings so the theme behaves the same on Windows, macOS and Linux
+* text=auto eol=lf
+
+*.php text
+*.css text
+*.js text
+*.json text
+*.po text
+*.pot text
+*.md text
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.mp4 binary
+*.webm binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.eot binary
+*.mo binary
+*.zip binary
+*.pdf binary
+
+# Keep developer-only files out of `git archive` / release packages
+.github/        export-ignore
+backup/         export-ignore
+docs/           export-ignore
+.gitignore      export-ignore
+.gitattributes  export-ignore
+.distignore     export-ignore
+CONTRIBUTING.md export-ignore
+CHANGELOG.md    export-ignore
+README.md       export-ignore

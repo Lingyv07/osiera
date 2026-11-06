@@ -1,0 +1,133 @@
+.frame-top-title {
+    font-size: 45px;
+}
+.fixed-wrap {
+    position: fixed;
+}
+.absolute-wrap {
+    position: absolute;
+}
+
+.applications-list-wrap {
+    margin-top: 15px;
+}
+
+.applications-info-wrap-box {
+    display:  flex;
+    flex-wrap: wrap;
+}
+.applications-info-wrap-box li {
+    width: 25%;
+    padding: 10px;
+}
+.application-info-item {
+    height: 100%;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+    transition: .3s;
+    border-radius: 5px;
+}
+.application-info-item-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    padding: 3%;
+}
+.application-info-item-image img {
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+    border-radius: 5px;
+}
+.application-info-item-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: .3s;
+    color: var(--text-color-drak2);
+    height: 60px;
+    width: 100%;
+    padding: 0 3px;
+}
+.application-info-item:hover {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .15);
+}
+.application-info-item:hover .application-info-item-image img {
+    transform: scale(1.05);
+}
+.application-info-item:hover .application-info-item-title {
+    color: var(--bg-color);
+}
+.application-info-item-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px;
+    color: var(--text-color-lt2);
+    margin-top: 5px;
+}
+.layout-list + .applications-list-wrap .applications-info-wrap-box {
+    flex-direction: column;
+}
+.layout-list + .applications-list-wrap .applications-info-wrap-box li {
+    width: 100%;
+}
+.layout-list + .applications-list-wrap .applications-info-wrap-box .application-info-item {
+    display: flex;
+}
+.layout-list + .applications-list-wrap .applications-info-wrap-box .application-info-item .application-info-item-description {
+    -webkit-line-clamp: 4;
+}
+.layout-list + .applications-list-wrap .applications-info-wrap-box .application-info-item .application-info-item-desc {
+    flex: 1;
+    padding-left: 10px;
+    overflow: hidden;
+}
+.layout-list + .applications-list-wrap .applications-info-wrap-box .application-info-item-image {
+    height: 150px;
+    width: auto;
+    padding: 5px;
+}
+
+@media (max-width: 1650px) {
+    .applications-info-wrap-box li {
+        width: 33.33%;
+    }
+}
+@media (max-width: 1300px) {
+    .applications-info-wrap-box li {
+        width: 50%;
+    }
+}
+@media (max-width: 980px) {
+    .frame-wrap .frame-top-title {
+        font-size: 30px;
+    }
+    .applications-info-wrap-box li {
+        width: 33.33%;
+    }
+    .application-info-item:hover {
+        box-shadow: none;
+    }
+    .application-info-item:hover .application-info-item-image img {
+        transform: scale(1);
+    }
+    .application-info-item:hover .application-info-item-title {
+        color: var(--text-color-drak2);
+    }
+}
+@media (max-width: 680px) {
+    .applications-info-wrap-box li {
+        width: 50%;
+    }
+}
+@media (max-width: 450px) {
+    .applications-info-wrap-box li {
+        width: 100%;
+    }
+}

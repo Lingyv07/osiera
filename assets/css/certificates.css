@@ -1,0 +1,219 @@
+.frame-content-box-wrap {
+    display: block;
+}
+
+.frame-wrap .frame-top-wrap {
+    height: 20vw;
+}
+.frame-wrap .frame-top-title {
+    font-size: 45px;
+}
+
+.cert-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+.cert-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.cert-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #111;
+}
+.cert-header p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.image-preview-a {
+    display: block;
+    width: 100%;
+    aspect-ratio: 7 / 10;
+}
+
+.iso-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 60px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    scroll-margin-top: 80px;
+}
+.iso-image {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 40px;
+}
+.iso-image img {
+    width: 100%;
+    min-height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+.iso-image img:hover {
+    transform: scale(1.02);
+}
+.iso-content {
+    flex: 1;
+    min-width: 300px;
+}
+.badge {
+    background: var(--bg-color);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.iso-content h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+.cert-specs li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+    list-style: none;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+.btn-download {
+    display: inline-block;
+    background: var(--bg-color);
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.btn-download:hover {
+    background: var(--bg-color-acce);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent);
+    padding-left: 15px;
+}
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+.cert-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px 20px 30px 20px;
+    text-align: center;
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    scroll-margin-top: 80px;
+}
+.cert-card:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.cert-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.cert-card h4 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+.cert-standard {
+    color: var(--text-color-light2);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+.report-no {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+.cert-desc {
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.text-link {
+    color: var(--bg-color-light);
+    font-weight: bold;
+    text-decoration: none;
+}
+.text-link:hover {
+    text-decoration: underline;
+}
+
+.a-strong {
+    color: var(--bg-color);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+@media (max-width: 980px) {
+    .frame-wrap .frame-top-wrap {
+        height: 42vw;
+    }
+    .frame-wrap .frame-top-title {
+        font-size: 30px;
+    }
+    .cert-page-container {
+        padding: 0;
+    }
+    .cert-header {
+        margin-bottom: 20px;
+    }
+    .cert-header h1 {
+        font-size: 1.5rem;
+    }
+    .iso-card {
+        flex-direction: column;
+        padding: 0;
+        margin-bottom: 40px;
+    }
+    .iso-image {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    .cert-grid {
+        grid-template-columns: 1fr;
+        margin-bottom: 20px;
+    }
+    .iso-content h2 {
+        font-size: 1.4rem;
+    }
+    .section-title {
+        font-size: 1.3rem;
+    }
+    .btn-download {
+        width: 80%;
+        text-align: center;
+        margin-top: 10px;
+        margin-left: 10%;
+    }
+}

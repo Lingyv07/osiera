@@ -1,0 +1,1744 @@
+{
+    "version": "1",
+    "name": "后台信息系统配置",
+    "desc": "后台界面相关：分组与字段的中文标签、各类设置页的默认值、页面提示标语、特殊输入类型。语言包本身在 data-init/data/lang-content.json。",
+    "meta": {
+        "groups": [
+            {
+                "key": "base",
+                "label": "页头与页脚",
+                "desc": "全站通用导航、联系方式与留言框文案",
+                "sections": [
+                    "header",
+                    "footer"
+                ]
+            },
+            {
+                "key": "home",
+                "label": "首页",
+                "desc": "首屏、产品/应用区块、视频区与首页 SEO",
+                "sections": [
+                    "home"
+                ]
+            },
+            {
+                "key": "lists",
+                "label": "列表页",
+                "desc": "产品、新闻、应用、FAQ 列表页标题与 SEO",
+                "sections": [
+                    "product",
+                    "news",
+                    "applications",
+                    "faq"
+                ]
+            },
+            {
+                "key": "about",
+                "label": "关于我们",
+                "desc": "公司简介、数据、优势、企业文化与规格说明",
+                "sections": [
+                    "about-us"
+                ]
+            },
+            {
+                "key": "pages",
+                "label": "其它页面",
+                "desc": "联系页、证书页、隐私政策与搜索结果页",
+                "sections": [
+                    "contact-us",
+                    "certificates",
+                    "privacy-policy",
+                    "search"
+                ]
+            },
+            {
+                "key": "system",
+                "label": "系统提示",
+                "desc": "按钮、404、表单校验提示与 Cookie 弹窗",
+                "sections": [
+                    "functional",
+                    "not-found",
+                    "message",
+                    "cookie"
+                ]
+            },
+            {
+                "key": "seo",
+                "label": "结构化数据",
+                "desc": "JSON-LD Organization 字段",
+                "sections": [
+                    "organization"
+                ]
+            }
+        ],
+        "sections": {
+            "header": "页头",
+            "footer": "页脚",
+            "home": "首页",
+            "product": "产品",
+            "news": "新闻",
+            "applications": "应用",
+            "faq": "常见问题",
+            "about-us": "关于我们",
+            "contact-us": "联系页",
+            "certificates": "证书页",
+            "privacy-policy": "隐私政策",
+            "search": "搜索页",
+            "functional": "功能按钮",
+            "not-found": "404 页",
+            "message": "提示信息",
+            "cookie": "Cookie 弹窗",
+            "organization": "结构化数据"
+        },
+        "fields": {
+            "header.search-placeholder": "搜索框占位文字",
+            "header.call-now": "立即致电",
+            "header.select-language-description": "选择语言提示",
+            "header.social-media-description": "社媒区标题",
+            "header.search-label": "搜索框无障碍说明",
+            "footer.company": "公司名称",
+            "footer.address-title": "地址标题",
+            "footer.telephone-title": "电话标题",
+            "footer.email-title": "邮箱标题",
+            "footer.copy-success": "复制成功提示",
+            "footer.contact-us": "联系我们标题",
+            "footer.send": "发送按钮",
+            "footer.name-placeholder": "姓名输入提示",
+            "footer.email-placeholder": "邮箱输入提示",
+            "footer.telephone-placeholder": "电话输入提示",
+            "footer.inquiry-placeholder": "询盘内容输入提示",
+            "footer.message-success": "提交成功提示",
+            "footer.message-error": "提交失败提示",
+            "footer.home": "首页文本",
+            "footer.products": "产品文本",
+            "footer.news": "新闻文本",
+            "footer.message": "留言文本",
+            "footer.about-us": "关于我们文本",
+            "footer.contact": "联系文本",
+            "footer.company-desc": "公司简介（页脚）",
+            "footer.street-address": "街道地址",
+            "footer.address-region": "省 / 州",
+            "footer.address-locality": "城市",
+            "footer.brand": "品牌名",
+            "footer.whats-app-title": "WhatsApp 标题",
+            "footer.copy-email": "复制邮箱提示",
+            "home.our-products": "产品区标题",
+            "home.our-products-desc": "产品区描述",
+            "home.applicable": "应用区标题",
+            "home.applicable-desc": "应用区描述",
+            "home.custom-title": "定制区标题",
+            "home.custom-desc": "定制区描述",
+            "home.custom-btn-text": "定制按钮文字",
+            "home.about-us-more": "了解更多关于我们",
+            "home.latest-news": "最新新闻标题",
+            "home.faq": "常见问题标题",
+            "home.video-title": "视频区标题",
+            "home.video-desc": "视频区描述",
+            "home.title": "首页 SEO 标题",
+            "home.description": "首页 SEO 描述",
+            "home.page-title": "首页主标题",
+            "home.summary-subtitle": "首页副标题",
+            "product.inquire-new": "询价按钮文字",
+            "product.product-categories": "产品分类标题",
+            "product.new-products": "新产品标题",
+            "product.related-products": "相关产品标题",
+            "product.read-more": "阅读更多",
+            "product.total-pages": "共几页",
+            "product.title": "列表页 SEO 标题",
+            "product.description": "列表页 SEO 描述",
+            "product.breadcrumb-list-name": "面包屑名称",
+            "product.warning-icon": "产品提示图标",
+            "news.title": "新闻页 SEO 标题",
+            "news.description": "新闻页 SEO 描述",
+            "news.breadcrumb-list-name": "新闻面包屑",
+            "applications.title": "应用页 SEO 标题",
+            "applications.description": "应用页 SEO 描述",
+            "applications.breadcrumb-list-name": "应用面包屑",
+            "faq.title": "FAQ 页 SEO 标题",
+            "faq.description": "FAQ 页 SEO 描述",
+            "faq.breadcrumb-list-name": "FAQ 面包屑",
+            "about-us.title": "关于页 SEO 标题",
+            "about-us.desc": "关于页 SEO 描述",
+            "about-us.summary-subtitle": "关于页副标题",
+            "about-us.video-summary-desc": "视频说明",
+            "about-us.summary-info-items.title": "数据项名称",
+            "about-us.summary-info-items.value": "数据项数值",
+            "about-us.company-overview-items.title": "公司概况小标题",
+            "about-us.company-overview-items.text": "公司概况正文",
+            "about-us.our-strengths": "优势区标题",
+            "about-us.our-strengths-items.icon": "优势图标",
+            "about-us.our-strengths-items.text": "优势说明",
+            "about-us.company-culture": "企业文化标题",
+            "about-us.company-culture-items.title": "文化项标题",
+            "about-us.company-culture-items.text": "文化项说明",
+            "about-us.need-to-know": "规格说明标题",
+            "about-us.need-to-know-items.title": "规格项标题",
+            "about-us.need-to-know-items.text": "规格项说明",
+            "contact-us.title": "联系页 SEO 标题",
+            "contact-us.description": "联系页 SEO 描述",
+            "certificates.title": "证书页 SEO 标题",
+            "certificates.description": "证书页 SEO 描述",
+            "privacy-policy.title": "隐私政策 SEO 标题",
+            "privacy-policy.description": "隐私政策 SEO 描述",
+            "search.title": "搜索结果页标题",
+            "functional.inquiry.title": "留言区标题",
+            "functional.inquiry.point-message": "留言区引导语",
+            "functional.page": "「页」字",
+            "not-found.not-found": "404 标题",
+            "not-found.search-label": "404 搜索提示",
+            "message.inquiry.empty-param": "提示：信息缺失",
+            "message.inquiry.email-format": "提示：邮箱格式错误",
+            "message.inquiry.success": "提示：提交成功",
+            "message.inquiry.error": "提示：提交失败",
+            "message.inquiry.req-frequently": "提示：提交过于频繁",
+            "cookie.cookie-policy-title": "Cookie 标题",
+            "cookie.cookie-policy-content": "Cookie 说明",
+            "cookie.cookie-policy-more": "了解更多链接文字",
+            "cookie.cookie-policy-reject-text": "拒绝按钮",
+            "cookie.cookie-policy-btn": "接受按钮",
+            "organization.logo-name": "Logo 替代文字",
+            "organization.contact-type": "联系方式类型",
+            "organization.web-site-description": "站点描述",
+            "organization.knows-about": "擅长领域",
+            "about-us.summary-info-items": "公司数据（列表）",
+            "about-us.company-overview-items": "公司概况（列表）",
+            "about-us.our-strengths-items": "我们的优势（列表）",
+            "about-us.company-culture-items": "企业文化（列表）",
+            "about-us.need-to-know-items": "规格说明（列表）"
+        },
+        "tags": [
+            "organization.knows-about"
+        ],
+        "files": [
+            "product.warning-icon",
+            "about-us.our-strengths-items.icon"
+        ],
+        "shapes": {
+            "about-us.summary-info-items": {
+                "title": "",
+                "value": ""
+            },
+            "about-us.company-overview-items": {
+                "title": "",
+                "text": ""
+            },
+            "about-us.our-strengths-items": {
+                "icon": "",
+                "text": ""
+            },
+            "about-us.company-culture-items": {
+                "title": "",
+                "text": ""
+            },
+            "about-us.need-to-know-items": {
+                "title": "",
+                "text": ""
+            }
+        },
+        "ui": {
+            "media": {
+                "svg": {
+                    "rejected": "SVG 文件无法识别，或内容里含有脚本，出于安全考虑不能上传。",
+                    "no-permission": "当前账号不能上传 SVG 文件"
+                }
+            },
+            "structured": {
+                "menu-title": "结构化设置",
+                "page": {
+                    "title": "结构化设置",
+                    "hint": "给页面补充或修改结构化数据（搜索引擎读取的那份站点信息）。按页面类型分别填写、按语言分别保存；留空表示不改动。品牌、地址、电话等信息由「页面信息」和「语言内容」统一维护，这里不用重复填。"
+                },
+                "card": {
+                    "help-title": "怎么写",
+                    "help-hint": "填一个 JSON 对象、对象数组，或直接粘贴带 @graph 的整段 JSON。数组里的第 1 项改页面原有结构化数据的第 1 条，只替换写到的属性，条数不够会新增；写了 @type 按类型对应，写了 @id 按 id 对应。空对象 {} 跳过，属性写 null 表示删掉，与 @graph 同级的键会并入最外层。",
+                    "help-example": "{\"@type\": \"Product\", \"brand\": {\"@type\": \"Brand\", \"name\": \"你的品牌\"}}\n{\"@graph\": [{}, {\"description\": \"一句话补充说明\"}], \"inLanguage\": \"zh-CN\"}"
+                },
+                "type": {
+                    "common": "所有页面",
+                    "common-hint": "先于其它类型生效。适合放 Organization、WebSite 这类每个页面都有的信息。",
+                    "home": "首页",
+                    "home-hint": "站点首页，含各语言的 /xx/home。",
+                    "product": "产品详情",
+                    "product-hint": "单个产品页。",
+                    "post": "文章详情",
+                    "post-hint": "新闻与博客文章页。",
+                    "application": "应用产品详情",
+                    "application-hint": "应用案例页。",
+                    "faq": "FAQ 详情",
+                    "faq-hint": "问答详情页。",
+                    "page": "其它页面",
+                    "page-hint": "普通页面、产品与文章列表、分类、搜索结果等。"
+                },
+                "field": {
+                    "json": "JSON 覆盖"
+                },
+                "status": {
+                    "empty": "未设置：不改动，页面保持原有内容。",
+                    "merge": "会合并进已有的 %s；没有该类型时自动新增。",
+                    "position": "没有 @type：按顺序对应——第 1 项改第 1 条、第 2 项改第 2 条…，条数不够就新增；空对象 {} 跳过。",
+                    "root": "另有 %d 条与 @graph 并列的内容，会并入最外层。",
+                    "error": "格式有误（%s），前台会忽略这段内容。"
+                },
+                "badge": {
+                    "set": "已设置 %d 项",
+                    "customized": "已覆盖 %d 项"
+                },
+                "tag": {
+                    "custom": "覆盖",
+                    "inherit": "继承"
+                },
+                "hint": {
+                    "scope-all": "正在编辑「全部语言」：某个语言没单独填，就用这里的值。",
+                    "scope-lang": "正在编辑 %s 的覆盖：留空或与「全部语言」写成一模一样都表示继承。",
+                    "savebar": "保存后前台立即生效，不用重新发布内容；按 Ctrl+F5 刷新就能看到新的结构化数据。"
+                },
+                "button": {
+                    "save": "保存设置",
+                    "reset-lang": "清空覆盖"
+                },
+                "confirm": {
+                    "reset-lang": "确定要清空这个语言的覆盖，全部改为继承吗？"
+                },
+                "notice": {
+                    "no-permission": "当前账号没有修改权限，或页面停留过久已失效，请刷新后重试",
+                    "saved-all": "「全部语言」的结构化覆盖已保存",
+                    "saved-lang": "%s 的覆盖已保存，留空的类型继续继承「全部语言」",
+                    "json-error": "其中 %d 项格式有误，内容已保存但前台会忽略，改好再存一次即可。",
+                    "reset-lang": "%s 的覆盖已清空，全部改为继承「全部语言」"
+                },
+                "demo": {
+                    "common": "{\"@type\": \"Organization\", \"name\": \"公司名称\"}",
+                    "home": "{\"@type\": \"WebSite\", \"alternateName\": \"网站简称\"}",
+                    "product": "{\"@type\": \"Product\", \"brand\": {\"@type\": \"Brand\", \"name\": \"品牌名称\"}}",
+                    "post": "{\"@type\": \"Article\", \"author\": {\"@type\": \"Organization\", \"name\": \"发布方\"}}",
+                    "application": "{\"@type\": \"Article\", \"about\": \"应用主题\"}",
+                    "faq": "{\"@type\": \"FAQPage\", \"inLanguage\": \"zh-CN\"}",
+                    "page": "{\"@type\": \"WebPage\", \"inLanguage\": \"zh-CN\"}"
+                },
+                "error": {
+                    "end-extra": "JSON 已经结束，后面还有多余内容",
+                    "comma-dup": "这里多了一个逗号（最后一项后面不需要逗号）",
+                    "key-name": "这里应该是键名（用双引号包起来），或右花括号",
+                    "string-open": "字符串没有闭合，缺少结尾的双引号",
+                    "colon": "键名后面应该是冒号",
+                    "comma-or-close": "这里应该是逗号或右括号（常见原因：上一项后面少了一个逗号）",
+                    "value": "这里应该是一个值（字符串、数字、对象或数组）",
+                    "bracket": "括号没有闭合，缺少右括号",
+                    "empty": "内容为空，或者不是一个完整的 JSON 值",
+                    "unknown": "结构无法识别",
+                    "located": "第 %d 行：%s",
+                    "not-object": "必须是 JSON 对象或对象数组"
+                }
+            },
+            "common": {
+                "button": {
+                    "publish": "发布"
+                },
+                "langbar": {
+                    "label": "语言版本",
+                    "current": "（当前语言）",
+                    "add-hint": "：还没有这个语言的版本，点一下以当前内容为蓝本新建",
+                    "empty-hint": "：尚未创建译文"
+                },
+                "migrate": {
+                    "done": "已经迁移过"
+                },
+                "column": {
+                    "image": "首图"
+                },
+                "page": {
+                    "view": "查看",
+                    "back": "返回列表"
+                }
+            },
+            "news": {
+                "page": {
+                    "title": "文章信息编辑",
+                    "view": "查看文章",
+                    "back": "返回所有文章"
+                },
+                "error": {
+                    "missing-post-id": "缺少 post_id 参数",
+                    "invalid-post": "无效的文章"
+                },
+                "notice": {
+                    "saved": "文章信息已保存"
+                },
+                "card": {
+                    "basic-title": "基本信息",
+                    "basic-hint": "标题显示在文章列表与搜索结果里；排序权重数字越小越靠前",
+                    "summary-title": "摘要",
+                    "summary-hint": "显示在文章列表与搜索结果中，建议 80 – 160 字符",
+                    "image-title": "文章主图",
+                    "image-hint": "用于列表与分享卡片，推荐 800 × 800 方图",
+                    "content-title": "文章内容",
+                    "content-hint": "这里填写的内容会作为文章正文；摘要在上方单独填写，不会拼进正文"
+                },
+                "field": {
+                    "title": "标题",
+                    "title-placeholder": "文章标题，显示在列表与搜索结果中",
+                    "sort": "排序权重",
+                    "article-type": "文章类型",
+                    "main-title": "主题",
+                    "main-title-placeholder": "页面大标题（H1），用于结构化数据",
+                    "summary-placeholder": "一句话概括这篇文章"
+                },
+                "option": {
+                    "article": "文章类 Article",
+                    "news-article": "新闻类 NewsArticle"
+                },
+                "counter": {
+                    "unit": "字符"
+                },
+                "switch": {
+                    "no-description": "摘要不并入正文",
+                    "no-description-hint": "默认开启：摘要只用于列表和搜索结果，不并入正文"
+                },
+                "button": {
+                    "pick-image": "选择 / 修改图片",
+                    "remove-image": "移除图片",
+                    "save": "保存文章信息"
+                },
+                "savebar": {
+                    "hint": "保存后同步更新文章正文与排序权重"
+                },
+                "media": {
+                    "title": "选择文章主图",
+                    "button": "使用该图片"
+                }
+            },
+            "products": {
+                "labels": {
+                    "name": "产品",
+                    "singular-name": "产品",
+                    "menu-name": "产品管理",
+                    "admin-bar": "产品",
+                    "add-new": "添加产品",
+                    "add-new-item": "添加新产品",
+                    "new-item": "新产品",
+                    "edit-item": "编辑产品",
+                    "view-item": "查看产品",
+                    "all-items": "所有产品",
+                    "search-items": "搜索产品",
+                    "not-found": "没有找到产品",
+                    "not-found-trash": "回收站里没有产品"
+                },
+                "tax": {
+                    "labels": {
+                        "name": "产品分类",
+                        "singular-name": "产品分类",
+                        "search-items": "搜索分类",
+                        "all-items": "所有分类",
+                        "edit-item": "编辑分类",
+                        "update-item": "更新分类",
+                        "add-new-item": "新增分类",
+                        "new-item-name": "新分类名称",
+                        "menu-name": "产品分类"
+                    }
+                },
+                "menu": {
+                    "page-title": "产品信息编辑",
+                    "menu-title": "产品信息编辑"
+                },
+                "page": {
+                    "title": "产品信息编辑",
+                    "view": "查看产品",
+                    "back": "返回所有产品"
+                },
+                "notice": {
+                    "missing-post-id": "缺少 post_id 参数",
+                    "invalid-product": "无效的产品",
+                    "saved": "产品信息已保存",
+                    "template-saved": "模板已保存",
+                    "template-name-empty": "模板名称不能为空",
+                    "template-deleted": "模板已删除",
+                    "template-not-found": "未找到要删除的模板",
+                    "template-select-required": "请先选择要删除的模板",
+                    "template-save-failed": "模板保存失败：",
+                    "template-delete-failed": "删除模板失败："
+                },
+                "template": {
+                    "title": "模板",
+                    "hint": "把当前填写的内容存成模板，以后可一键套用；选择已有模板会替换当前的图片、文案和内容",
+                    "select": "选择模板",
+                    "placeholder": "请选择模板",
+                    "name-label": "新模板名称",
+                    "name-placeholder": "例如：热熔胶膜标准结构",
+                    "id-label": "模板ID:%s"
+                },
+                "card": {
+                    "basic-title": "基本信息",
+                    "basic-hint": "排序权重控制产品在列表中的位置，数字越小越靠前",
+                    "summary-title": "产品摘要",
+                    "summary-hint": "显示在产品列表与搜索结果中，建议 80 – 160 字符",
+                    "images-title": "产品图片",
+                    "images-hint": "推荐 800 × 800 方图。拖动卡片可调整顺序，第一张作为列表主图；支持图片与视频，可为每张图设置描述与内嵌视频",
+                    "desc-title": "产品描述与提醒",
+                    "desc-hint": "描述显示在详情页正文上方；提醒用于注意事项、供货说明等补充信息",
+                    "params-title": "产品参数",
+                    "params-hint": "按「参数名 / 参数值」分行展示在详情页参数表，拖动手柄可排序，留空的组合不会保存",
+                    "content-title": "产品内容",
+                    "content-hint": "保存后自动组成产品正文：主标题、产品描述，再接下面这些内容"
+                },
+                "field": {
+                    "title": "标题",
+                    "title-placeholder": "产品标题，显示在列表、导航与搜索结果中",
+                    "sort": "排序权重",
+                    "main-title": "主标题",
+                    "main-title-placeholder": "用于结构化数据与页面 H1",
+                    "summary-placeholder": "一句话概括这款产品",
+                    "image-alt": "图片描述",
+                    "video-src": "内部视频",
+                    "iframe-src": "外部视频",
+                    "description": "产品描述",
+                    "warning": "产品提醒",
+                    "warning-placeholder": "没有可留空",
+                    "param-key": "参数名",
+                    "param-value": "参数值"
+                },
+                "media": {
+                    "drag-hint": "按住拖动可排序",
+                    "video": "视频",
+                    "image": "图片",
+                    "primary-badge": "首图",
+                    "remove-title": "删除该媒体",
+                    "edit-overlay": "点击更换",
+                    "empty": "还没有图片，点右上角「添加图片」从媒体库选择",
+                    "pick-title": "选择或上传媒体",
+                    "pick-button": "使用该媒体"
+                },
+                "params": {
+                    "drag-hint": "按住拖动可排序",
+                    "empty": "还没有参数，点右上角「添加参数」新增一行",
+                    "json-hint": "顺序就是参数表里的显示顺序，格式：",
+                    "json-tip": "应用后会替换下面的参数行，保存产品后才真正生效",
+                    "json-placeholder": "[\n  { \"key\": \"参数名\", \"value\": \"参数值\" },\n  { \"key\": \"厚度\", \"value\": \"0.05 mm\" }\n]"
+                },
+                "button": {
+                    "add-image": "添加图片",
+                    "template-save": "保存为模板",
+                    "template-delete": "删除选中模板",
+                    "delete": "删除",
+                    "json-toggle": "JSON 编辑",
+                    "add-param": "添加参数",
+                    "json-format": "格式化",
+                    "json-apply": "应用到列表",
+                    "json-cancel": "收起",
+                    "save": "保存产品信息",
+                    "json-close": "返回列表"
+                },
+                "savebar": {
+                    "hint": "保存后同步更新产品正文、排序权重与图片信息"
+                },
+                "counter": {
+                    "char-unit": "字符",
+                    "image-unit": "张",
+                    "param-unit": "项"
+                },
+                "json": {
+                    "error-syntax": "JSON 语法错误：",
+                    "error-array": "最外层必须是数组 []",
+                    "error-shape": "第 %d 项应为 {\"key\":\"\",\"value\":\"\"} 或 [\"参数名\",\"参数值\"]",
+                    "error-types": "第 %d 项的 key / value 必须是字符串",
+                    "applied": "已应用 %d 项",
+                    "ok-parse": "可解析 · %d 项",
+                    "ok-format": "已格式化 · %d 项"
+                },
+                "confirm": {
+                    "delete-template": "确定要删除选择的模板吗？此操作不可撤销！"
+                },
+                "alert": {
+                    "template-name": "请输入模板名称"
+                }
+            },
+            "application-info": {
+                "labels": {
+                    "name": "应用产品",
+                    "singular-name": "应用产品",
+                    "add-new": "添加应用产品",
+                    "add-new-item": "添加新应用产品",
+                    "edit-item": "编辑应用产品",
+                    "all-items": "所有应用产品",
+                    "search-items": "搜索应用产品",
+                    "not-found": "没有找到应用产品"
+                },
+                "menu-name": "应用产品管理",
+                "tax": {
+                    "labels": {
+                        "name": "应用分类",
+                        "singular-name": "应用分类",
+                        "search-items": "搜索应用分类",
+                        "all-items": "所有应用分类",
+                        "edit-item": "编辑应用分类",
+                        "update-item": "更新应用分类",
+                        "add-new-item": "新增应用分类",
+                        "new-item-name": "新应用分类名称",
+                        "menu-name": "应用分类"
+                    }
+                },
+                "page": {
+                    "title": "应用产品信息编辑",
+                    "view": "查看应用产品",
+                    "back": "返回所有应用产品"
+                },
+                "error": {
+                    "missing-post-id": "缺少 post_id 参数",
+                    "invalid-post": "无效的 Application"
+                },
+                "notice": {
+                    "saved": "应用产品信息已保存"
+                },
+                "card": {
+                    "basic-title": "基本信息",
+                    "basic-hint": "排序权重控制应用产品在列表中的位置，数字越小越靠前",
+                    "excerpt-title": "摘要",
+                    "excerpt-hint": "显示在应用产品列表与搜索结果中，建议 80 – 160 字符",
+                    "image-title": "主图",
+                    "image-hint": "用于列表与分享卡片，推荐 800 × 800 方图",
+                    "content-title": "内容",
+                    "content-hint": "保存后自动组成正文：主标题、摘要，再接下面这些内容"
+                },
+                "field": {
+                    "title": "标题",
+                    "title-placeholder": "应用产品标题，显示在列表、导航与搜索结果中",
+                    "sort": "排序权重",
+                    "main-title": "主标题",
+                    "main-title-placeholder": "用于结构化数据与页面 H1",
+                    "excerpt-placeholder": "一句话概括这个应用场景"
+                },
+                "switch": {
+                    "no-description": "摘要不并入正文",
+                    "no-description-hint": "开启后摘要只用于列表展示，不并入正文"
+                },
+                "button": {
+                    "pick-image": "选择 / 修改图片",
+                    "remove-image": "移除图片",
+                    "save": "保存应用产品信息"
+                },
+                "savebar": {
+                    "hint": "保存后同步更新正文、排序权重与主图"
+                },
+                "counter": {
+                    "unit": "字符"
+                },
+                "media": {
+                    "title": "选择主图",
+                    "button": "使用该图片"
+                }
+            },
+            "faq-info": {
+                "menu-name": "FAQ 管理",
+                "labels": {
+                    "add-new": "添加 FAQ",
+                    "add-new-item": "添加新 FAQ",
+                    "edit-item": "编辑 FAQ",
+                    "all-items": "所有 FAQ",
+                    "search-items": "搜索 FAQ",
+                    "not-found": "没有找到 FAQ"
+                },
+                "tax": {
+                    "labels": {
+                        "name": "FAQ 分类",
+                        "singular-name": "FAQ 分类",
+                        "search-items": "搜索 FAQ 分类",
+                        "all-items": "所有 FAQ 分类",
+                        "edit-item": "编辑 FAQ 分类",
+                        "update-item": "更新 FAQ 分类",
+                        "add-new-item": "新增 FAQ 分类",
+                        "new-item-name": "新 FAQ 分类名称",
+                        "menu-name": "FAQ 分类"
+                    }
+                },
+                "page": {
+                    "title": "FAQ 信息编辑",
+                    "view": "查看 FAQ",
+                    "back": "返回所有 FAQ"
+                },
+                "error": {
+                    "missing-post-id": "缺少 post_id 参数",
+                    "invalid-post": "无效的 FAQ"
+                },
+                "notice": {
+                    "saved": "FAQ 信息已保存"
+                },
+                "card": {
+                    "basic-title": "基本信息",
+                    "basic-hint": "排序权重控制 FAQ 在列表中的位置，数字越小越靠前",
+                    "content-title": "FAQ 内容",
+                    "content-hint": "保存后成为问答正文，详情页直接显示这些内容"
+                },
+                "field": {
+                    "title": "标题",
+                    "title-placeholder": "FAQ 问题标题，显示在列表与搜索结果中",
+                    "sort": "排序权重"
+                },
+                "savebar": {
+                    "hint": "保存后同步更新正文与排序权重"
+                },
+                "button": {
+                    "save": "保存 FAQ 信息"
+                }
+            },
+            "manage": {
+                "item-unit": "条",
+                "json-error": "JSON 语法有误，修好后再保存：",
+                "media": {
+                    "choose-image": "选择图片",
+                    "pick-title": "选择图片",
+                    "pick-button": "使用这张图片",
+                    "custom-url-hint": "可填站内路径（如 /contact）或完整地址。选「Custom URL」时框里原有的图片地址会被清空，直接输入新的即可。"
+                }
+            },
+            "page-info": {
+                "js": {
+                    "cert.alt-placeholder": "图片 alt，用于 SEO 与无障碍",
+                    "cert.anchor": "锚点 ID",
+                    "cert.badge": "徽章文字",
+                    "cert.button": "按钮文字",
+                    "cert.card-title": "卡片标题",
+                    "cert.category": "认证类目",
+                    "cert.code-err": "代码中的 JSON 格式有误，修正后才能切回可视化模式。",
+                    "cert.collapse-all": "收起全部",
+                    "cert.del-confirm": "删除这张证书？",
+                    "cert.desc": "描述",
+                    "cert.expand-all": "展开全部",
+                    "cert.file": "文件 URL",
+                    "cert.file-addr": "PDF 或其它文件地址",
+                    "cert.file-placeholder": "PDF 或验证页地址",
+                    "cert.group-add": "＋ 添加分组",
+                    "cert.group-del": "删除整个分组",
+                    "cert.group-del-confirm": "删除整个分组及组内所有证书？",
+                    "cert.group-placeholder": "如 Environmental Compliance (EU Standards)",
+                    "cert.group-title": "分组标题",
+                    "cert.groups": "证书分组",
+                    "cert.header": "页头",
+                    "cert.hero": "主证书（页面顶部大卡片）",
+                    "cert.html-hint": "支持 HTML",
+                    "cert.icon": "图标",
+                    "cert.icon-add": "＋ 添加图标",
+                    "cert.icon-del": "删除这个图标",
+                    "cert.icon-pick": "选择",
+                    "cert.icon-relate": "关联证书 ID",
+                    "cert.icon-relate-hint": "与证书锚点 ID 一致",
+                    "cert.icons": "首页 / 关于我们 图标",
+                    "cert.image": "证书图片",
+                    "cert.item-add": "＋ 添加证书",
+                    "cert.item-del": "删除这张证书",
+                    "cert.json-format-err": "JSON 格式有误，请先修正后再格式化。",
+                    "cert.json-ok": "✓ JSON 格式正确",
+                    "cert.link-text": "链接文字",
+                    "cert.name": "证书名称 name",
+                    "cert.new": "新证书",
+                    "cert.pdf": "PDF 地址",
+                    "cert.pick-file": "选择文件",
+                    "cert.pick-image": "选择图片",
+                    "cert.relate-hint": "与首页图标关联",
+                    "cert.report-no": "报告编号",
+                    "cert.report-no-hint": "支持 HTML，如 <strong>Report No.: ...</strong>",
+                    "cert.reset-confirm": "放弃当前改动，恢复为上次保存的内容？",
+                    "cert.save-err": "证书 JSON 格式有误，无法保存。请修正后在代码框下方查看错误提示。",
+                    "cert.schema": "schema 类型",
+                    "cert.sort-hint": "按住左侧手柄可拖动排序，保存后前台按这个顺序展示。",
+                    "cert.spec-add": "＋ 添加一行",
+                    "cert.spec-del": "删除这一行",
+                    "cert.spec-name-placeholder": "参数名，如 Certificate No.",
+                    "cert.spec-value-placeholder": "参数值，支持 HTML",
+                    "cert.specs": "规格参数",
+                    "cert.standard": "标准文字",
+                    "cert.title": "标题",
+                    "cert.verify": "验证链接",
+                    "common.delete": "删除",
+                    "common.drag": "按住拖动排序",
+                    "common.name": "名称",
+                    "common.url": "链接",
+                    "link.del": "删除这条外链",
+                    "media.no-video": "未选择视频",
+                    "media.not-loaded": "媒体库未加载，请刷新页面后重试。",
+                    "media.pick-file": "选择或上传文件（PDF / Word / Excel）",
+                    "media.pick-image": "选择或上传图片",
+                    "media.pick-video": "选择或上传视频",
+                    "media.use": "使用该文件",
+                    "slide.change": "点击更换",
+                    "slide.confirm": "确定移除这张轮播图？",
+                    "slide.remove": "移除这张图",
+                    "slide.route": "跳转路由",
+                    "social.change-icon": "点击更换图标",
+                    "social.confirm": "确定移除这条社媒？",
+                    "social.pick-icon": "选择图标"
+                },
+                "menu-title": "页面信息设置",
+                "notice": {
+                    "no-permission": "当前账号没有修改权限，或页面停留过久已失效，请刷新后重试",
+                    "saved": "配置已保存",
+                    "saved-cert-invalid": "配置已保存，但「证书 JSON」存在格式错误，请到「结构化数据」中检查。",
+                    "reset-done": "已恢复默认配置"
+                },
+                "image": {
+                    "home-main-title": "首页主图",
+                    "home-main-hint": "首页首屏主视觉",
+                    "video-title": "视频主图",
+                    "video-hint": "公司介绍视频封面",
+                    "product-top-title": "产品顶部图",
+                    "product-top-hint": "产品列表页横幅",
+                    "post-top-title": "文章顶部图",
+                    "post-top-hint": "新闻 / 文章页横幅",
+                    "application-top-title": "应用案例顶部图",
+                    "application-top-hint": "应用案例页横幅；留空时沿用文章顶部图",
+                    "faq-top-title": "常见问题顶部图",
+                    "faq-top-hint": "常见问题页横幅；留空时沿用文章顶部图",
+                    "about-top-title": "关于我们顶部图",
+                    "about-top-hint": "关于我们页横幅",
+                    "about-culture-title": "关于我们企业文化图",
+                    "about-culture-hint": "关于我们「企业文化」区块左侧配图；留空则不显示该图片",
+                    "contact-top-title": "联系我们顶部图",
+                    "contact-top-hint": "联系我们页横幅",
+                    "certificates-top-title": "证书顶部图",
+                    "certificates-top-hint": "证书页横幅"
+                },
+                "video": {
+                    "company-title": "公司介绍内部视频",
+                    "custom-bg-title": "定制展示背景视频",
+                    "none": "未选择视频"
+                },
+                "default-image": {
+                    "new-title": "文章默认图",
+                    "new-hint": "新闻列表没有配图时使用",
+                    "product-title": "产品默认图",
+                    "product-hint": "产品没有配图时使用",
+                    "application-title": "应用产品默认图",
+                    "application-hint": "应用产品没有配图时使用",
+                    "faq-title": "FAQ 默认图",
+                    "faq-hint": "常见问题没有配图时使用",
+                    "post-title": "文章格式默认图",
+                    "post-hint": "新闻 / 文章没有配图时使用"
+                },
+                "page": {
+                    "title": "页面信息设置",
+                    "hint": "首页轮播、各页面顶部图、联系方式与结构化数据（按语言独立保存）"
+                },
+                "card": {
+                    "slides-title": "首页轮播图",
+                    "slides-hint": "按顺序轮播，每张图可以单独设置点击后跳到哪个页面",
+                    "images-title": "页面图片",
+                    "images-hint": "首页主图、视频封面与各内页的顶部横幅",
+                    "default-images-title": "默认图片",
+                    "default-images-hint": "文章 / 产品等没有配图时的占位图，建议使用 1:1 方图",
+                    "video-title": "视频",
+                    "video-hint": "支持选择媒体库中的 mp4 文件",
+                    "contact-title": "联系方式与版权",
+                    "contact-hint": "页脚、联系我们页与结构化数据共用",
+                    "social-title": "社媒与地图",
+                    "social-hint": "页头 / 页脚的社媒图标、联系我们页的地图与 WhatsApp 入口",
+                    "schema-title": "结构化数据",
+                    "schema-hint": "用于全站结构化数据里的公司信息，搜索引擎和社交平台会读取"
+                },
+                "button": {
+                    "add-image": "＋ 添加图片",
+                    "choose-image": "选择图片",
+                    "remove": "移除",
+                    "choose-video": "选择视频",
+                    "add-social": "＋ 添加社媒",
+                    "choose-icon": "选择图标",
+                    "delete": "删除",
+                    "visual": "可视化",
+                    "code": "代码",
+                    "add-link": "＋ 添加外链",
+                    "format": "格式化",
+                    "reset-to-saved": "重置为已保存内容",
+                    "save": "保存配置"
+                },
+                "label": {
+                    "change-image": "点击更换",
+                    "remove-image": "移除这张图",
+                    "drag-sort": "按住拖动排序",
+                    "change-icon": "点击更换图标"
+                },
+                "field": {
+                    "route": "点击跳转",
+                    "telephone": "联系电话",
+                    "telephone-placeholder": "对外公开的电话，含国家区号",
+                    "email": "联系邮箱",
+                    "copy-info": "版权信息",
+                    "address": "公司地址",
+                    "address-placeholder": "省 / 市 / 区 / 街道 / 门牌",
+                    "name": "名称",
+                    "link": "链接",
+                    "map-embed": "谷歌地图嵌入地址",
+                    "map-search": "谷歌地图搜索链接",
+                    "whatsapp-url": "WhatsApp 链接",
+                    "whatsapp-placeholder": "WhatsApp 号码，含国家区号",
+                    "whatsapp-url-placeholder": "留空则自动生成",
+                    "whatsapp-text": "WhatsApp 默认消息"
+                },
+                "empty": {
+                    "slides": "还没有轮播图，点击右上角「添加图片」开始。",
+                    "social": "还没有社媒，点击右上角「添加社媒」开始。",
+                    "links": "还没有外链，点击下方按钮添加。"
+                },
+                "hint": {
+                    "social-map": "社媒可按住左侧手柄拖动排序；图标留空时按名称匹配主题内置图标。地图与 WhatsApp 链接留空时，分别使用默认语言配置与「联系方式 → WhatsApp 号码」自动生成。",
+                    "links-separator-prefix": "多条链接用英文分号",
+                    "links-separator-suffix": "或换行分隔，保存时自动合并。",
+                    "savebar": "保存后前台立即生效"
+                },
+                "schema": {
+                    "same-as-title": "外链认可",
+                    "same-as-hint": "第三方平台上的公司主页、认证查询页等链接",
+                    "cert-title": "证书信息",
+                    "cert-hint": "证书页内容与首页 / 关于我们页的图标，共四个部分"
+                },
+                "langbar": {
+                    "current": "当前语言：",
+                    "default": "默认语言"
+                }
+            },
+            "smtp": {
+                "menu-title": "邮箱设置",
+                "notice": {
+                    "no-permission": "当前账号没有修改权限，或页面停留过久已失效，请刷新后重试",
+                    "saved-all": "「全部语言」配置已保存，各语言没单独改的字段都用这份",
+                    "saved-lang": "%1$s 的配置已保存（只记录了与「全部语言」不同的 %2$d 项）",
+                    "same-as-all": "%s 与「全部语言」完全一致，已恢复为全部继承"
+                },
+                "page": {
+                    "title": "邮箱设置",
+                    "hint": "询盘通知邮件的发信配置与内容异常拦截都在这里。SMTP 可以按语言分别设置，某个语言没填的字段自动沿用「全部语言」，保存后立即生效。"
+                },
+                "filter": {
+                    "card-title": "询盘拦截",
+                    "card-hint": "拦下疑似脚本或垃圾内容，避免无效询盘占用收件箱",
+                    "switch": "内容异常拦截转发",
+                    "hint": "开启后，判定为内容异常的询盘只入库、不转发邮件，记录备注标记为「未转发询盘-内容异常」；关闭后该语言的询盘全部正常转发。按语言设置，某个语言没单独改就沿用「全部语言」。",
+                    "badge-own": "已单独设置",
+                    "badge-inherit": "继承「全部语言」"
+                },
+                "group": {
+                    "smtp": "SMTP 设置"
+                },
+                "card": {
+                    "server-title": "发信服务器",
+                    "server-hint": "邮箱服务商提供的 SMTP 地址、端口与账号",
+                    "sender-title": "收发件人",
+                    "sender-hint": "发件邮箱应与 SMTP 账号一致，否则容易被判为垃圾邮件；发件人名称自动使用站点名称"
+                },
+                "field": {
+                    "host": "SMTP 服务器",
+                    "port": "端口",
+                    "username": "SMTP 用户名",
+                    "secure": "加密方式",
+                    "password": "SMTP 密码 / 授权码",
+                    "from": "发件邮箱",
+                    "to": "送达邮箱",
+                    "to-placeholder": "接收询盘通知的邮箱"
+                },
+                "option": {
+                    "ssl": "SSL（推荐）",
+                    "none": "不加密"
+                },
+                "label": {
+                    "password-aria": "SMTP 密码或授权码"
+                },
+                "button": {
+                    "show": "显示",
+                    "save": "保存配置"
+                },
+                "hint": {
+                    "password": "多数邮箱需要填客户端授权码，而不是网页登录密码",
+                    "to": "默认取站点管理员邮箱",
+                    "savebar-all": "保存后所有语言立即使用新配置",
+                    "savebar-lang": "只保存与「全部语言」不同的字段，清空即继承",
+                    "editing-lang": "正在编辑 <strong>%s</strong> 的配置：只有跟「全部语言」不同的值会被单独保存，留空（或与「全部语言」一致）即继承。",
+                    "port-common": "按邮箱服务商提供的端口与加密方式填写"
+                },
+                "mail": {
+                    "from-name": "询盘"
+                }
+            },
+            "indexnow": {
+                "menu-title": "IndexNow 设置",
+                "notice": {
+                    "no-permission": "当前账号没有修改权限，或页面停留过久已失效，请刷新后重试",
+                    "saved-all": "「全部语言」密钥已保存",
+                    "submit-failed": "提交失败",
+                    "submit-success": "提交成功",
+                    "reset-inherit": "%s 已恢复为继承「全部语言」的密钥",
+                    "saved-lang": "%s 的密钥已保存"
+                },
+                "label": {
+                    "all-languages": "全部语言",
+                    "key-aria": "IndexNow 密钥",
+                    "key-with-lang": "KEY 密钥（%s）"
+                },
+                "page": {
+                    "title": "IndexNow 设置",
+                    "hint": "把站点 URL 主动推送给 Bing、Yandex 等搜索引擎，省去等待爬虫自行发现的时间。密钥按语言分别设置，填写后点右侧「保存配置」即生效。"
+                },
+                "card": {
+                    "key-title": "密钥",
+                    "key-hint": "搜索引擎先访问密钥文件校验站点归属，再接收推送；可按语言分别设置",
+                    "submit-title": "提交 URL"
+                },
+                "button": {
+                    "save": "保存配置",
+                    "get-urls": "获取全部 URL",
+                    "submit": "提交到 IndexNow"
+                },
+                "hint": {
+                    "no-key": "尚未设置密钥，填写后点右侧「保存配置」生效。",
+                    "inherit": "留空或填成与「全部语言」相同的密钥，就会继续继承「全部语言」。",
+                    "savebar": "保存后密钥立即生效，无需重新发布文章",
+                    "submit": "提交后由 IndexNow 异步抓取，通常几分钟内生效",
+                    "key-file": "校验文件路径：<code>/%1$s.txt</code>，IndexNow 首次提交时会自动读取该地址。",
+                    "url-list": "每行一个，或用英文分号分隔；只抓取「%s」的内容",
+                    "published": "%1$s已发布的内容共 <strong>%2$d</strong> 条，点右上角「获取全部 URL」一键填入，再删掉不想推送的即可。"
+                },
+                "field": {
+                    "urls": "URL 列表"
+                },
+                "badge": {
+                    "url-unit": "条"
+                }
+            },
+            "site_paths": {
+                "menu-title": "站点与路径",
+                "page": {
+                    "title": "站点与路径",
+                    "hint": "设置搜索引擎认可的规范网址（canonical）用哪个域名，以及样式、图片、上传文件等资源走哪个地址。默认沿用 WordPress 原生地址，新站一般不用改。"
+                },
+                "card": {
+                    "target-title": "目标源",
+                    "target-hint": "页面规范网址（canonical）使用的域名，跟其他地址没有关系。",
+                    "prefix-title": "URL 前缀",
+                    "prefix-hint": "默认全部沿用 WordPress 原生地址；只有站点确实做过服务器别名或反向代理时，才需要改成自定义前缀。",
+                    "nginx-title": "对应的 nginx 配置",
+                    "nginx-hint": "随上面的选择实时变化，只有选了「自定义」并填了前缀的项才会出现；复制后粘贴到站点的服务器配置里。"
+                },
+                "field": {
+                    "target": "目标源域名",
+                    "nginx": "nginx 片段"
+                },
+                "assets": {
+                    "label": "主题静态资源",
+                    "desc": "CSS / JS / SVG 等主题内置文件的地址前缀"
+                },
+                "uploads": {
+                    "label": "媒体库文件",
+                    "desc": "图片、视频等上传文件的地址前缀"
+                },
+                "includes": {
+                    "label": "WordPress 核心资源",
+                    "desc": "WordPress 自带脚本和样式的地址前缀，例如 /includes；只有站点做过别名才需要改"
+                },
+                "api": {
+                    "label": "接口前缀",
+                    "desc": "询盘等前端请求的接口地址前缀"
+                },
+                "native": {
+                    "template": "WordPress 原生",
+                    "core": "WordPress 原生",
+                    "rest": "WordPress 原生"
+                },
+                "custom": "自定义前缀",
+                "hint": {
+                    "current": "当前输出：<code>%s</code>",
+                    "custom": "自己填，以 / 开头；直接贴完整 URL 也可，会自动只取路径部分。留空 = 继续用 WordPress 原生地址。",
+                    "target-auto": "留空 = 用访客当前访问的域名。",
+                    "target-fixed": "填写后规范网址固定用该域名。",
+                    "target-current": "当前生效：<code>%s</code>",
+                    "hreflang-current": "hreflang 用的访问域名：<code>%s</code>",
+                    "nginx": "复制到站点的 server { } 配置里，重启 nginx 后生效。",
+                    "savebar": "保存后前台刷新即可生效，不需要重新发布内容"
+                },
+                "button": {
+                    "save": "保存配置"
+                },
+                "notice": {
+                    "saved": "配置已保存，前台刷新（Ctrl+F5）即可生效。",
+                    "target": "目标源：%s",
+                    "expired": "链接已过期，请刷新页面后重试。"
+                },
+                "nginx": {
+                    "root-hint": "# 推荐：静态资源用 rewrite 转发到真实目录，比 alias 稳，不用管尾部斜杠",
+                    "includes": "# WordPress 核心资源（把前缀指到站点自己的 wp-includes 目录）",
+                    "assets": "# 主题静态资源",
+                    "uploads": "# 上传目录",
+                    "api": "# 接口（转给 WordPress 的 REST 路由，不要改 /wp-json 这一段）",
+                    "native": "# 当前全部使用 WordPress 原生路径，不需要额外配置"
+                }
+            },
+            "assets": {
+                "menu-title": "资源更新",
+                "jsdist": {
+                    "card-title": "JS 压缩混淆（js-dist）",
+                    "card-hint": "把主题 assets/js 下的脚本做字符串数组混淆并压掉注释空白，输出到同级的 assets/js-dist，前台脚本地址改指这个目录；源文件一行不动，随时可以重新生成。变量只在函数内部改名，顶层变量保持原样，避免页面内联脚本引用失效。",
+                    "badge-on": "本站已启用",
+                    "badge-cdn-only": "仅 CDN 生效",
+                    "switch": "本站启用",
+                    "switch-hint": "开启后本站所有访问都引用 js-dist；关闭后只有走 CDN 访问时才引用 js-dist，直连源站仍然用原始脚本，方便线上排查。",
+                    "status-title": "当前状态",
+                    "status-dir": "输出目录 %s",
+                    "status-files": "%1$d 个文件 · %2$s",
+                    "status-ratio": "%1$s → %2$s（体积 %3$s）",
+                    "status-time": "生成于 %s",
+                    "status-empty": "还没生成，点下面的「保存并更新」会按 assets/js 重新生成一遍。",
+                    "hint-rebuild": "重新生成时，源目录里已经删掉的脚本也会同步从 js-dist 删掉；想让访客重新拉取，记得把上面的版本号一起改。",
+                    "notice-built": "已生成 js-dist：%1$d 个文件，%2$s → %3$s",
+                    "notice-build-failed": "但 js-dist 没能生成，请检查主题目录里的 assets 文件夹是否可写。",
+                    "notice-fallback": "其中 %d 个文件混淆后自检没通过，已退回只压缩（功能正常，只是没有混淆）。"
+                },
+                "page": {
+                    "title": "资源更新",
+                    "hint": "全站自定义样式和脚本，以及资源版本号。保存后前台直接引用；改一下版本号，访客浏览器就会重新加载最新资源。"
+                },
+                "card": {
+                    "version-title": "资源版本",
+                    "version-hint": "主题所有样式和脚本共用这个版本号。改了自定义 CSS / JS 的内容后，把这里改成别的值（例如 1.0.1）再保存，访客浏览器才会重新加载。",
+                    "code-title": "自定义 CSS / JS",
+                    "code-hint": "只粘贴代码本身，不要带 <link> / <script> 标签；保存后全站自动生效。",
+                    "status-title": "当前引用",
+                    "status-hint": "下面列出前台实际加载的地址；内容为空时不会输出。"
+                },
+                "field": {
+                    "version": "版本号",
+                    "css": "自定义 CSS",
+                    "js": "自定义 JavaScript"
+                },
+                "hint": {
+                    "version": "改完内容记得同步改版本号，否则访客浏览器可能还在用旧文件",
+                    "css": "保存后生成主题里的 assets/css/add-custom.css 并全站自动引用；留空保存会删除这个文件。",
+                    "js": "保存后生成主题里的 assets/js/add-custom.js 并全站自动引用；留空保存会删除这个文件。",
+                    "savebar": "保存后前台立即生效，无需改动任何文件"
+                },
+                "status": {
+                    "empty": "未生成（内容为空）"
+                },
+                "button": {
+                    "save": "保存并更新"
+                },
+                "notice": {
+                    "saved": "已保存，资源版本 %s",
+                    "no-permission": "当前账号没有修改权限",
+                    "nonce-expired": "链接已过期，请刷新页面后重试",
+                    "write-failed": "内容已保存，但文件没能生成，请检查主题目录里的 assets 文件夹是否可写"
+                },
+                "demo": {
+                    "css": "/* 例：body { --brand-color: #2271b1; } */",
+                    "js": "// 例：console.log('custom js ready');"
+                }
+            },
+            "languages": {
+                "page": {
+                    "title": "语言"
+                },
+                "card": {
+                    "list-title": "语言列表",
+                    "delete-hint-before": "删除语言只会把它从列表和前台移除",
+                    "delete-hint-after": "，已填写的内容仍会保留；以后重新添加同一语言代码，这些内容会自动恢复。系统至少要保留一种语言，并指定其中一种为默认语言。",
+                    "deleted-restore": "。重新添加同一语言代码即可恢复。",
+                    "count-hint": "共 %d 种，顺序即前台展示顺序",
+                    "deleted-note": "还有 %d 种已删除的语言：",
+                    "deleted-sep": "、"
+                },
+                "col": {
+                    "flag": "国旗",
+                    "code": "语言代码",
+                    "name": "显示名称",
+                    "locale": "本地化",
+                    "locale-tip": "语言标记（locale），小写「语言_地区」写法，如 en_us、ru_ru、ja_ja；<html lang> 与 hreflang 都用它",
+                    "default": "默认",
+                    "content": "语言内容"
+                },
+                "row": {
+                    "drag": "按住拖动排序",
+                    "flag-upload": "点击上传国旗",
+                    "set-default": "设为默认语言",
+                    "auto-template": "保存后按该语言的默认文案填充"
+                },
+                "button": {
+                    "add": "＋ 添加语言",
+                    "edit-content": "编辑内容",
+                    "delete": "删除",
+                    "save": "保存语言"
+                },
+                "savebar": {
+                    "hint": "保存后前台语言切换器立即生效"
+                },
+                "notice": {
+                    "saved": "语言配置已保存",
+                    "at-least-one": "至少要保留一个语言，且语言代码需为 2-5 位小写字母",
+                    "dup-code": "语言代码重复：%1$s。每种语言只能用唯一代码，请修改后再保存。",
+                    "created": "；新增 %d 种语言，文案按该语言自带的默认值显示",
+                    "invalid-rows": "；有 %d 行代码格式不正确（需 2-5 位小写字母），已忽略"
+                },
+                "error": {
+                    "permission": "当前账号没有修改权限"
+                },
+                "js": {
+                    "dup": "语言代码重复：%s。每种语言只能用唯一代码，请改好后再保存。",
+                    "dup-alert": "有重复的语言代码：%s。每种语言只能用唯一代码，改好后再保存。",
+                    "last-one": "至少要保留一个语言，最后一个不能删除。\n如果确实不需要这个语言，可以先添加另一个语言，再删除它。",
+                    "del-title": "删除「%s」？",
+                    "del-title-plain": "删除这个语言？",
+                    "del-tail": "保存后这个语言会从列表和前台移除，已填写的内容仍会保留，重新添加同一语言代码即可恢复。",
+                    "media-fail": "媒体库没能打开，请刷新页面后重试。",
+                    "media-title": "选择国旗图标",
+                    "media-button": "使用这张图片",
+                    "rename": "改语言代码等于新增一种语言，原语言下已填写的内容会一起删除：",
+                    "rename-confirm": "确定继续？"
+                }
+            },
+            "language-content": {
+                "error": {
+                    "no-code": "缺少语言代码",
+                    "template-empty": "默认文案为空，暂时无法套用，请检查 data-init/data/lang-content.json",
+                    "permission": "当前账号没有修改权限",
+                    "json": "内容格式有误，未能保存："
+                },
+                "notice": {
+                    "nothing-to-fill": "没有需要补齐的内容",
+                    "filled": "已按模板补齐缺失字段",
+                    "nonce-expired": "链接已过期，请刷新页面重试",
+                    "overwritten": "已用默认文案覆盖 %d 个分组",
+                    "applied": "已套用默认文案 %d 个分组",
+                    "saved-count": "已保存 %d 个分组"
+                },
+                "confirm": {
+                    "fill-template": "把系统自带的文案填入下面的表单？填入后还要点「保存语言内容」才会生效。"
+                },
+                "group": {
+                    "all": "全部内容",
+                    "other": "其它"
+                },
+                "tabs": {
+                    "all": "全部语言",
+                    "aria-label": "选择语言"
+                },
+                "menu-title": "语言内容",
+                "page": {
+                    "title": "语言内容"
+                },
+                "mode": {
+                    "aria-label": "编辑模式"
+                },
+                "json": {
+                    "card-title": "完整 JSON",
+                    "card-hint-before": "格式与系统自带的内容模板一致",
+                    "card-hint-after": "；保存后整份应用到该语言",
+                    "foot-hint-before": "只保存模板里已有的分组，以 ",
+                    "foot-hint-after": " 开头的内容会被忽略。"
+                },
+                "tag": {
+                    "delete": "删除"
+                },
+                "savebar": {
+                    "hint": "保存后前台对应语言立即生效"
+                },
+                "stats": {
+                    "summary": "%1$d 个分组 · %2$d/%3$d 个字段已填写",
+                    "updated": "· 最近保存 %s"
+                },
+                "card": {
+                    "count": "%d 个分组"
+                }
+            },
+            "slogans": {
+                "menu-title": "后台标语",
+                "page": {
+                    "title": "后台标语",
+                    "hint": "后台各页面的提示条都在这里配置，保存后立即生效"
+                },
+                "mode": {
+                    "visual": "可视化编辑",
+                    "json": "JSON 模式"
+                },
+                "button": {
+                    "reset": "恢复默认",
+                    "save": "保存标语"
+                },
+                "json": {
+                    "card-title": "标语 JSON",
+                    "card-hint": "每个标识对应一条提示语；",
+                    "card-hint-mid": " 设为 ",
+                    "card-hint-tail": " 时页面不显示",
+                    "foot-hint": "保存后立即覆盖系统自带的提示语；删掉某一条会回到系统默认的那句。"
+                },
+                "card": {
+                    "enabled": "启用",
+                    "count": "%d 条标语"
+                },
+                "field": {
+                    "type": "类型",
+                    "title": "标题",
+                    "title-optional": "可留空",
+                    "text": "正文",
+                    "preview": "预览"
+                },
+                "preview": {
+                    "fallback-type": "提示"
+                },
+                "savebar": {
+                    "hint": "保存后立即生效，无需刷新其它设置"
+                },
+                "notice": {
+                    "reset-done": "已恢复模板默认标语",
+                    "nonce-expired": "链接已过期，请刷新页面重试",
+                    "saved-count": "已保存 %d 条标语"
+                },
+                "error": {
+                    "permission": "当前账号没有修改权限",
+                    "json": "内容格式有误，未能保存："
+                },
+                "confirm": {
+                    "reset": "恢复为模板自带的默认标语？当前修改会丢失。"
+                },
+                "type": {
+                    "info": "提示",
+                    "warning": "注意",
+                    "danger": "危险",
+                    "success": "成功"
+                }
+            },
+            "monitor": {
+                "menu-title": "监控管理",
+                "page": {
+                    "title": "监控管理",
+                    "hint": "Clarity 与 gtag 的配置、以及「什么动作发什么」都在这块维护；前台脚本只读这份配置，不再写死任何 ID。"
+                },
+                "card": {
+                    "switch-title": "开关",
+                    "switch-hint": "本站启用、Cookie 授权、本站 SEO 三个开关互相独立，按需要组合；统计脚本是否加载只由下面 Clarity 与 Google 两个启用开关决定。",
+                    "clarity-title": "Microsoft Clarity",
+                    "clarity-hint": "Clarity 只做录屏与热图，不参与 gtag、也没有转化和自定义事件，所以单独一块配置。",
+                    "google-title": "Google（gtag 配置）",
+                    "google-hint": "GA4 记录、Google Ads、Google Tag 与 Tag Manager 容器都是同一份 gtag 配置：页面只请求一次 gtag.js，下面每个 ID 各执行一条 gtag('config', id)，这里不填转化标签。",
+                    "event-title": "事件发送",
+                    "event-hint": "一条事件选一个类型：GA4 记录发事件名；Ads 转化发 conversion，发送目标直接填 Google Ads 的 send_to 值。来源选「默认」表示任何来源都发，精确来源优先。"
+                },
+                "field": {
+                    "clarity-id": "项目 ID",
+                    "clarity-on": "启用 Clarity",
+                    "gtag-id": "配置 ID",
+                    "google-on": "启用 Google 统计",
+                    "trigger": "触发动作",
+                    "source": "流量来源",
+                    "kind": "类型",
+                    "event": "事件名",
+                    "target": "发送目标（send_to）",
+                    "site": "本站启用监控统计",
+                    "seo": "本站 SEO",
+                    "consent": "需要访客授权 Cookie"
+                },
+                "kind": {
+                    "ga4": "GA4 记录",
+                    "ads": "Ads 转化"
+                },
+                "trigger": {
+                    "inquiry": "询盘提交成功",
+                    "email-click": "点击邮箱"
+                },
+                "source": {
+                    "default": "默认（全部来源）",
+                    "google-ads": "Google 广告",
+                    "google-seo": "Google 自然搜索",
+                    "bing-ads": "Bing 广告",
+                    "bing-seo": "Bing 自然搜索",
+                    "baidu-ads": "百度广告",
+                    "baidu-seo": "百度自然搜索",
+                    "facebook-ads": "Facebook 广告",
+                    "tiktok-ads": "TikTok 广告"
+                },
+                "button": {
+                    "add-gtag": "添加配置",
+                    "add-event": "添加事件",
+                    "save": "保存配置",
+                    "delete": "删除这一行"
+                },
+                "badge": {
+                    "on": "已开启 · %d 个脚本",
+                    "off": "已关闭"
+                },
+                "notice": {
+                    "saved": "监控配置已保存。",
+                    "expired": "页面已过期，请重新保存。"
+                },
+                "sub": {
+                    "gtag": "gtag 配置"
+                },
+                "gtag-empty": "还没有 gtag 配置，点下面的「添加配置」开始。",
+                "event-empty": "还没有事件发送，点下面的「添加事件」开始。",
+                "hint": {
+                    "clarity-id": "Clarity 后台「设置 → 概览」里的项目 ID，10 位字母数字。",
+                    "gtag": "每行填一个 ID，页面对每条执行一次 gtag('config', id)：G- 是 GA4 记录，AW- 是 Google Ads 转化，GT- 是 Google Tag，GTM- 是 Tag Manager 容器（容器单独加载 gtm.js，里面的事件在 Tag Manager 里配）。转化标签不填在这里，到「事件发送」里填。",
+                    "event": "GA4 记录发事件名（如 generate_lead）；Ads 转化固定发 conversion，发送目标填 Google Ads 的 send_to 值，形如 AW-XXXXXXXXXX/XXXXXXXXXX。",
+                    "savebar": "保存后前台立即生效，无需重新生成资源。",
+                    "site": "开启 Clarity 与 Google 统计后，这个开关关闭时只有经 CDN 访问的访客会被监控与统计，直接访问源站（含本地调试）的流量不计入。",
+                    "consent": "关闭 = 默认授权，进页面就加载；打开 = 先显示 Cookie 提示条，访客点同意后才加载。",
+                    "seo": "关闭时本站源码输出 noindex, follow，robots.txt 改为 Disallow: /；经 CDN 访问的域名仍允许抓取，线上收录不受影响。",
+                    "clarity-on": "关闭后不加载 Clarity 脚本，录屏与热图停止采集。",
+                    "google-on": "关闭后所有 gtag 配置都不加载；ID 保留，重新打开即恢复。"
+                }
+            },
+            "inquiry": {
+                "menu-title": "询盘记录",
+                "page": {
+                    "title": "询盘记录",
+                    "total": "共 <strong>%s</strong> 条",
+                    "position": "第 %1$s / %2$s 页",
+                    "summary": "共 %1$s 条记录，每页 %2$s 条"
+                },
+                "filter": {
+                    "label": "语言"
+                },
+                "col": {
+                    "customer": "客户",
+                    "contact": "联系方式",
+                    "message": "询盘内容",
+                    "source": "来源信息",
+                    "time": "时间"
+                },
+                "row": {
+                    "lang-title": "语言 / 地区",
+                    "copy-email": "复制邮箱",
+                    "copy-phone": "复制电话",
+                    "show-full": "显示全文",
+                    "show-less": "收起",
+                    "type-title": "类型",
+                    "keyword-title": "关键词",
+                    "empty": "暂无询盘记录"
+                },
+                "pager": {
+                    "prev": "上一页",
+                    "next": "下一页"
+                },
+                "mail": {
+                    "subject": "网站新询盘",
+                    "subtitle": "网站收到一条新的询盘",
+                    "preview": "来自 %s 的新询盘",
+                    "name": "联系人",
+                    "email": "邮箱",
+                    "telephone": "电话",
+                    "message": "询盘内容",
+                    "footer": "来自 %1$s · %2$s"
+                }
+            },
+            "multilang": {
+                "menu": {
+                    "title": "语言"
+                },
+                "column": {
+                    "lang": "语言",
+                    "unset": "未设置",
+                    "nav": "导航",
+                    "nav-in": "显示",
+                    "nav-out": "不显示",
+                    "nav-add": "加入导航",
+                    "nav-remove": "从导航中移除",
+                    "nav-draft": "发布后才进导航",
+                    "nav-denied": "没有权限修改这个页面的导航状态。"
+                },
+                "filter": {
+                    "aria-label": "按语言筛选",
+                    "all": "全部语言",
+                    "default-suffix": "（默认）"
+                },
+                "picker": {
+                    "keep": "— 不修改 —"
+                },
+                "field": {
+                    "lang": "语言"
+                },
+                "term-lang": {
+                    "hint": "这条分类属于哪个语言。前台只在这个语言的页面里列出它。"
+                },
+                "panel": {
+                    "hint": "这条内容属于哪个语言。前台只会在这个语言的地址下显示它。",
+                    "foot-new": "保存后会归到这个语言下。",
+                    "add": "添加",
+                    "preview": "预览 %2$s 站点"
+                },
+                "bar": {
+                    "hint": "当前内容语言，点开可切换",
+                    "all": "所有语言",
+                    "default": "默认语言"
+                },
+                "menu-bar": {
+                    "title": "编辑语言",
+                    "tip": "「添加菜单项」只列出该语言的内容"
+                },
+                "menu-item": {
+                    "default": "默认"
+                },
+                "error": {
+                    "permission": "当前账号没有修改权限",
+                    "missing-post-id": "缺少 post_id 参数",
+                    "missing-param": "缺少参数",
+                    "bad-lang": "未知的语言",
+                    "source-missing": "找不到要复制的内容",
+                    "post-only": "请通过「添加」按钮创建语言版本"
+                },
+                "action": {
+                    "edit-version": "编辑 %s 版本",
+                    "add-version": "添加 %s 版本",
+                    "new-version": "在当前内容基础上新建 %s 版本"
+                },
+                "label": {
+                    "untitled": "未命名"
+                },
+                "default-title": {
+                    "post": "新文章",
+                    "product": "新产品",
+                    "application": "新应用产品",
+                    "faq": "新 FAQ"
+                },
+                "tax": {
+                    "name": "内容语言"
+                }
+            },
+            "list-add": "＋ 添加一项",
+            "list-delete": "删除",
+            "list-drag": "按住拖动排序",
+            "list-empty": "暂无内容，点「添加一项」开始填写",
+            "list-lines": "一行一条",
+            "list-count": "项",
+            "tag-hint": "回车添加，点 × 删除",
+            "tag-placeholder": "输入内容后回车添加",
+            "file-hint": "图片 / 文件",
+            "file-pick": "选择文件",
+            "file-clear": "移除",
+            "file-none": "未选择",
+            "file-placeholder": "选择文件后自动填入，也可手动填写路径",
+            "mode-visual": "可视化",
+            "mode-json": "代码",
+            "fill-template": "填入默认文案",
+            "save": "保存语言内容",
+            "menu": {
+                "name": "Osiera Menu"
+            },
+            "data_init": {
+                "menu-title": "初始数据",
+                "page": {
+                    "title": "初始数据",
+                    "hint": "把一套演示数据导进来做参考：语言、页面、菜单、分类、界面文案，以及产品 / 新闻 / 应用案例 / FAQ 示例。导入后可以随意修改或删除，站点标题等基础设置不受影响。"
+                },
+                "state": {
+                    "pending": "尚未导入",
+                    "importing": "正在导入",
+                    "done": "已导入",
+                    "failed": "导入失败",
+                    "dismissed": "已关闭本次提醒",
+                    "disabled": "已永久关闭",
+                    "hint-pending": "还没有导入初始数据：前台只有主题的框架结构，没有演示文案、图片和内容，需要自己一条条录入。导入一份演示数据能更快看清各区块的用法。",
+                    "hint-importing": "导入正在进行中，请不要关闭页面。远端数据源需要下载图片，通常十几秒。",
+                    "hint-done": "初始数据已经导入。演示内容只是参考，可以直接改成自己的；需要补数据时可以再次导入，已存在的条目会跳过。",
+                    "hint-failed": "上次导入没有完成，原因见下方。可以修改数据地址后重试，也可以永久关闭导入。",
+                    "hint-dismissed": "已关闭本次提醒，下次进入后台还会提示。需要导入时点上方按钮；不想再看到请点「永久关闭导入」。",
+                    "hint-disabled": "已永久关闭导入：不再提示，也不会自动拉取任何数据。想恢复请点下方「重新启用」。",
+                    "done-at": "最近一次导入：%s"
+                },
+                "card": {
+                    "source-title": "数据来源",
+                    "source-hint": "初始数据放在一个目录里，本地目录或线上地址都行。地址填错会导致导入失败，改完保存再重试即可。",
+                    "import-title": "导入",
+                    "import-hint": "导入只做一次，执行期间不要刷新页面。",
+                    "close-title": "提示与关闭",
+                    "close-hint": "关闭提醒不影响数据；永久关闭之后不会再提示，也不会自动拉取数据。",
+                    "stats-title": "上次导入结果",
+                    "stats-hint": "每一项是本次新建的数量，已存在的会跳过。"
+                },
+                "field": {
+                    "url": "数据地址（data_init_url）"
+                },
+                "hint": {
+                    "url": "可填主题相对路径（data-init）、站根路径（/wp-content/themes/osiera/data-init/）、Windows 绝对路径，或 http(s) 线上目录。留空则用主题内置默认值。",
+                    "savebar": "修改地址后先保存，再点「导入初始数据」。",
+                    "import-busy": "导入期间会占用服务器一段时间，请耐心等待完成提示。"
+                },
+                "current": {
+                    "title": "当前解析为",
+                    "empty": "（未设置，使用主题内置 data-init）",
+                    "exists": "目录存在",
+                    "missing": "目录不存在",
+                    "remote": "远端地址",
+                    "hint": "远端地址需要能被本站服务器访问到；本机 / 内网地址会自动直连，不走系统代理。"
+                },
+                "button": {
+                    "probe": "检测地址",
+                    "save": "保存地址",
+                    "import": "导入初始数据",
+                    "reimport": "重新导入",
+                    "dismiss": "关闭提醒",
+                    "disable": "永久关闭导入",
+                    "enable": "重新启用导入",
+                    "go": "去导入初始数据",
+                    "never": "永久关闭"
+                },
+                "import": {
+                    "what": "会导入：语言、页面、菜单、分类、界面文案、页面信息，以及产品 / 新闻 / 应用案例 / FAQ 的示例内容。",
+                    "safe": "不会覆盖已有内容：同地址（slug）、同语言已经存在的条目会跳过；重复导入也不会产生副本。",
+                    "site-name": "站点标题、时区、日期格式这类基础设置不在这里改，请到「设置 → 常规」填。",
+                    "alt": "图片与视频的 Alt Text 由 data/assets-alt.json 提供（键为资源相对路径）；未配置的才按文件名自动生成，已手改过的 alt 不会被覆盖。"
+                },
+                "error": {
+                    "title": "上次导入失败",
+                    "tip": "检查数据地址是否能访问：本地目录要存在，线上地址要能打开 …/data/languages.json。改好后保存，再点「重新导入」。",
+                    "disabled": "导入已永久关闭，请先在下方重新启用。",
+                    "busy": "已有导入任务在进行，请稍后再试。",
+                    "forbidden": "没有权限执行这个操作。",
+                    "unknown": "导入没有完成，请检查数据地址后重试。",
+                    "network": "请求没有返回结果，可能是服务器超时或网络中断，请重试。",
+                    "not-found": "地址里读不到 data/languages.json：%s",
+                    "remote-hint": "远端地址要能被本站服务器自己访问到；本机 / 内网地址会自动直连，不走系统代理。"
+                },
+                "probe": {
+                    "checking": "正在检测…",
+                    "ok": "地址可用，读到 %d 种语言。"
+                },
+                "progress": {
+                    "importing": "正在导入，请勿关闭页面…",
+                    "stage-lang": "正在导入语言与界面文案…",
+                    "stage-page": "正在创建页面与菜单…",
+                    "stage-term": "正在建立分类…",
+                    "stage-content": "正在导入产品 / 新闻 / 应用案例 / FAQ…",
+                    "stage-media": "正在导入图片与图标…",
+                    "stage-finish": "正在收尾…",
+                    "reload": "刷新前台即可看到导入的内容。"
+                },
+                "notice": {
+                    "saved": "数据地址已保存。",
+                    "dismissed": "已关闭本次提醒，随时可以回来手动导入。下次进入后台还会再提示。",
+                    "disabled": "已永久关闭导入，不再提示。",
+                    "enabled": "已重新启用导入。",
+                    "expired": "页面已过期，请重试。",
+                    "done": "初始数据导入完成。",
+                    "themes-title": "Osiera 初始数据：",
+                    "themes-pending": "尚未导入。导入一份演示数据可以更快看清各区块的用法，也可以永久关闭。",
+                    "themes-failed": "上次导入失败，数据地址可能需要修改。"
+                },
+                "stat": {
+                    "languages": "语言（新建）",
+                    "pages": "页面（新建）",
+                    "terms": "分类（新建）",
+                    "menu": "菜单项（新建）",
+                    "lang-content": "文案分组（写入）",
+                    "page-info": "页面信息（写入）",
+                    "product": "产品（新建）",
+                    "post": "新闻（新建）",
+                    "application": "应用案例（新建）",
+                    "faq": "FAQ（新建）",
+                    "skipped": "已跳过（已存在）"
+                }
+            }
+        },
+        "ui_scopes": {
+            "application-info": {
+                "label": "应用产品信息编辑",
+                "file": "tables/application.php"
+            },
+            "faq-info": {
+                "label": "FAQ 信息编辑",
+                "file": "tables/FAQ.php"
+            },
+            "indexnow": {
+                "label": "IndexNow 设置",
+                "file": "tables/IndexNow.php"
+            },
+            "monitor": {
+                "label": "监控管理",
+                "file": "tables/monitor.php"
+            },
+            "inquiry": {
+                "label": "询盘记录",
+                "file": "tables/inquiry.php"
+            },
+            "language-content": {
+                "label": "语言内容",
+                "file": "tables/language-content.php"
+            },
+            "languages": {
+                "label": "语言列表",
+                "file": "tables/languages.php"
+            },
+            "multilang": {
+                "label": "多语言：语言列 / 筛选 / 编辑器面板",
+                "file": "inc/multilang/*.php"
+            },
+            "news": {
+                "label": "文章信息编辑",
+                "file": "tables/news.php"
+            },
+            "page-info": {
+                "label": "页面信息设置",
+                "file": "tables/page-info.php"
+            },
+            "products": {
+                "label": "产品信息编辑",
+                "file": "tables/products.php"
+            },
+            "slogans": {
+                "label": "后台标语",
+                "file": "tables/admin-slogans.php"
+            },
+            "smtp": {
+                "label": "邮箱设置",
+                "file": "tables/smtp.php"
+            },
+            "common": {
+                "label": "通用页头 / 发布按钮 / 语言版本条",
+                "file": "tables/admin-info-common.php"
+            },
+            "form": {
+                "label": "语言内容页表单控件（顶层扁平键：list-* / tag-* / file-* / mode-*）",
+                "file": "tables/language-content.php"
+            }
+        }
+    },
+    "settings": {
+        "smtp": {
+            "host": "",
+            "port": "",
+            "username": "",
+            "password": "",
+            "secure": "ssl",
+            "from": "",
+            "to": ""
+        },
+        "indexnow": {
+            "index_now_key": ""
+        },
+        "assets": {
+            "warning-icon": ""
+        }
+    },
+    "slogan_labels": {
+        "language-content": "语言内容页",
+        "language-content-json": "语言内容 · JSON 模式",
+        "admin-slogans": "后台标语页",
+        "admin-slogans-json": "后台标语 · JSON 模式"
+    },
+    "slogans": {
+        "language-content": {
+            "type": "info",
+            "title": "",
+            "text": "这里编辑的是该语言的完整语言包，保存后前台立即生效。某个字段留空会回退到该语言的默认文案或默认语言的文案，所以不必逐条填满。",
+            "enabled": true
+        },
+        "language-content-json": {
+            "type": "danger",
+            "title": "直接改 JSON 有风险",
+            "text": "整份 JSON 保存后会覆盖该语言的全部文案：语法错误将无法保存，删掉的键会退回默认文案。动手前请先复制一份留底，或先切到可视化模式核对结构。",
+            "enabled": true
+        },
+        "admin-slogans": {
+            "type": "info",
+            "title": "",
+            "text": "后台各页面的提示条都在这里配置：关掉某条，对应页面就不再显示这句提示，页面功能不受影响。",
+            "enabled": true
+        },
+        "admin-slogans-json": {
+            "type": "warning",
+            "title": "",
+            "text": "一条标语对应 JSON 里的一个键，键名要和页面调用的 key 一致才会生效；type 取 info / warning / danger / success。",
+            "enabled": true
+        }
+    }
+}

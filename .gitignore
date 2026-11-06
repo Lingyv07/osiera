@@ -1,0 +1,45 @@
+# ---------------------------------------------------------------------------
+# Osiera — files that must never reach the public repository
+# ---------------------------------------------------------------------------
+
+# Local revision snapshots (kept on the dev machine only)
+/backup/
+
+# Starter-content dataset. Lives in the separate osiera-data repository and is
+# fetched at import time from the URL in init-config.json. Keeping it out of the
+# theme repository avoids shipping 7 MB of demo media with every clone.
+/data-init/
+
+# Editor / OS clutter
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build tooling & dependencies
+node_modules/
+vendor/
+dist/
+build/
+
+# Archives produced by manual packaging
+*.zip
+*.tar.gz
+*.rar
+
+# Logs and leftovers
+*.log
+*.tmp
+*.bak
+*.orig
+*.rej
+
+# Never commit secrets or database dumps
+.env
+.env.*
+*.sql
+*.sql.gz
+wp-config.php
