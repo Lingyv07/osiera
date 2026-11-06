@@ -52,7 +52,13 @@ cd wp-content/themes
 git clone https://github.com/Lingyv07/osiera.git osiera
 ```
 
-The clone directory **must** be named `osiera` — the text domain depends on it.
+The trailing `osiera` is the destination folder name. Git would derive it from the URL
+anyway, but WordPress stores the folder name as the active theme, and the `.mo` files in
+`languages/` are looked up by that same slug — so pinning it explicitly is deliberate.
+
+A clone contains no `data-init/` folder: it is git-ignored. Starter content is fetched
+from `osiera-data` on first import, which means that step needs a network connection.
+Release zips behave identically.
 
 ## Starter content
 
