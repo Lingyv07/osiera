@@ -1,9 +1,13 @@
 # Osiera
 
 A self-contained WordPress theme for B2B sites: products, applications, FAQ and news as first-class
-content types, multilingual routing, and the SEO plumbing usually assembled from five plugins —
-without the plugin stack. Comments and WordPress update prompts are switched off by design, and the
-operational settings live in one admin panel.
+content types, multi-language routing with per-locale content, and the SEO plumbing usually assembled
+from five plugins — without the plugin stack. It is responsive from 370 px up, comments and WordPress
+update prompts are switched off by design, and the operational settings live in one admin panel.
+
+<p align="center">
+  <img src="docs/screenshots/home-desktop.jpg" alt="Osiera home page: hero video, headline and key figures" width="100%">
+</p>
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 [![Requires PHP](https://img.shields.io/badge/PHP-%E2%89%A5%208.0-777bb4.svg)](https://www.php.net/)
@@ -15,9 +19,12 @@ site actually needs, a light front end, and no pre-filled demo content unless yo
 ## Contents
 
 - [What's inside](#whats-inside)
+- [Screens](#screens)
 - [Admin screens](#admin-screens)
 - [What the theme switches off](#what-the-theme-switches-off)
 - [SEO and performance decisions](#seo-and-performance-decisions)
+- [Responsive and mobile](#responsive-and-mobile)
+- [Languages are a mapping, not a translator](#languages-are-a-mapping-not-a-translator)
 - [CDN and reverse proxies](#cdn-and-reverse-proxies)
 - [Caveats](#caveats)
 - [Requirements](#requirements)
@@ -34,8 +41,10 @@ site actually needs, a light front end, and no pre-filled demo content unless yo
   single template, plus per-type URL segments you can rename.
 - **Inquiry forms with stored submissions** — every submission lands in a dedicated database table,
   searchable from the admin, not buried in a mailbox.
-- **Multilingual without a plugin** — locale routing, translated slugs, translated admin UI strings
-  (Chinese/English out of the box), per-language settings overrides.
+- **Multi-language routing without a plugin** — one URL prefix per language, per-locale content and
+  slugs, translated admin UI strings (Chinese/English out of the box), per-language settings
+  overrides. See [Languages are a mapping](#languages-are-a-mapping-not-a-translator) for what this
+  does **not** do.
 - **Per-page SEO** — title and meta description per page, JSON-LD `@graph` output, and a multilingual
   sitemap with `hreflang` cross-references.
 - **Configurable URL paths** — assets, uploads, `wp-includes` and the API prefix are settings, with
@@ -46,6 +55,17 @@ site actually needs, a light front end, and no pre-filled demo content unless yo
   when you trigger it.
 - **Light front end** — two stylesheets (base + media queries) with one inlined block, scripts in the
   footer, optional PHP-level gzip fallback, no third-party font or script CDN.
+- **Responsive down to 370 px** — fluid grids, a collapsible header menu and a fixed bottom tab bar
+  on phones. Details in [Responsive and mobile](#responsive-and-mobile).
+
+## Screens
+
+| Product archive | Product detail |
+|---|---|
+| <img src="docs/screenshots/products.jpg" alt="Product archive with a category sidebar and card grid" width="100%"> | <img src="docs/screenshots/product-detail.jpg" alt="Product detail page with parameter table, warning block and quote button" width="100%"> |
+
+Both pages are rendered from the theme's own templates — no page builder, no block patterns to
+maintain. The parameter table and the warning band come from per-product fields.
 
 ## Admin screens
 
@@ -54,7 +74,7 @@ unrelated settings pages.
 
 | Screen | What it does |
 |---|---|
-| **Starter data** | Imports the demo dataset from `osiera-data`. Nothing is published until you run it. |
+| **Starter data** | Imports the demo dataset from `osiera-data`, including page bodies from `pages.json` (the privacy policy in both languages). A page is only filled when it is empty or still carries WordPress's default draft, so edited content is never overwritten. Nothing is published until you run it. |
 | **Email settings** | SMTP for the whole site with per-language overrides, plus a switch that rejects inquiries with abnormal content. |
 | **IndexNow settings** | Stores one key per language, serves `/{key}.txt`, and pushes URLs to `api.indexnow.org`. |
 | **Structured data** | Paste JSON-LD patches per page type (`common`, `home`, `product`, `post`, `application`, `faq`, `page`) and per language; they are deep-merged into the generated `@graph`. |
@@ -108,8 +128,49 @@ exists.** Watching for updates is your job now — see [Caveats](#caveats).
 - **PHP gzip fallback.** If the server already compresses, the response carries `Content-Encoding` and
   nothing is compressed twice. Turn it off with
   `add_filter('osiera_php_gzip', '__return_false');`.
+- **One `<h1>` per page.** Page titles render as `<h1>`, section titles as `<h2>`/`<h3>`, so heading
+  levels are never skipped — Google uses the heading outline, and screen readers navigate by it.
 - **No external requests on first paint.** Styles, scripts, icons and fonts are all served from the
   theme; there is no third-party font or asset CDN to wait on.
+
+## Responsive and mobile
+
+The layout is fluid, not a fixed-width desktop page shrunk down. Breakpoints are set where the content
+stops fitting, not at device names:
+
+| Width | What changes |
+|---|---|
+| ≤ 1530 / 1400 / 1300 px | Hero and full-bleed sections tighten, card grids drop a column |
+| ≤ 980 px | Header collapses to a menu button, the footer menu becomes a fixed bottom tab bar, multi-column sections stack |
+| ≤ 680 / 450 / 370 px | Type scale, paddings and small-screen spacing shrink |
+
+<p align="center">
+  <img src="docs/screenshots/home-mobile.jpg" alt="Osiera on a 393 px viewport: collapsible header, single-column layout and a fixed bottom tab bar" width="260">
+</p>
+
+On phones the header keeps only the logo, the search field and a menu button; navigation, language
+switching, social links and search move into the slide-down panel. The footer menu turns into a fixed
+bottom bar carrying Home, Products, Message, About and Contact, so the primary actions stay reachable
+with one thumb. Below-the-fold imagery on the long pages is lazy-loaded, and the viewport tag allows
+zoom up to 5× instead of locking it.
+
+## Languages are a mapping, not a translator
+
+This is worth stating plainly, because "multilingual theme" is usually read as "the theme translates
+my content".
+
+- Adding a language **creates a locale**: a URL prefix (`/ja/`), a row in the languages table, a flag
+  and a locale tag (`ja-JP`) used for `<html lang>` and `hreflang`.
+- It **does not translate anything**. There is no machine translation, no automatic copy of an English
+  page into Japanese, and no fallback that shows English text inside a Japanese page.
+- Content is **mapped** to a locale: the same slug under `en` and `ja` is treated as the same entry in
+  two languages (that is what powers the language switcher and the `hreflang` links). A slug that
+  exists in only one language stays in that language.
+- Text you do not supply is missing, not translated. Empty per-language settings fall back to the
+  site-wide value, which is the only fallback the theme performs.
+
+So plan the languages you can actually write. The demo dataset ships English and Japanese as a
+pairing example, not as evidence of a translation engine.
 
 ## CDN and reverse proxies
 
@@ -271,12 +332,32 @@ osiera/
 
 Osiera 是一个面向制造商、外贸出口与 B2B 服务商的 WordPress 主题，思路是"结构先行、设计克制"：
 
+![Osiera 首页](docs/screenshots/home-desktop.jpg)
+
 **内容与后台**
 
 - 内置产品、应用、FAQ、文章四种内容类型，各自独立的模板与详情页，URL 段可改名；
 - 询盘表单提交入库，后台可检索，不依赖邮件收件箱；
-- 不装插件即可多语言，语言前缀、译文 slug、后台界面中英文切换；
-- 后台统一收在一个 **Osiera** 菜单下：初始数据、邮箱设置、IndexNow、结构化数据、站点与路径、资源更新、监控管理。
+- 不装插件即可多语言：每种语言一个 URL 前缀、一套自己的内容与 slug，后台界面中英文可切；
+- 后台统一收在一个 **Osiera** 菜单下：初始数据、邮箱设置、IndexNow、结构化数据、站点与路径、资源更新、监控管理；
+- 初始数据页除演示内容外，还会按 `pages.json` 写入页面正文（英/日两版隐私政策）：只在正文为空或仍是 WordPress 自带草稿时写入，后台改过的页面不会被覆盖。
+
+**多语言是映射，不是翻译**
+
+- 添加语言只是**注册一个 locale**：多一个 URL 前缀（`/ja/`）、一条语言记录、一个 hreflang 标记，**不会翻译任何内容**；
+- 没有机器翻译、不会把英文页自动复制成日文页，也没有"缺内容就显示英文"的兜底；
+- 内容是**按语言映射**的：`en` 与 `ja` 下同一个 slug 视为同一条的两种语言版本（语言切换与 hreflang 靠它）；
+- 没写的文案就是没有，不会凭空生成。因此请按"你确实能写的语言"来规划。
+
+**移动端适配**
+
+- 断点按内容宽度设，不按设备名：≤1530 / 1400 / 1300 收紧首屏与栅格，≤980 页头收成菜单按钮、页脚菜单变底部固定 Tab 栏，≤680 / 450 / 370 继续缩字号与间距；
+- 手机端页头只留 Logo、搜索框与菜单按钮，导航、语言切换、社交、搜索收进下拉面板；
+- 底部 Tab 栏固定 Home / Products / Message / About / Contact，单手可及；长页面首屏以下的图片懒加载；viewport 允许放大到 5 倍，不锁缩放。
+
+| 移动端（393 px） | 产品列表 | 产品详情 |
+|---|---|---|
+| <img src="docs/screenshots/home-mobile.jpg" alt="手机端首页" width="180"> | <img src="docs/screenshots/products.jpg" alt="产品列表页" width="100%"> | <img src="docs/screenshots/product-detail.jpg" alt="产品详情页" width="100%"> |
 
 **主动关闭的功能**
 

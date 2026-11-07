@@ -4,11 +4,11 @@ Tags: two-columns, custom-logo, custom-menu, featured-images, translation-ready
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 8.0
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-A multilingual B2B theme with products, applications, FAQ and news as content types, plugin-free translation, structured data and a CDN-aware output layer.
+A responsive B2B theme with products, applications, FAQ and news as content types, per-locale content mapping, structured data and a CDN-aware output layer.
 
 == Description ==
 
@@ -29,7 +29,9 @@ Everything operational is grouped under one **Osiera** admin menu, so the sideba
 
 = Admin screens =
 
-* **Starter data** - imports the demo dataset from a separate data repository.
+* **Starter data** - imports the demo dataset from a separate data repository, including page bodies
+  from pages.json (English and Japanese privacy policy). A page is only filled when it is empty or
+  still carries the WordPress default draft.
 * **Email settings** - SMTP for the site, per-language overrides, and a switch that rejects inquiries
   with abnormal content.
 * **IndexNow settings** - one key per language, the key file served at /{key}.txt, and URL pushes to
@@ -79,12 +81,25 @@ inc/setup/remove-features.php, inc/setup/remove-hooks.php or inc/setup/functiona
 * PHP-level gzip fallback for servers without compression; an already compressed response is not
   compressed twice.
 
-= Multilingual =
+= Multi-language =
 
-* Locale routing with per-language URL prefixes, translated slugs, and translated admin UI strings.
+* One URL prefix per language, with per-locale content, slugs and settings.
+* Adding a language registers a locale - a prefix, a row in the languages table, a flag and a
+  locale tag for html lang and hreflang. It does **not** translate anything.
+* There is no machine translation and no fallback that shows one language inside another. The same
+  slug under two languages is treated as one entry in two languages; text you do not write stays
+  missing.
 * Chinese and English admin interface out of the box.
 * Settings can be overridden per language: SMTP, IndexNow keys and structured data all fall back to
   the site-wide value when a language has none.
+
+= Responsive =
+
+* Fluid layout with breakpoints at 1530, 1400, 1300, 980, 680, 450 and 370 px.
+* At 980 px and below the header collapses to a menu button, and the footer menu turns into a fixed
+  bottom tab bar (Home, Products, Message, About, Contact).
+* Navigation, language switching, social links and search move into the slide-down panel on phones.
+* Below-the-fold images are lazy-loaded, and the viewport tag allows zoom up to 5x.
 
 = CDN and reverse proxies =
 
@@ -113,8 +128,19 @@ The theme decides whether a request came through a CDN from one signal: the X-Fo
 
 = Does this theme require any plugins? =
 
-No. Multilingual support, SEO fields, structured data, forms, SMTP and IndexNow are part of the
+No. Multi-language routing, SEO fields, structured data, forms, SMTP and IndexNow are part of the
 theme.
+
+= Does the theme translate my content into other languages? =
+
+No. Adding a language registers a locale: a URL prefix, a languages-table row, a flag and an hreflang
+tag. You write the content for that language yourself. There is no machine translation, and no
+fallback that shows one language inside another page.
+
+= Is the theme mobile friendly? =
+
+Yes. The layout is fluid and has breakpoints at 1530, 1400, 1300, 980, 680, 450 and 370 px. Below
+980 px the header collapses to a menu button and the footer menu becomes a fixed bottom tab bar.
 
 = Why are comments and update notices missing? =
 
@@ -129,8 +155,11 @@ project releases, back up, then replace the theme directory or upload a new zip.
 
 = Where does starter content come from? =
 
-From the dataset configured in init-config.json, which lives in a separate repository. Nothing is
-imported until you start the import from the admin, and that step needs a network connection.
+From the dataset configured in init-config.json, which lives in a separate repository. It includes
+the page bodies in pages.json, so the privacy policy arrives with real text instead of the WordPress
+placeholder. A page is only filled when it is empty or still carries the default draft, so content you
+have edited is never overwritten. Nothing is imported until you start the import from the admin, and
+that step needs a network connection.
 
 = Why does my CDN domain show up in the page source? =
 
@@ -153,6 +182,13 @@ Site & paths screen have to be installed. Leaving every prefix native needs no s
 
 == Changelog ==
 
+= 1.1.0 =
+* Import page bodies from pages.json, so the privacy policy ships with real text instead of the WordPress placeholder. Pages that already have content are never overwritten.
+* Privacy policy typography for long legal text.
+* Editor styles are registered on after_setup_theme with editor-styles support, so the block and classic editors match the front end.
+* The comment REST guard only blocks writes; the editor notes panel no longer returns 403.
+* Heading hierarchy fixed on the certificate and privacy policy pages (h1 / h2 / h3, no skipped levels).
+
 = 1.0.0 =
 * Initial public release.
 * Four content types, inquiry storage, plugin-free multilingual routing.
@@ -162,6 +198,9 @@ Site & paths screen have to be installed. Leaving every prefix native needs no s
 * CDN-aware output built on X-Forwarded-Host, with a pinned canonical.
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+Adds page-body import for the privacy policy and fixes editor styles, comment REST filtering and heading levels. No database migration needed.
 
 = 1.0.0 =
 Initial public release.

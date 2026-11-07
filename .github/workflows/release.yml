@@ -51,8 +51,8 @@ jobs:
           body: |
             ## Installation
 
-            Download **`osiera-${{ github.ref_name }}.zip`** from the Assets list below
-            and upload it in WordPress: **Appearance → Themes → Add New → Upload Theme**.
+            Download the **`osiera-*.zip`** asset below (not "Source code") and upload it in
+            WordPress: **Appearance → Themes → Add New → Upload Theme**.
             No need to extract it first.
 
             Already have Osiera installed? Back up first, then replace the theme folder

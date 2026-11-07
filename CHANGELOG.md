@@ -9,6 +9,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Nothing yet.
 
+## [1.1.0] - 2026-11-07
+
+### Added
+- Page bodies are imported from `data/pages.json`: the privacy policy now arrives with real English
+  and Japanese text instead of the WordPress placeholder. A page is written only when it has no
+  content, or still carries the `privacy-policy-tutorial` draft, so edited pages are never overwritten.
+  The import report gained a `pages_content` counter.
+- Privacy policy typography: heading rhythm, list and table spacing, and a readable measure for long
+  legal text.
+
+### Fixed
+- Editor styles are registered on `after_setup_theme` with `editor-styles` support instead of
+  `admin_enqueue_scripts`, which ran after the block editor had already collected canvas styles — the
+  editor showed core defaults only. The classic editor now gets the block-library stylesheets through
+  `mce_css`.
+- The comment REST guard only blocks write methods. Blocking `GET /wp/v2/comments` broke the editor's
+  notes panel, which spun forever and logged a 403.
+- Heading hierarchy on the certificate and privacy policy pages: the page title is an `h1`, section
+  titles are `h2`, card titles `h3`. No skipped levels.
+
 ## [1.0.0] - 2026-11-06
 
 ### Added
@@ -48,5 +68,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - XML-RPC, the `[video]` shortcode and oEmbed auto-embedding.
 - Core sitemaps, including the `wp-sitemap.xsl` stylesheet that triggers browser XSLT warnings.
 
-[Unreleased]: https://github.com/Lingyv07/osiera/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/Lingyv07/osiera/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/Lingyv07/osiera/releases/tag/v1.1.0
 [1.0.0]: https://github.com/Lingyv07/osiera/releases/tag/v1.0.0
