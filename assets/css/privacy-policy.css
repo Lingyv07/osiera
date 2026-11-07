@@ -8,6 +8,11 @@
 .frame-content-box h1 {
     text-align: center;
 }
+
+/* 页头标题改成 h1 后抹掉浏览器默认外边距，位置与原来的 div 一致 */
+.frame-top-wrap .frame-top-title {
+    margin: 0;
+}
 .privacy-policy-date {
     padding: 15px;
     color: var(--bg-color-acce);
@@ -25,5 +30,183 @@
 @media (max-width: 980px) {
     .frame-content-box {
         margin: 0 5vw;
+    }
+}
+/* ------------------------------------------------------------------
+ * 隐私政策正文：页头信息条 / 要点卡 / 章节标题 / 表格
+ * 只用主题变量，正文仍是 .editor-content 那套排版，页面之间观感一致
+ * ------------------------------------------------------------------ */
+
+.frame-content-box-wrap.editor-content .policy-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    margin: 0 0 24px 0;
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--bg-color-lt);
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--text-color-drak3);
+}
+
+.frame-content-box-wrap.editor-content .policy-meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.frame-content-box-wrap.editor-content .policy-meta-item::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--accent);
+}
+
+.frame-content-box-wrap.editor-content .policy-points {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin: 0 0 28px 0;
+}
+
+/* 要点卡的分区标题：标签式 h2，避免 h1 之后直接跳到 h3 */
+.frame-content-box-wrap.editor-content .policy-points-heading {
+    margin: 0 0 12px 0;
+    padding: 0;
+    border-left: 0;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: bold;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--text-color-drak3);
+}
+
+.frame-content-box-wrap.editor-content .policy-point {
+    padding: 18px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: #fff;
+}
+
+.frame-content-box-wrap.editor-content .policy-point-index {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: .1em;
+    color: var(--accent);
+}
+
+.frame-content-box-wrap.editor-content .policy-point h3 {
+    margin: 0 0 6px 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-color-drak);
+}
+
+.frame-content-box-wrap.editor-content .policy-point p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 23px;
+    color: var(--text-color-drak3);
+}
+
+/* 长文的小节标题左对齐、带主色竖线；全站其它页面的 h2 仍是居中 */
+.frame-content-box-wrap.editor-content h2 {
+    margin: 34px 0 14px 0;
+    padding-left: 12px;
+    border-left: 3px solid var(--bg-color);
+    font-size: 20px;
+    line-height: 28px;
+    text-align: left;
+}
+
+.frame-content-box-wrap.editor-content h2:first-of-type {
+    margin-top: 8px;
+}
+
+.frame-content-box-wrap.editor-content h3 {
+    margin: 20px 0 8px 0;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* 表格：首列是记录名，左对齐并加粗；数字列不强制居中 */
+.frame-content-box-wrap.editor-content .editor-table th {
+    text-align: left;
+    font-weight: bold;
+    padding: 12px 14px;
+}
+
+.frame-content-box-wrap.editor-content .editor-table td {
+    text-align: left;
+    padding: 12px 14px;
+    vertical-align: top;
+}
+
+.frame-content-box-wrap.editor-content .editor-table td:first-child {
+    font-weight: bold;
+    color: var(--text-color-drak);
+}
+
+.frame-content-box-wrap.editor-content .table-scroll {
+    margin: 18px 0 26px 0;
+}
+
+.frame-content-box-wrap.editor-content p {
+    line-height: 26px;
+}
+
+.frame-content-box-wrap.editor-content .content-cta {
+    margin-top: 34px;
+}
+
+/* 四列表格的末列是保存期限（24 months / 7 years），宽屏下不让它折行 */
+@media (min-width: 981px) {
+    .frame-content-box-wrap.editor-content .editor-table tr > :nth-child(4) {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 980px) {
+    .frame-content-box-wrap.editor-content .policy-points {
+        grid-template-columns: 1fr;
+    }
+
+    .frame-content-box-wrap.editor-content .policy-meta {
+        display: block;
+        font-size: 12px;
+        line-height: 19px;
+    }
+
+    .frame-content-box-wrap.editor-content .policy-meta-item {
+        display: flex;
+        margin-bottom: 4px;
+    }
+
+    .frame-content-box-wrap.editor-content h2 {
+        margin: 26px 0 10px 0;
+        font-size: 17px;
+        line-height: 25px;
+        padding-left: 10px;
+    }
+
+    .frame-content-box-wrap.editor-content .policy-point {
+        padding: 15px;
+    }
+
+    .frame-content-box-wrap.editor-content .editor-table th,
+    .frame-content-box-wrap.editor-content .editor-table td {
+        padding: 10px 10px;
+        font-size: 13px;
+    }
+
+    /* 四列表格手机上列太窄会挤成一列字，给个下限，在框内左右滑动看 */
+    .frame-content-box-wrap.editor-content .editor-table-wide {
+        min-width: 620px;
     }
 }

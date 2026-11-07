@@ -169,7 +169,7 @@ get_header();
                         </section>
                         <?php foreach ($data['certificate_groups'] as $group): ?>
                             <section class="cert-grid-section">
-                                <h3 class="section-title"><?php echo $group['group_title']; ?></h3>
+                                <h2 class="section-title"><?php echo $group['group_title']; ?></h2>
                                 <div class="cert-grid">
                                     <?php foreach ($group['items'] as $item): ?>
                                         <div class="cert-card" <?php  if (isset($item['id'])) { echo 'id="'.$item['id'].'"';}?>>
@@ -177,7 +177,7 @@ get_header();
                                                 <a class="image-preview-a v-load" href="<?php echo $item['file_url']; ?>" target="_blank">
                                                     <img onload="remove_load(this)" onerror="remove_load(this)" src="<?php echo esc_url($item['image_url']); ?>" alt="<?php echo esc_attr($item['image_alt'] ?: ($item['title'] ?? 'Certificate')); ?>">
                                                 </a>
-                                                <h4><?php echo $item['title']; ?></h4>
+                                                <h3><?php echo $item['title']; ?></h3>
                                                 <?php if($item['report_no'] ?? '') { ?>
                                                 <p class="report-no"><?php echo $item['report_no']; ?></p>
                                                 <?php } ?>

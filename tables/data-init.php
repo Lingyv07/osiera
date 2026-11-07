@@ -99,6 +99,7 @@ if (!function_exists('tpi_data_init_stats_rows')) {
         $map = [
             'languages'    => ['languages', 'data_init.stat.languages'],
             'pages'        => ['pages_new', 'data_init.stat.pages'],
+            'pages-content'=> ['pages_content', 'data_init.stat.pages-content'],
             'terms'        => ['terms_new', 'data_init.stat.terms'],
             'menu'         => ['menu', 'data_init.stat.menu'],
             'lang-content' => ['lang-content', 'data_init.stat.lang-content'],

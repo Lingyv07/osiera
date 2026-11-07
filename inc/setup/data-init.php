@@ -633,13 +633,42 @@ if (!function_exists('tpi_data_init_fix_slug')) {
     }
 }
 
+if (!function_exists('tpi_data_init_page_needs_content')) {
+    /**
+     * 页面正文要不要由 pages.json 写入
+     *
+     * - 正文为空（或只剩一个空段落、占位符）→ 要写
+     * - WordPress 新装自带的隐私政策草稿（正文里全是 privacy-policy-tutorial 的 Suggested text）→ 覆盖
+     * - 已经有真实正文 → 不动，别盖掉后台改过的内容
+     */
+    function tpi_data_init_page_needs_content(int $post_id): bool
+    {
+        $post = get_post($post_id);
+        if (!$post) {
+            return false;
+        }
+        $content = (string) $post->post_content;
+        if (trim($content) === '') {
+            return true;
+        }
+        if (trim(wp_strip_all_tags($content)) === '' && strpos($content, '<img') === false) {
+            return true;
+        }
+        return strpos($content, 'privacy-policy-tutorial') !== false;
+    }
+}
+
 if (!function_exists('tpi_data_init_pages')) {
     /**
      * 建骨架页面（每语言一份，标题取菜单标题 / 语言内容）
      *
+     * 正文来自 data/pages.json（键：语言 → slug → {title, excerpt, content}）。
+     * 已存在的页面只在「没有正文」或「还是 WP 默认隐私草稿」时补写，不覆盖人工编辑过的内容。
+     *
+     * @param int $written 被写入/补写正文的页面数（引用传出，用于报告）
      * @return array<string,int> "lang:slug" => post_id
      */
-    function tpi_data_init_pages(array $page_slugs, array $titles, string $lang, bool $dry = false): array
+    function tpi_data_init_pages(array $page_slugs, array $titles, string $lang, bool $dry = false, array $pages = [], int &$written = 0): array
     {
         $ids     = [];
         $default = function_exists('tpi_default_language') ? tpi_default_language() : 'en';
@@ -647,9 +676,27 @@ if (!function_exists('tpi_data_init_pages')) {
 
         foreach ($page_slugs as $slug) {
             $title = (string) ($titles[$slug][$lang] ?? $titles[$slug][$default] ?? ucfirst($slug));
+            $row = (array) ($pages[$lang][$slug] ?? $pages[$default][$slug] ?? []);
+            if (trim($title) === '' && !empty($row['title'])) {
+                $title = (string) $row['title'];
+            }
+            $content = (string) ($row['content'] ?? '');
+            $excerpt = (string) ($row['excerpt'] ?? '');
+
             $existing = tpi_data_init_page_id($slug, $lang);
             if ($existing > 0) {
                 $ids[$slug] = $existing;
+                // 老站/新装站点：页面已经在，但正文是空的或还是 WP 的隐私政策草稿
+                if ($content !== '' && tpi_data_init_page_needs_content((int) $existing)) {
+                    if (!$dry) {
+                        $update = ['ID' => (int) $existing, 'post_content' => $content];
+                        if ($excerpt !== '' && trim((string) get_post($existing)->post_excerpt) === '') {
+                            $update['post_excerpt'] = $excerpt;
+                        }
+                        wp_update_post($update);
+                        $written++;
+                    }
+                }
                 continue;
             }
             if ($dry) {
@@ -661,11 +708,15 @@ if (!function_exists('tpi_data_init_pages')) {
                 'post_status'    => 'publish',
                 'post_title'     => $title,
                 'post_name'      => $slug,
-                'post_content'   => '',
+                'post_content'   => $content,
+                'post_excerpt'   => $excerpt,
                 'menu_order'     => function_exists('tpi_page_setup_order') ? tpi_page_setup_order($slug) : 0,
                 'comment_status' => 'closed',
                 'ping_status'    => 'closed',
             ]);
+            if ($post_id > 0 && $content !== '') {
+                $written++;
+            }
             if ($post_id <= 0) {
                 continue;
             }
@@ -895,7 +946,7 @@ if (!function_exists('tpi_data_init_run')) {
     function tpi_data_init_run(bool $dry = false, bool $with_content = true): array
     {
         $report = [
-            'languages' => 0, 'pages' => 0, 'pages_new' => 0, 'terms' => 0, 'terms_new' => 0,
+            'languages' => 0, 'pages' => 0, 'pages_new' => 0, 'pages_content' => 0, 'terms' => 0, 'terms_new' => 0,
             'menu' => 0, 'lang-content' => 0, 'page-info' => 0,
             'product' => 0, 'post' => 0, 'application' => 0, 'faq' => 0,
             'skipped' => 0, 'dry' => $dry, 'error' => '',
@@ -1034,8 +1085,10 @@ if (!function_exists('tpi_data_init_run')) {
         });
 
         $page_ids = [];
+        $page_bodies = tpi_data_init_json('pages');
+        $page_written = 0;
         foreach ($langs as $lang) {
-            $made = tpi_data_init_pages($page_slugs, $page_titles, $lang, $dry);
+            $made = tpi_data_init_pages($page_slugs, $page_titles, $lang, $dry, $page_bodies, $page_written);
             foreach ($made as $slug => $id) {
                 $page_ids[$lang . ':' . $slug] = $id;
                 if ($id > 0) {
@@ -1045,6 +1098,7 @@ if (!function_exists('tpi_data_init_run')) {
                 }
             }
         }
+        $report['pages_content'] = (int) $page_written;
 
         // 4) 分类
         $taxonomies = tpi_data_init_json('taxonomies');

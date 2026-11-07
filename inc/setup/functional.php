@@ -86,11 +86,20 @@ add_filter('xmlrpc_enabled', '__return_false');
 add_filter('rest_allow_anonymous_comments', '__return_false');
 
 // REST API 发送评论时直接返回错误
+// 只拦写操作（POST/PUT/PATCH/DELETE）。读请求要放行：
+// 文章 / 产品 / 应用的区块编辑器会自己发
+// GET /wp/v2/comments?context=edit&type=note&status=all 去取编辑器笔记，
+// 一并拦掉会在控制台刷 403（rest_cookie_invalid_nonce 之外的另一条红字），
+// 编辑器右上角的笔记面板也一直转圈。
 add_filter('rest_pre_dispatch', function($response, $server, $request) {
-    if (str_contains($request->get_route(), '/comments')) {
-        return new WP_Error('comments_disabled', 'Comments are disabled.', array('status' => 403));
+    if (!str_contains($request->get_route(), '/comments')) {
+        return $response;
     }
-    return $response;
+    $method = strtoupper((string) $request->get_method());
+    if ($method === 'GET' || $method === 'HEAD') {
+        return $response;
+    }
+    return new WP_Error('comments_disabled', 'Comments are disabled.', array('status' => 403));
 }, 10, 3);
 
 // 禁止直接提交评论

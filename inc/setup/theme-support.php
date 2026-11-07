@@ -225,3 +225,53 @@ add_filter('get_the_title', 'sanitize_all_titles');
 function sanitize_all_titles($title, $post_id = null): string {
     return html_entity_decode($title);
 }
+
+/* ------------------------------------------------------------------
+ * 编辑器样式（区块编辑器 + 经典编辑器）
+ *
+ * add_editor_style() 必须在 after_setup_theme 里调用：挂在
+ * admin_enqueue_scripts 上时，区块编辑器已经收集完编辑画布的样式，
+ * 一条都注入不进去（编辑框里只剩核心默认排版）。
+ * 同时要声明 editor-styles 支持，区块编辑器才会把主题样式放进 iframe。
+ * ------------------------------------------------------------------ */
+add_action('after_setup_theme', 'tpi_register_editor_styles');
+
+if (!function_exists('tpi_register_editor_styles')) {
+    function tpi_register_editor_styles(): void
+    {
+        add_theme_support('editor-styles');
+
+        // 只放主题内的相对路径：区块编辑器会直接读文件内容注入 iframe，
+        // 换成绝对 URL 它会用 wp_remote_get 抓自己，慢且容易静默失败。
+        add_editor_style([
+            'assets/css/global-style-inline.css',
+            'assets/css/global-style.css',
+            'assets/css/editor.css',
+        ]);
+    }
+}
+
+/**
+ * 经典编辑器（自建编辑页的 wp_editor）补上区块库的两份核心样式：
+ * 内容里存的是 wp-block-quote 等区块 HTML，后台不加载区块样式就会塌成默认排版。
+ * 区块编辑器自己本来就加载这两份，不用重复加。
+ */
+add_filter('mce_css', 'tpi_editor_mce_css');
+
+if (!function_exists('tpi_editor_mce_css')) {
+    function tpi_editor_mce_css(string $css): string
+    {
+        $extra = [
+            includes_url('css/dist/block-library/style.min.css'),
+            includes_url('css/dist/block-library/theme.min.css'),
+        ];
+
+        foreach ($extra as $url) {
+            if (strpos($css, $url) === false) {
+                $css .= ($css !== '' ? ',' : '') . $url;
+            }
+        }
+
+        return $css;
+    }
+}

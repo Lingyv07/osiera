@@ -61,7 +61,7 @@ get_header();
         <section class="frame-top-wrap" aria-label="News Top">
             <a href="<?php echo go_url("privacy-policy"); ?>">
                 <img src="<?php echo esc_url($page_info_settings['post_top_image'] ?? ''); ?>" alt="<?php echo esc_attr(get_image_alt($page_info_settings['post_top_image'])); ?>">
-                <div class="frame-top-title"><?php the_title(); ?></div>
+                <h1 class="frame-top-title"><?php the_title(); ?></h1>
             </a>
         </section>
         <div class="frame-box">

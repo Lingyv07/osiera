@@ -1,4 +1,4 @@
-body {
+body:not(.editor-styles-wrapper) {
     padding-bottom: 100px;
     color: var(--text-color-drak);
 }
@@ -85,33 +85,56 @@ td img {
 /* ------------------------------------------------------------------
    正文结构件：与前台 assets/css/editor-content.css 用同一套数值，
    让产品 / 资讯 / 应用 / FAQ 的内容编辑器真正所见即所得。
-   前台把样式挂在 .editor-content 容器上，编辑器里 body 的 id 是 tinymce，
-   所以这里统一用 #tinymce 作用域，不影响后台其它界面。
+
+   两套编辑器共用这组规则：
+   - 经典编辑器（自建编辑页的 wp_editor）：body 的 id 是 tinymce；
+   - 区块编辑器（post.php?action=edit，内容画在 iframe 里）：
+     body 的 class 是 editor-styles-wrapper。
+   所以作用域写 :is(#tinymce, .editor-styles-wrapper)，两边同一份数值。
    ------------------------------------------------------------------ */
-#tinymce {
+:is(#tinymce, .editor-styles-wrapper) {
     color: var(--text-color-drak);
+}
+
+/* 经典编辑器（TinyMCE body）自己的一点内边距；区块编辑器的画布留白由核心控制，别覆盖 */
+#tinymce {
     padding: 0 3px;
 }
 
-#tinymce p {
+/* 区块编辑器画布：和前台一样白底，避免 iframe 里露出后台灰底 */
+.editor-styles-wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: #fff;
+}
+
+/* 前台正文样式里带全局 reset（margin:0），会把标题块原本的居中 margin 清掉，
+   这里把标题按内容宽度重新居中，和下面的正文块左对齐 */
+:is(#tinymce, .editor-styles-wrapper) .editor-visual-editor__post-title-wrapper .editor-post-title {
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+:is(#tinymce, .editor-styles-wrapper) p {
     font-size: 17px;
     line-height: 28px;
     margin: 0 0 22px 0;
     color: var(--text-color-drak);
 }
 
-#tinymce h1 { font-size: 25px; margin: 25px 0 15px 0; }
-#tinymce h2 { font-size: 22px; margin: 20px 0 12px 0; text-align: center; }
-#tinymce h3 { font-size: 18px; margin: 15px 0 10px 0; }
-#tinymce h4 { font-size: 17px; margin: 12px 0 8px 0; }
-#tinymce h5 { font-size: 16px; margin: 10px 0 6px 0; }
-#tinymce h6 { font-size: 15px; margin: 5px 0 4px 0; }
+:is(#tinymce, .editor-styles-wrapper) h1 { font-size: 25px; margin: 25px 0 15px 0; }
+:is(#tinymce, .editor-styles-wrapper) h2 { font-size: 22px; margin: 20px 0 12px 0; text-align: center; }
+:is(#tinymce, .editor-styles-wrapper) h3 { font-size: 18px; margin: 15px 0 10px 0; }
+:is(#tinymce, .editor-styles-wrapper) h4 { font-size: 17px; margin: 12px 0 8px 0; }
+:is(#tinymce, .editor-styles-wrapper) h5 { font-size: 16px; margin: 10px 0 6px 0; }
+:is(#tinymce, .editor-styles-wrapper) h6 { font-size: 15px; margin: 5px 0 4px 0; }
 
-#tinymce ul, #tinymce ol { padding-left: 25px; margin: 5px 0; }
-#tinymce li { list-style: unset; margin: 5px 0; line-height: 25px; font-size: 16px; }
+:is(#tinymce, .editor-styles-wrapper) ul, :is(#tinymce, .editor-styles-wrapper) ol { padding-left: 25px; margin: 5px 0; }
+:is(#tinymce, .editor-styles-wrapper) li { list-style: unset; margin: 5px 0; line-height: 25px; font-size: 16px; }
 
 /* 导语 */
-#tinymce .content-lead {
+:is(#tinymce, .editor-styles-wrapper) .content-lead {
     font-size: 17px;
     line-height: 28px;
     color: var(--text-color-drak2);
@@ -119,47 +142,47 @@ td img {
 }
 
 /* 表格横向滚动容器 */
-#tinymce .table-scroll { overflow-x: auto; margin: 18px 0 24px 0; }
+:is(#tinymce, .editor-styles-wrapper) .table-scroll { overflow-x: auto; margin: 18px 0 24px 0; }
 
 /* 正文配图 + 图注 */
-#tinymce .content-figure { margin: 26px 0 28px 0; }
-#tinymce .content-figure img {
+:is(#tinymce, .editor-styles-wrapper) .content-figure { margin: 26px 0 28px 0; }
+:is(#tinymce, .editor-styles-wrapper) .content-figure img {
     display: block; max-width: 100%; height: auto; margin: 0 auto; border-radius: 6px;
 }
-#tinymce .content-figure figcaption {
+:is(#tinymce, .editor-styles-wrapper) .content-figure figcaption {
     font-size: 13px; line-height: 20px; color: var(--text-color-drak2);
     text-align: center; margin: 10px auto 0 auto; max-width: 650px;
 }
 
 /* 提示框 */
-#tinymce .content-note {
+:is(#tinymce, .editor-styles-wrapper) .content-note {
     background-color: var(--border-color-lt);
     border-left: 3px solid var(--bg-color);
     padding: 14px 18px;
     margin: 22px 0;
 }
-#tinymce .content-note p { margin: 0; font-size: 16px; line-height: 26px; }
+:is(#tinymce, .editor-styles-wrapper) .content-note p { margin: 0; font-size: 16px; line-height: 26px; }
 
 /* 结尾 CTA 按钮 */
-#tinymce .content-cta { text-align: center; margin: 30px auto 6px auto; }
-#tinymce .content-cta a {
+:is(#tinymce, .editor-styles-wrapper) .content-cta { text-align: center; margin: 30px auto 6px auto; }
+:is(#tinymce, .editor-styles-wrapper) .content-cta a {
     display: inline-block; padding: 10px 24px; border-radius: 24px;
     background-color: var(--bg-color); color: #fff; text-decoration: none;
 }
 
 /* 引用块：前台没有区块库样式，编辑器里也按这套显示，避免两边不一致 */
-#tinymce blockquote {
+:is(#tinymce, .editor-styles-wrapper) blockquote {
     margin: 22px 0;
     padding: 4px 0 4px 18px;
     border-left: 3px solid var(--border-color-drak);
     color: var(--text-color-drak2);
     font-style: normal;
 }
-#tinymce blockquote p:last-child { margin-bottom: 0; }
+:is(#tinymce, .editor-styles-wrapper) blockquote p:last-child { margin-bottom: 0; }
 
 @media (max-width: 980px) {
-    #tinymce { padding: 0 3px; }
-    #tinymce .content-lead { font-size: 15px; line-height: 25px; }
-    #tinymce .content-figure figcaption { font-size: 12px; }
-    #tinymce h1 { font-size: 20px; margin: 15px 0 10px 0; }
+    :is(#tinymce, .editor-styles-wrapper) { padding: 0 3px; }
+    :is(#tinymce, .editor-styles-wrapper) .content-lead { font-size: 15px; line-height: 25px; }
+    :is(#tinymce, .editor-styles-wrapper) .content-figure figcaption { font-size: 12px; }
+    :is(#tinymce, .editor-styles-wrapper) h1 { font-size: 20px; margin: 15px 0 10px 0; }
 }

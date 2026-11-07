@@ -61,15 +61,8 @@ function custom_manage_css(): void {
     global $version;
     if (is_user_logged_in()) {
         wp_enqueue_style('custom-manage-css', get_template_directory_uri() . '/assets/wp-assets/css/wp-manage.css', array(), $version);
-        // 自带编辑器的内容（产品 / FAQ / 应用 / 资讯）里存的是区块 HTML（wp-block-quote 等），
-        // 后台页面本身不加载区块样式，编辑器里就只剩浏览器默认样式。
-        // 两份核心样式都要：style 管结构（按钮圆角、图片对齐），theme 管外观（引用块左边框）。
-        add_editor_style(includes_url('css/dist/block-library/style.min.css'));
-        add_editor_style(includes_url('css/dist/block-library/theme.min.css'));
-        // 主题这几份编辑器样式要带版本号，否则改了 CSS 浏览器仍用旧缓存，编辑器里看到的还是旧样式
-        add_editor_style(add_query_arg('ver', $version, get_template_directory_uri() . '/assets/css/global-style-inline.css'));
-        add_editor_style(add_query_arg('ver', $version, get_template_directory_uri() . '/assets/css/global-style.css'));
-        add_editor_style(add_query_arg('ver', $version, get_template_directory_uri() . '/assets/css/editor.css'));
+        // 编辑器（经典 + 区块）的样式统一在 inc/setup/theme-support.php 的
+        // after_setup_theme 里注册：挂到这里已经错过区块编辑器收集样式的时机。
     }
 }
 add_action('admin_enqueue_scripts', "custom_manage_css");

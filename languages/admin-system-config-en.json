@@ -1617,6 +1617,7 @@
                 "stat": {
                     "languages": "Languages (new)",
                     "pages": "Pages (new)",
+                    "pages-content": "Page bodies (written)",
                     "terms": "Taxonomies (new)",
                     "menu": "Menu items (new)",
                     "lang-content": "Copy groups (written)",

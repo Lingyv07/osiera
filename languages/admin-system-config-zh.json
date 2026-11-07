@@ -1617,6 +1617,7 @@
                 "stat": {
                     "languages": "语言（新建）",
                     "pages": "页面（新建）",
+                    "pages-content": "页面正文（写入）",
                     "terms": "分类（新建）",
                     "menu": "菜单项（新建）",
                     "lang-content": "文案分组（写入）",
